@@ -23,5 +23,5 @@ df <- df %>%
 
 # Filter the countries
 countries <- read_csv("data/countries.csv")
-df2 <- merge(df, countries, by.x = "iso_code", by.y = "country.code")
-print(df2)
+df <- merge(df, countries, by.x = "iso_code", by.y = "country.code")
+print(df)
