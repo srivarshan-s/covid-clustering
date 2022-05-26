@@ -1,0 +1,1 @@
+Rscript ~/Documents/covid-clustering/src/main.R
