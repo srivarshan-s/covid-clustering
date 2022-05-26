@@ -13,10 +13,15 @@ df <- read_csv("data/owid_covid_data.csv")
 # print(df)
 
 # Select only the required columns
-df <- df %>% 
+df <- df %>%
     select(
         "iso_code", "continent", "location", "date",
         "new_cases_per_million", "new_deaths_per_million",
         "total_cases_per_million", "total_deaths_per_million",
         "stringency_index", "new_tests_per_thousand")
-print(df)
+# print(df)
+
+# Filter the countries
+countries <- read_csv("data/countries.csv")
+df2 <- merge(df, countries, by.x = "iso_code", by.y = "country.code")
+print(df2)
