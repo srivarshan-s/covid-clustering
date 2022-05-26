@@ -1,5 +1,7 @@
-# Environment Setup
+# Environment setup
 setwd("~/Documents/covid-clustering")
+
+# Source other scripts
 source("src/negatives.R")
 
 # Import packages
