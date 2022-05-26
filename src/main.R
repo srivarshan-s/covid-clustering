@@ -1,5 +1,6 @@
 # Environment Setup
 setwd("~/Documents/covid-clustering")
+source("src/negatives.R")
 
 # Import packages
 library(readr)
@@ -18,10 +19,19 @@ df <- df %>%
         "iso_code", "continent", "location", "date",
         "new_cases_per_million", "new_deaths_per_million",
         "total_cases_per_million", "total_deaths_per_million",
-        "stringency_index", "new_tests_per_thousand")
+        "stringency_index", "new_tests_per_thousand"
+    )
 # print(df)
 
 # Filter the countries
 countries <- read_csv("data/countries.csv")
 df <- merge(df, countries, by.x = "iso_code", by.y = "country.code")
+# print(df)
+
+# Set missing values (na) to 0
+df[is.na(df)] <- 0
+# print(df)
+
+# Fix negatives in the columns
+df <- fix_negatives(fix_data = df, column_to_fix = "new_cases_per_million")
 print(df)
