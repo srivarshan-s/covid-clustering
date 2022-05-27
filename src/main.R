@@ -4,9 +4,10 @@ setwd("~/Documents/functional-data-clustering")
 
 
 #################### IMPORT PACKAGES ###########################
-library("dplyr")
+# library("dplyr")
 library("tidyverse")
-library("readr")
+# library("readr")
+library("fda.usc")
 
 
 
@@ -36,11 +37,19 @@ print("Class 2")
 print(df_class_2)
 
 # Plot class 1
-ggplot(data = df_class_1) + 
-	geom_line(mapping = aes(
-		x = colnames(df_class_1),
-		y = data.matrix(df_class_1[1, ])
-	))
-
-print(colnames(df_class_1))
-print(data.matrix(df_class_1[1, ]))
+drops <- c("X1")
+plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
+plot_matrix <- t(data.matrix(plot_df))
+pdf( "class_1.pdf", width = 20, height = 8 )
+plot(
+     plot_matrix[1, ],
+     # lwd=2,
+     col = "red",
+     type = "l",
+     main = "Class 1",
+     xlab = "Observations",
+     ylab = "Electrical Activity"
+)
+for (i in 2:96) {
+   # lines(plot_matrix[i, ], col="red")
+}
