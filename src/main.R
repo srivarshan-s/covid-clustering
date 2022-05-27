@@ -22,4 +22,10 @@ df_test <- read_tsv("data/ECG200_TEST.tsv", col_names = FALSE)
 
 # Merging the two dataframes
 df <- rbind(df_train, df_test)
-print(df)
+# print(df)
+
+# Extracting the two classes
+df_class_1 <- filter(df, X1 == "-1")
+df_class_2 <- filter(df, X1 == "1")
+print(df_class_1)
+print(df_class_2)
