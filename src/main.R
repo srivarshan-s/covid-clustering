@@ -145,7 +145,7 @@ plot.fdata(
            ecg_fdata,
            type = "l",
            col = "black",
-           main = "Outliers",
+           main = "Outliers in Class 1",
            xlab = "Time",
            ylab = "Value",
 )
