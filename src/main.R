@@ -46,55 +46,14 @@ print(df_class_1)
 print("Class 2")
 print(df_class_2)
 
-# # Plot class 1
-# drops <- c("X1")
-# plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
-# pdf("class_1.pdf", width = 20, height = 8)
-# plot(
-#    # time,
-#    # smooth_line(plot_matrix[1, ]),
-#    plot_matrix[1, ],
-#    col = "white",
-#    type = "l",
-#    main = "Class 1",
-#    xlab = "Observations",
-#    ylab = "Electrical Activity"
-# )
-# for (i in 1:96) {
-#    # lines(plot_matrix[i, ], col="red")
-#    lines(smooth_line((plot_matrix[i, ])), lwd = 1, col = "blue")
-# }
-
-# # Plot class 2
-# drops <- c("X1")
-# plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
-# print(length(plot_matrix[1, ]))
-# pdf("class_2.pdf", width = 20, height = 8)
-# plot(
-#    # time,
-#    # smooth_line(plot_matrix[1, ]),
-#    plot_matrix[1, ],
-#    col = "white",
-#    type = "l",
-#    main = "Class 2",
-#    xlab = "Observations",
-#    ylab = "Electrical Activity"
-# )
-# for (i in 1:96) {
-#    # lines(plot_matrix[i, ], col="red")
-#    lines(smooth_line((plot_matrix[i, ])), lwd = 1, col = "blue")
-# }
-
 # Plot class 1
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
-plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata.cen(plot_matrix)$Xcen
 pdf("class_1.pdf")
 plot.fdata(
-     plot_fdata.c, 
+     plot_fdata, 
      type = "l", 
      col = "red",
      main = "Class 1",
@@ -107,10 +66,10 @@ drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 # plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
-plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata.cen(plot_matrix)$Xcen
 pdf("class_2.pdf")
 plot.fdata(
-     plot_fdata.c, 
+     plot_fdata, 
      type = "l", 
      col = "black",
      main = "Class 2",
@@ -122,10 +81,10 @@ plot.fdata(
 drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
-plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata.cen(plot_matrix)$Xcen
 pdf("all_classes.pdf")
 plot.fdata(
-     plot_fdata.c, 
+     plot_fdata, 
      type = "l", 
      col = "red",
      main = "All classes",
@@ -136,9 +95,65 @@ drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 # plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
-plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata.cen(plot_matrix)$Xcen
 lines(
-     plot_fdata.c, 
+     plot_fdata, 
      col = "black",
 )
 
+# Search for outliers in class 1
+drops <- c("X1")
+ecg_df <- df_class_1[, !(names(df_class_1) %in% drops)]
+ecg_matrix <- data.matrix(ecg_df)
+ecg_fdata <- fdata.cen(ecg_matrix)$Xcen
+ecg_outliers <- outliers.depth.trim(
+                                    ecg_fdata, 
+                                    trim = 0.1,
+                                    dfunc = depth.FM, 
+                                    nb = 20
+)
+print(ecg_outliers)
+pdf("class_1_outliers.pdf")
+plot.fdata(
+           ecg_fdata,
+           type = "l",
+           col = "red",
+           main = "Outliers in Class 1",
+           xlab = "Time",
+           ylab = "Value",
+)
+for (otlr in ecg_outliers$outliers) {
+    otlr <- strtoi(otlr)
+    lines(
+          ecg_fdata$data[otlr, ],
+          col = "blue"
+    )
+}
+
+# Search for outliers in class 2
+drops <- c("X1")
+ecg_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+ecg_matrix <- data.matrix(ecg_df)
+ecg_fdata <- fdata.cen(ecg_matrix)$Xcen
+ecg_outliers <- outliers.depth.trim(
+                                    ecg_fdata, 
+                                    trim = 0.1,
+                                    dfunc = depth.FM, 
+                                    nb = 20
+)
+pdf("class_2_outliers.pdf")
+plot.fdata(
+           ecg_fdata,
+           type = "l",
+           col = "black",
+           main = "Outliers",
+           xlab = "Time",
+           ylab = "Value",
+)
+for (otlr in ecg_outliers$outliers) {
+    otlr <- strtoi(otlr)
+    lines(
+          ecg_fdata$data[otlr, ],
+          col = "blue"
+    )
+}
