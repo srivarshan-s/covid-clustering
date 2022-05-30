@@ -16,6 +16,7 @@ library("fda.usc")
 #################### GLOBAL VARIABLES ##########################
 DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
+SAVE_PLOTS <- FALSE
 
 
 
@@ -54,7 +55,7 @@ plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
 # plot_fdata <- fdata.cen(plot_matrix)$Xcen
 plot_fdata <- fdata(plot_matrix)
-pdf("class_1.pdf")
+if (SAVE_PLOTS) pdf("class_1.pdf")
 plot.fdata(
      plot_fdata, 
      type = "l", 
@@ -86,7 +87,7 @@ drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
 plot_fdata <- fdata(plot_matrix)
-pdf("all_classes.pdf")
+if (SAVE_PLOTS) pdf("all_classes.pdf")
 plot.fdata(
      plot_fdata, 
      type = "l", 
@@ -115,7 +116,7 @@ if (DETECT_OUTLIERS) {
         num_of_outliers <- num_of_outliers + 1
     }
     cat("Number of outliers in Class 1:", num_of_outliers)
-    pdf("class_1_outliers.pdf")
+    if (SAVE_PLOTS) pdf("class_1_outliers.pdf")
     plot.fdata(
                ecg_fdata,
                type = "l",
@@ -140,7 +141,7 @@ if (DETECT_OUTLIERS) {
         num_of_outliers <- num_of_outliers + 1
     }
     cat("\nNumber of outliers in Class 2:", num_of_outliers)
-    pdf("class_2_outliers.pdf")
+    if (SAVE_PLOTS) pdf("class_2_outliers.pdf")
     plot.fdata(
                ecg_fdata,
                type = "l",
