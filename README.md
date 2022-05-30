@@ -1,1 +1,1 @@
-# covid-clustering
+# functional-data-clustering
