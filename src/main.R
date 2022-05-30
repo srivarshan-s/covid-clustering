@@ -112,7 +112,6 @@ ecg_outliers <- outliers.depth.trim(
                                     dfunc = depth.FM, 
                                     nb = 20
 )
-print(ecg_outliers)
 pdf("class_1_outliers.pdf")
 plot.fdata(
            ecg_fdata,
