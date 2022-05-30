@@ -14,34 +14,10 @@ library("fda.usc")
 
 
 #################### GLOBAL VARIABLES ##########################
-n_obs <- 67
-time_span <- 100
-time <- sort(runif(n_obs, 0, time_span))
 
 
 
 #################### DEFINE FUNCTIONS ##########################
-
-# Function to smooth the line using the fda package's smooth.basis
-smooth_line <- function(val) {
-   # n_obs <- length(val)
-   # time_span <- 100
-   # time <- sort(runif(n_obs, 0, time_span))
-   val_obs <- val + rnorm(n_obs, 0, 0.05)
-   times_basis <- seq(0, time_span, 1)
-   knots <- c(seq(0, time_span, 5))
-   n_knots <- length(knots)
-   n_order <- 4
-   n_basis <- length(knots) + n_order - 2
-   basis <- create.bspline.basis(
-      c(min(times_basis), max(times_basis)),
-      n_basis,
-      n_order,
-      knots
-   )
-   val_obj <- smooth.basis(argvals = time, y = val_obs, fdParobj = basis)
-   return(val_obj)
-}
 
 
 
@@ -70,22 +46,98 @@ print(df_class_1)
 print("Class 2")
 print(df_class_2)
 
+# # Plot class 1
+# drops <- c("X1")
+# plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
+# plot_matrix <- t(data.matrix(plot_df))
+# pdf("class_1.pdf", width = 20, height = 8)
+# plot(
+#    # time,
+#    # smooth_line(plot_matrix[1, ]),
+#    plot_matrix[1, ],
+#    col = "white",
+#    type = "l",
+#    main = "Class 1",
+#    xlab = "Observations",
+#    ylab = "Electrical Activity"
+# )
+# for (i in 1:96) {
+#    # lines(plot_matrix[i, ], col="red")
+#    lines(smooth_line((plot_matrix[i, ])), lwd = 1, col = "blue")
+# }
+
+# # Plot class 2
+# drops <- c("X1")
+# plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+# plot_matrix <- t(data.matrix(plot_df))
+# print(length(plot_matrix[1, ]))
+# pdf("class_2.pdf", width = 20, height = 8)
+# plot(
+#    # time,
+#    # smooth_line(plot_matrix[1, ]),
+#    plot_matrix[1, ],
+#    col = "white",
+#    type = "l",
+#    main = "Class 2",
+#    xlab = "Observations",
+#    ylab = "Electrical Activity"
+# )
+# for (i in 1:96) {
+#    # lines(plot_matrix[i, ], col="red")
+#    lines(smooth_line((plot_matrix[i, ])), lwd = 1, col = "blue")
+# }
+
 # Plot class 1
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-plot_matrix <- t(data.matrix(plot_df))
-pdf("class_1.pdf", width = 20, height = 8)
-plot(
-   # time,
-   # smooth_line(plot_matrix[1, ]),
-   plot_matrix[1, ],
-   col = "white",
-   type = "l",
-   main = "Class 1",
-   xlab = "Observations",
-   ylab = "Electrical Activity"
+plot_matrix <- data.matrix(plot_df)
+plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+pdf("class_1.pdf")
+plot.fdata(
+     plot_fdata.c, 
+     type = "l", 
+     col = "red",
+     main = "Class 1",
+     xlab = "Time",
+     ylab = "Value"
 )
-for (i in 1:96) {
-   # lines(plot_matrix[i, ], col="red")
-   lines(smooth_line((plot_matrix[i, ])), lwd = 1, col = "blue")
-}
+
+# Plot class 2
+drops <- c("X1")
+plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+# plot_matrix <- t(data.matrix(plot_df))
+plot_matrix <- data.matrix(plot_df)
+plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+pdf("class_2.pdf")
+plot.fdata(
+     plot_fdata.c, 
+     type = "l", 
+     col = "black",
+     main = "Class 2",
+     xlab = "Time",
+     ylab = "Value"
+)
+
+# Plot both classes
+drops <- c("X1")
+plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+plot_matrix <- data.matrix(plot_df)
+plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+pdf("all_classes.pdf")
+plot.fdata(
+     plot_fdata.c, 
+     type = "l", 
+     col = "red",
+     main = "All classes",
+     xlab = "Time",
+     ylab = "Value"
+)
+drops <- c("X1")
+plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
+# plot_matrix <- t(data.matrix(plot_df))
+plot_matrix <- data.matrix(plot_df)
+plot_fdata.c <- fdata.cen(plot_matrix)$Xcen
+lines(
+     plot_fdata.c, 
+     col = "black",
+)
