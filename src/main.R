@@ -16,7 +16,6 @@ library("fda.usc")
 #################### GLOBAL VARIABLES ##########################
 DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
-SAVE_PLOTS <- FALSE
 
 
 
@@ -55,16 +54,14 @@ plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
 # plot_fdata <- fdata.cen(plot_matrix)$Xcen
 plot_fdata <- fdata(plot_matrix)
-if (SAVE_PLOTS) {
-    pdf("class_1.pdf")
-}
+pdf("class_1.pdf")
 plot.fdata(
-     plot_fdata, 
-     type = "l", 
-     col = "red",
-     main = "Class 1",
-     xlab = "Time",
-     ylab = "Value"
+           plot_fdata, 
+           type = "l", 
+           col = "red",
+           main = "Class 1",
+           xlab = "Time",
+           ylab = "Value"
 )
 
 # Plot class 2
@@ -74,16 +71,14 @@ plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
 # plot_fdata <- fdata.cen(plot_matrix)$Xcen
 plot_fdata <- fdata(plot_matrix)
-if (SAVE_PLOTS) {
-    pdf("class_2.pdf")
-}
+pdf("class_2.pdf")
 plot.fdata(
-     plot_fdata, 
-     type = "l", 
-     col = "black",
-     main = "Class 2",
-     xlab = "Time",
-     ylab = "Value"
+           plot_fdata, 
+           type = "l", 
+           col = "black",
+           main = "Class 2",
+           xlab = "Time",
+           ylab = "Value"
 )
 
 # Plot both classes
@@ -91,16 +86,14 @@ drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
 plot_fdata <- fdata(plot_matrix)
-if (SAVE_PLOTS) {
-    pdf("all_classes.pdf")
-}
+pdf("all_classes.pdf")
 plot.fdata(
-     plot_fdata, 
-     type = "l", 
-     col = "red",
-     main = "All classes",
-     xlab = "Time",
-     ylab = "Value"
+           plot_fdata, 
+           type = "l", 
+           col = "red",
+           main = "All classes",
+           xlab = "Time",
+           ylab = "Value"
 )
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
@@ -122,9 +115,7 @@ if (DETECT_OUTLIERS) {
         num_of_outliers <- num_of_outliers + 1
     }
     cat("Number of outliers in Class 1:", num_of_outliers)
-    if (SAVE_PLOTS) {
-        pdf("class_1_outliers.pdf")
-    }
+    pdf("class_1_outliers.pdf")
     plot.fdata(
                ecg_fdata,
                type = "l",
@@ -149,9 +140,7 @@ if (DETECT_OUTLIERS) {
         num_of_outliers <- num_of_outliers + 1
     }
     cat("\nNumber of outliers in Class 2:", num_of_outliers)
-    if (SAVE_PLOTS) {
-        pdf("class_2_outliers.pdf")
-    }
+    pdf("class_2_outliers.pdf")
     plot.fdata(
                ecg_fdata,
                type = "l",
