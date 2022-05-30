@@ -14,6 +14,7 @@ library("fda.usc")
 
 
 #################### GLOBAL VARIABLES ##########################
+TRIM <- 0.1
 
 
 
@@ -50,7 +51,8 @@ print(df_class_2)
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata.cen(plot_matrix)$Xcen
+# plot_fdata <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata(plot_matrix)
 pdf("class_1.pdf")
 plot.fdata(
      plot_fdata, 
@@ -66,7 +68,8 @@ drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 # plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata.cen(plot_matrix)$Xcen
+# plot_fdata <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata(plot_matrix)
 pdf("class_2.pdf")
 plot.fdata(
      plot_fdata, 
@@ -81,7 +84,7 @@ plot.fdata(
 drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata.cen(plot_matrix)$Xcen
+plot_fdata <- fdata(plot_matrix)
 pdf("all_classes.pdf")
 plot.fdata(
      plot_fdata, 
@@ -95,23 +98,20 @@ drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 # plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata.cen(plot_matrix)$Xcen
-lines(
-     plot_fdata, 
-     col = "black",
-)
+plot_fdata <- fdata(plot_matrix)
+lines(plot_fdata, col="black")
 
 # Search for outliers in class 1
 drops <- c("X1")
 ecg_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 ecg_matrix <- data.matrix(ecg_df)
-ecg_fdata <- fdata.cen(ecg_matrix)$Xcen
-ecg_outliers <- outliers.depth.trim(
-                                    ecg_fdata, 
-                                    trim = 0.1,
-                                    dfunc = depth.FM, 
-                                    nb = 20
-)
+ecg_fdata <- fdata(ecg_matrix)
+ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=TRIM,)
+num_of_outliers <- 0
+for (ele in ecg_outliers$outliers) {
+     num_of_outliers <- num_of_outliers + 1
+}
+cat("Number of outliers in Class 1:", num_of_outliers)
 pdf("class_1_outliers.pdf")
 plot.fdata(
            ecg_fdata,
@@ -123,23 +123,20 @@ plot.fdata(
 )
 for (otlr in ecg_outliers$outliers) {
     otlr <- strtoi(otlr)
-    lines(
-          ecg_fdata$data[otlr, ],
-          col = "blue"
-    )
+    lines(ecg_fdata$data[otlr, ], col="blue")
 }
 
 # Search for outliers in class 2
 drops <- c("X1")
 ecg_df <- df_class_2[, !(names(df_class_2) %in% drops)]
 ecg_matrix <- data.matrix(ecg_df)
-ecg_fdata <- fdata.cen(ecg_matrix)$Xcen
-ecg_outliers <- outliers.depth.trim(
-                                    ecg_fdata, 
-                                    trim = 0.1,
-                                    dfunc = depth.FM, 
-                                    nb = 20
-)
+ecg_fdata <- fdata(ecg_matrix)
+ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=TRIM)
+num_of_outliers <- 0
+for (ele in ecg_outliers$outliers) {
+     num_of_outliers <- num_of_outliers + 1
+}
+cat("\nNumber of outliers in Class 2:", num_of_outliers)
 pdf("class_2_outliers.pdf")
 plot.fdata(
            ecg_fdata,
@@ -147,12 +144,9 @@ plot.fdata(
            col = "black",
            main = "Outliers in Class 2",
            xlab = "Time",
-           ylab = "Value",
+           ylab = "Value"
 )
 for (otlr in ecg_outliers$outliers) {
     otlr <- strtoi(otlr)
-    lines(
-          ecg_fdata$data[otlr, ],
-          col = "blue"
-    )
+    lines(ecg_fdata$data[otlr, ], col="blue")
 }
