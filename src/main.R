@@ -105,6 +105,7 @@ plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_fdata <- functional_data(plot_df)
 lines(plot_fdata, col="black")
 
+# Outlier detection
 if (DETECT_OUTLIERS) {
 
     # Search for outliers in class 1
