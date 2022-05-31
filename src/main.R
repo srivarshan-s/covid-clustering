@@ -5,9 +5,7 @@ set.seed(999)
 
 
 #################### IMPORT PACKAGES ###########################
-# library("dplyr")
 library("tidyverse")
-# library("readr")
 library("fda")
 library("fda.usc")
 
@@ -52,7 +50,6 @@ print(df_class_2)
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_matrix <- data.matrix(plot_df)
-# plot_fdata <- fdata.cen(plot_matrix)$Xcen
 plot_fdata <- fdata(plot_matrix)
 pdf("class_1.pdf")
 plot.fdata(
@@ -67,9 +64,7 @@ plot.fdata(
 # Plot class 2
 drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
-# plot_fdata <- fdata.cen(plot_matrix)$Xcen
 plot_fdata <- fdata(plot_matrix)
 pdf("class_2.pdf")
 plot.fdata(
@@ -97,7 +92,6 @@ plot.fdata(
 )
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
 plot_matrix <- data.matrix(plot_df)
 plot_fdata <- fdata(plot_matrix)
 lines(plot_fdata, col="black")
