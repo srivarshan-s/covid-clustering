@@ -20,6 +20,7 @@ NSPLINES <- 9
 
 
 #################### DEFINE FUNCTIONS ##########################
+
 functional_data <- function(data, nsplines=NSPLINES) {
     if (FOURIER_BASIS) {
         basis <- create.fourier.basis(rangeval=c(0,95), nbasis=nsplines)
