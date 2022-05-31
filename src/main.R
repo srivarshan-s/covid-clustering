@@ -57,6 +57,16 @@ df <- rbind(df_train, df_test)
 print("Merged data")
 print(df)
 
+# Extract the labels
+labels <- data.matrix(df[, c("X1")])
+for (idx in 1:length(labels)) {
+  if (labels[idx] == -1) {
+    # Mapping  1 -> 1
+    #         -1 -> 2
+    labels[idx] <- 2 
+  }
+}
+
 # Extracting the two classes
 df_class_1 <- filter(df, X1 == "-1")
 df_class_2 <- filter(df, X1 == "1")
@@ -161,10 +171,10 @@ if (DETECT_OUTLIERS) {
 }
 
 # funHDDC algorithm
+print("Running funHDDC algorithm.....")
 drops <- c("X1")
 ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
-# print(ecg_fdata)
 result <- funHDDC(
                   ecg_fdata, 
                   K=2, 
@@ -176,3 +186,7 @@ result <- funHDDC(
 )
 pdf("funHDDC_clusters.pdf")
 plot.fd(ecg_fdata, col=result$class, lwd=2, lty=1)
+cf_matrix <- table(labels, result$class)
+print(cf_matrix)
+ccr <- (cf_matrix[1,1] + cf_matrix[2,2]) / sum(cf_matrix)
+cat("The correct classification rate:", ccr*100, "%\n")
