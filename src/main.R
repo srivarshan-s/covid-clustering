@@ -5,21 +5,34 @@ set.seed(999)
 
 
 #################### IMPORT PACKAGES ###########################
-# library("dplyr")
 library("tidyverse")
-# library("readr")
 library("fda")
 library("fda.usc")
 
 
 
 #################### GLOBAL VARIABLES ##########################
-DETECT_OUTLIERS <- FALSE
+DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
+FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
+NSPLINES <- 9
 
 
 
 #################### DEFINE FUNCTIONS ##########################
+functional_data <- function(data, nsplines=NSPLINES) {
+    if (FOURIER_BASIS) {
+        basis <- create.fourier.basis(rangeval=c(0,95), nbasis=nsplines)
+        ecg_fdata <- smooth.basis(
+                                  argvals=seq(0,95,length.out=96),
+                                  y=t(data.matrix(data)),
+                                  fdParobj=basis
+        )$fd
+        return(ecg_fdata)
+    } else {
+        return(fdata(data.matrix(data)))
+    }
+}
 
 
 
@@ -51,12 +64,10 @@ print(df_class_2)
 # Plot class 1
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata(plot_matrix)
+plot_fdata <- functional_data(plot_df)
 pdf("class_1.pdf")
-plot.fdata(
+plot.fd(
            plot_fdata, 
-           type = "l", 
            col = "red",
            main = "Class 1",
            xlab = "Time",
@@ -66,14 +77,10 @@ plot.fdata(
 # Plot class 2
 drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
-plot_matrix <- data.matrix(plot_df)
-# plot_fdata <- fdata.cen(plot_matrix)$Xcen
-plot_fdata <- fdata(plot_matrix)
+plot_fdata <- functional_data(plot_df)
 pdf("class_2.pdf")
-plot.fdata(
-           plot_fdata, 
-           type = "l", 
+plot.fd(
+           plot_fdata,
            col = "black",
            main = "Class 2",
            xlab = "Time",
@@ -83,12 +90,10 @@ plot.fdata(
 # Plot both classes
 drops <- c("X1")
 plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
-plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata(plot_matrix)
+plot_fdata <- functional_data(plot_df)
 pdf("all_classes.pdf")
-plot.fdata(
+plot.fd(
            plot_fdata, 
-           type = "l", 
            col = "red",
            main = "All classes",
            xlab = "Time",
@@ -96,60 +101,56 @@ plot.fdata(
 )
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-# plot_matrix <- t(data.matrix(plot_df))
-plot_matrix <- data.matrix(plot_df)
-plot_fdata <- fdata(plot_matrix)
+plot_fdata <- functional_data(plot_df)
 lines(plot_fdata, col="black")
 
 if (DETECT_OUTLIERS) {
 
     # Search for outliers in class 1
+    print("Detecting outliers in Class 1.....")
     drops <- c("X1")
     ecg_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-    ecg_matrix <- data.matrix(ecg_df)
-    ecg_fdata <- fdata(ecg_matrix)
-    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=OUTLIER_TRIM,)
+    ecg_fdata <- functional_data(ecg_df)
+    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=OUTLIER_TRIM)
     num_of_outliers <- 0
-    for (ele in ecg_outliers$outliers) {
-        num_of_outliers <- num_of_outliers + 1
-    }
-    cat("Number of outliers in Class 1:", num_of_outliers)
+    cat("Number of outliers in Class 1:", 
+        length(ecg_outliers$outliers), "\n")
     pdf("class_1_outliers.pdf")
-    plot.fdata(
+    plot.fd(
                ecg_fdata,
-               type = "l",
                col = "red",
                main = "Outliers in Class 1",
                xlab = "Time",
-               ylab = "Value",
+               ylab = "Value"
     )
     for (otlr in ecg_outliers$outliers) {
-        otlr <- strtoi(otlr)
-        lines(ecg_fdata$data[otlr, ], col="blue")
+        lines(
+              ecg_fdata[ecg_fdata$fdnames$reps == otlr], 
+              col="blue"
+        )
     }
 
     # Search for outliers in class 2
+    print("Detecting outliers in Class 2.....")
     drops <- c("X1")
     ecg_df <- df_class_2[, !(names(df_class_2) %in% drops)]
-    ecg_matrix <- data.matrix(ecg_df)
-    ecg_fdata <- fdata(ecg_matrix)
+    ecg_fdata <- functional_data(ecg_df)
     ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=OUTLIER_TRIM)
     num_of_outliers <- 0
-    for (ele in ecg_outliers$outliers) {
-        num_of_outliers <- num_of_outliers + 1
-    }
-    cat("\nNumber of outliers in Class 2:", num_of_outliers)
+    cat("Number of outliers in Class 2:", 
+        length(ecg_outliers$outliers), "\n")
     pdf("class_2_outliers.pdf")
-    plot.fdata(
+    plot.fd(
                ecg_fdata,
-               type = "l",
                col = "black",
                main = "Outliers in Class 2",
                xlab = "Time",
                ylab = "Value"
     )
     for (otlr in ecg_outliers$outliers) {
-        otlr <- strtoi(otlr)
-        lines(ecg_fdata$data[otlr, ], col="blue")
+        lines(
+              ecg_fdata[ecg_fdata$fdnames$reps == otlr], 
+              col="blue"
+        )
     }
 }
