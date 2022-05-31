@@ -16,7 +16,7 @@ library("funHDDC")
 DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
-NSPLINES <- 9
+NSPLINES <- 10
 FUNHDDC_ITER_MAX <- 200
 FUNHDDC_THRESHOLD <- 0.1
 
@@ -174,3 +174,5 @@ result <- funHDDC(
                   itermax=FUNHDDC_ITER_MAX,
                   nb.rep=50
 )
+pdf("funHDDC_clusters.pdf")
+plot.fd(ecg_fdata, col=result$class, lwd=2, lty=1)
