@@ -106,7 +106,9 @@
 [1] "done"
 [1] "done"
 [1] "done"
-[1] "Detecting outliers in Class 1....."
-Number of outliers in Class 1: 1 
-[1] "Detecting outliers in Class 2....."
-Number of outliers in Class 2: 24 
+funHDDC: 
+      model K threshold complexity       BIC
+1 AKJBKQKDK 2       0.1         69 -5,083.67
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.

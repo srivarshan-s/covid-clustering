@@ -8,6 +8,7 @@ set.seed(999)
 library("tidyverse")
 library("fda")
 library("fda.usc")
+library("funHDDC")
 
 
 
@@ -16,6 +17,8 @@ DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
 NSPLINES <- 9
+FUNHDDC_ITER_MAX <- 200
+FUNHDDC_THRESHOLD <- 0.1
 
 
 
@@ -156,3 +159,18 @@ if (DETECT_OUTLIERS) {
         )
     }
 }
+
+# funHDDC algorithm
+drops <- c("X1")
+ecg_df <- df[, !(names(df) %in% drops)]
+ecg_fdata <- functional_data(ecg_df)
+# print(ecg_fdata)
+result <- funHDDC(
+                  ecg_fdata, 
+                  K=2, 
+                  init="kmeans", 
+                  threshold=FUNHDDC_THRESHOLD,
+                  # model=c("AkjBkQkDk", "AkjBQkDk","AkBkQkDk","AkBQkDk","ABkQkDk","ABQkDk"),
+                  itermax=FUNHDDC_ITER_MAX,
+                  nb.rep=50
+)
