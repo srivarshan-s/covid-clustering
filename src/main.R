@@ -12,7 +12,7 @@ library("fda.usc")
 
 
 #################### GLOBAL VARIABLES ##########################
-DETECT_OUTLIERS <- TRUE
+DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
 NSPLINES <- 9
