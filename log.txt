@@ -116,6 +116,6 @@ Selection Criterion: BIC.
 [1] "done"
       
 labels   1   2
-     1  26  41
-     2 111  22
-The correct classification rate: 24 %
+     1 111  22
+     2  26  41
+The correct classification rate: 76 %

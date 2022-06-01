@@ -42,6 +42,30 @@ functional_data <- function(data, nsplines=NSPLINES) {
     }
 }
 
+extract_labels <- function(df) {
+    labels <- data.matrix(df[, c("X1")])
+    if (LABEL_MAPPING == TRUE) {
+        for (idx in 1:length(labels)) {
+            if (labels[idx] == -1) {
+                # Mapping  1 -> 1
+                #         -1 -> 2
+                labels[idx] <- 2
+            }
+        }
+    } else {
+        for (idx in 1:length(labels)) {
+            # Mapping -1 -> 1
+            #          1 -> 2
+            if (labels[idx] == -1) {
+                labels[idx] <- 1
+            } else {
+                labels[idx] <- 2
+            }
+        }
+    }
+    return(labels)
+}
+
 
 
 #################### MAIN CODE #################################
@@ -62,26 +86,7 @@ print("Merged data")
 print(df)
 
 # Extract the labels
-labels <- data.matrix(df[, c("X1")])
-if (LABEL_MAPPING == TRUE) {
-    for (idx in 1:length(labels)) {
-        if (labels[idx] == -1) {
-            # Mapping  1 -> 1
-            #         -1 -> 2
-            labels[idx] <- 2
-        }
-    }
-} else {
-    for (idx in 1:length(labels)) {
-        # Mapping -1 -> 1
-        #          1 -> 2
-        if (labels[idx] == -1) {
-            labels[idx] <- 1
-        } else {
-            labels[idx] <- 2
-        }
-    }
-}
+labels <- extract_labels(df)
 
 # Extracting the two classes
 df_class_1 <- filter(df, X1 == "-1")
