@@ -113,9 +113,63 @@ funHDDC:
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
-[1] "done"
       
 labels   1   2
      1 111  22
      2  26  41
 The correct classification rate: 76 %
+funHDDC: 
+     model K threshold complexity       BIC
+1 AKJBQKDK 2       0.1        164 -8,471.80
+
+SELECTED: model  AKJBQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1 112  21
+     2  26  41
+The correct classification rate: 76.5 %
+funHDDC: 
+     model K threshold complexity       BIC
+1 AKBKQKDK 2       0.1        161 -8,559.34
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1 112  21
+     2  26  41
+The correct classification rate: 76.5 %
+funHDDC: 
+    model K threshold complexity       BIC
+1 AKBQKDK 2       0.1        160 -8,572.38
+
+SELECTED: model  AKBQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1  21 112
+     2  41  26
+The correct classification rate: 23.5 %
+funHDDC: 
+    model K threshold complexity       BIC
+1 ABKQKDK 2       0.1        160 -8,558.79
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1  21 112
+     2  41  26
+The correct classification rate: 23.5 %
+funHDDC: 
+   model K threshold complexity       BIC
+1 ABQKDK 2       0.1        159 -8,571.91
+
+SELECTED: model  ABQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1  21 112
+     2  41  26
+The correct classification rate: 23.5 %

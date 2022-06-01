@@ -20,6 +20,8 @@ LABEL_MAPPING <- TRUE # TRUE corresponds to 1 -> 1 & -1 -> 2 mapping
 NSPLINES <- 20
 FUNHDDC_ITER_MAX <- 200
 FUNHDDC_THRESHOLD <- 0.1
+FUNHDDC_MODELS <- c("AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
+                    "ABkQkDk", "ABQkDk")
 
 
 
@@ -196,18 +198,20 @@ print("Running funHDDC algorithm.....")
 drops <- c("X1")
 ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
-result <- funHDDC(
-                  ecg_fdata,
-                  K = 2,
-                  init = "kmeans",
-                  threshold = FUNHDDC_THRESHOLD,
-                  # model=c("AkjBkQkDk", "AkjBQkDk","AkBkQkDk","AkBQkDk","ABkQkDk","ABQkDk"),
-                  itermax = FUNHDDC_ITER_MAX,
-                  nb.rep = 50
-)
-pdf("funHDDC_clusters.pdf")
-plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
-cf_matrix <- table(labels, result$class)
-print(cf_matrix)
-ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-cat("The correct classification rate:", ccr * 100, "%\n")
+for (model in FUNHDDC_MODELS) {
+    result <- funHDDC(
+                      ecg_fdata,
+                      K = 2,
+                      init = "kmeans",
+                      threshold = FUNHDDC_THRESHOLD,
+                      model = model,
+                      itermax = FUNHDDC_ITER_MAX,
+                      nb.rep = 50
+    )
+    pdf("funHDDC_clusters.pdf")
+    plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
+    cf_matrix <- table(labels, result$class)
+    print(cf_matrix)
+    ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    cat("The correct classification rate:", ccr * 100, "%\n")
+}
