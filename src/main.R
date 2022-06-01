@@ -27,15 +27,18 @@ FUNHDDC_THRESHOLD <- 0.1
 
 functional_data <- function(data, nsplines=NSPLINES) {
     if (FOURIER_BASIS) {
-        basis <- create.fourier.basis(rangeval=c(0,95), nbasis=nsplines)
+        basis <- fda::create.fourier.basis(
+            rangeval = c(0, 95),
+            nbasis = nsplines
+        )
         ecg_fdata <- smooth.basis(
-                                  argvals=seq(0,95,length.out=96),
-                                  y=t(data.matrix(data)),
-                                  fdParobj=basis
+                                  argvals = seq(0, 95, length.out = 96),
+                                  y = t(data.matrix(data)),
+                                  fdParobj = basis
         )$fd
         return(ecg_fdata)
     } else {
-        return(fdata(data.matrix(data)))
+        return(fda.usc::fdata(data.matrix(data)))
     }
 }
 
@@ -65,7 +68,7 @@ if (LABEL_MAPPING == TRUE) {
         if (labels[idx] == -1) {
             # Mapping  1 -> 1
             #         -1 -> 2
-            labels[idx] <- 2 
+            labels[idx] <- 2
         }
     }
 } else {
@@ -73,7 +76,7 @@ if (LABEL_MAPPING == TRUE) {
         # Mapping -1 -> 1
         #          1 -> 2
         if (labels[idx] == -1) {
-            labels[idx] <- 1 
+            labels[idx] <- 1
         } else {
             labels[idx] <- 2
         }
@@ -129,7 +132,7 @@ plot.fd(
 drops <- c("X1")
 plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
 plot_fdata <- functional_data(plot_df)
-lines(plot_fdata, col="black")
+lines(plot_fdata, col = "black")
 
 # Outlier detection
 if (DETECT_OUTLIERS) {
@@ -139,9 +142,9 @@ if (DETECT_OUTLIERS) {
     drops <- c("X1")
     ecg_df <- df_class_1[, !(names(df_class_1) %in% drops)]
     ecg_fdata <- functional_data(ecg_df)
-    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=OUTLIER_TRIM)
+    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim = OUTLIER_TRIM)
     num_of_outliers <- 0
-    cat("Number of outliers in Class 1:", 
+    cat("Number of outliers in Class 1:",
         length(ecg_outliers$outliers), "\n")
     pdf("class_1_outliers.pdf")
     plot.fd(
@@ -153,8 +156,8 @@ if (DETECT_OUTLIERS) {
     )
     for (otlr in ecg_outliers$outliers) {
         lines(
-              ecg_fdata[ecg_fdata$fdnames$reps == otlr], 
-              col="blue"
+              ecg_fdata[ecg_fdata$fdnames$reps == otlr],
+              col = "blue"
         )
     }
 
@@ -163,9 +166,9 @@ if (DETECT_OUTLIERS) {
     drops <- c("X1")
     ecg_df <- df_class_2[, !(names(df_class_2) %in% drops)]
     ecg_fdata <- functional_data(ecg_df)
-    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim=OUTLIER_TRIM)
+    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim = OUTLIER_TRIM)
     num_of_outliers <- 0
-    cat("Number of outliers in Class 2:", 
+    cat("Number of outliers in Class 2:",
         length(ecg_outliers$outliers), "\n")
     pdf("class_2_outliers.pdf")
     plot.fd(
@@ -177,8 +180,8 @@ if (DETECT_OUTLIERS) {
     )
     for (otlr in ecg_outliers$outliers) {
         lines(
-              ecg_fdata[ecg_fdata$fdnames$reps == otlr], 
-              col="blue"
+              ecg_fdata[ecg_fdata$fdnames$reps == otlr],
+              col = "blue"
         )
     }
 }
@@ -189,17 +192,17 @@ drops <- c("X1")
 ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
 result <- funHDDC(
-                  ecg_fdata, 
-                  K=2, 
-                  init="kmeans", 
-                  threshold=FUNHDDC_THRESHOLD,
+                  ecg_fdata,
+                  K = 2,
+                  init = "kmeans",
+                  threshold = FUNHDDC_THRESHOLD,
                   # model=c("AkjBkQkDk", "AkjBQkDk","AkBkQkDk","AkBQkDk","ABkQkDk","ABQkDk"),
-                  itermax=FUNHDDC_ITER_MAX,
-                  nb.rep=50
+                  itermax = FUNHDDC_ITER_MAX,
+                  nb.rep = 50
 )
 pdf("funHDDC_clusters.pdf")
-plot.fd(ecg_fdata, col=result$class, lwd=2, lty=1)
+plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
 cf_matrix <- table(labels, result$class)
 print(cf_matrix)
-ccr <- (cf_matrix[1,1] + cf_matrix[2,2]) / sum(cf_matrix)
-cat("The correct classification rate:", ccr*100, "%\n")
+ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+cat("The correct classification rate:", ccr * 100, "%\n")
