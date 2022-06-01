@@ -16,7 +16,8 @@ library("funHDDC")
 DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
-NSPLINES <- 10
+LABEL_MAPPING <- TRUE # TRUE corresponds to 1 -> 1 & -1 -> 2 mapping
+NSPLINES <- 20
 FUNHDDC_ITER_MAX <- 200
 FUNHDDC_THRESHOLD <- 0.1
 
@@ -59,12 +60,24 @@ print(df)
 
 # Extract the labels
 labels <- data.matrix(df[, c("X1")])
-for (idx in 1:length(labels)) {
-  if (labels[idx] == -1) {
-    # Mapping  1 -> 1
-    #         -1 -> 2
-    labels[idx] <- 2 
-  }
+if (LABEL_MAPPING == TRUE) {
+    for (idx in 1:length(labels)) {
+        if (labels[idx] == -1) {
+            # Mapping  1 -> 1
+            #         -1 -> 2
+            labels[idx] <- 2 
+        }
+    }
+} else {
+    for (idx in 1:length(labels)) {
+        # Mapping -1 -> 1
+        #          1 -> 2
+        if (labels[idx] == -1) {
+            labels[idx] <- 1 
+        } else {
+            labels[idx] <- 2
+        }
+    }
 }
 
 # Extracting the two classes

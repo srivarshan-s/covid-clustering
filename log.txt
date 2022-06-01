@@ -106,20 +106,16 @@
 [1] "done"
 [1] "done"
 [1] "done"
-[1] "Detecting outliers in Class 1....."
-Number of outliers in Class 1: 1 
-[1] "Detecting outliers in Class 2....."
-Number of outliers in Class 2: 21 
 [1] "Running funHDDC algorithm....."
 funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.1         85 -5,803.01
+1 AKJBKQKDK 2       0.1        165 -8,458.15
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
 [1] "done"
       
 labels   1   2
-     1 112  21
-     2  27  40
-The correct classification rate: 76 %
+     1  26  41
+     2 111  22
+The correct classification rate: 24 %
