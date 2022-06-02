@@ -13,7 +13,7 @@ library("funHDDC")
 
 
 #################### GLOBAL VARIABLES ##########################
-DETECT_OUTLIERS <- FALSE
+DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # Do not change to FALSE, as code breaks
 LABEL_MAPPING <- TRUE # TRUE corresponds to 1 -> 1 & -1 -> 2 mapping
@@ -193,25 +193,75 @@ if (DETECT_OUTLIERS) {
     }
 }
 
-# funHDDC algorithm
-print("Running funHDDC algorithm.....")
+# # funHDDC algorithm
+# print("Running funHDDC algorithm.....")
+# drops <- c("X1")
+# ecg_df <- df[, !(names(df) %in% drops)]
+# ecg_fdata <- functional_data(ecg_df)
+# for (model in FUNHDDC_MODELS) {
+#     result <- funHDDC(
+#                       ecg_fdata,
+#                       K = 2,
+#                       init = "kmeans", # 'random', 'kmeans'
+#                       threshold = FUNHDDC_THRESHOLD,
+#                       model = model,
+#                       itermax = FUNHDDC_ITER_MAX,
+#                       nb.rep = 50
+#     )
+#     pdf("funHDDC_clusters.pdf")
+#     plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
+#     cf_matrix <- table(labels, result$class)
+#     print(cf_matrix)
+#     ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+#     cat("The correct classification rate:", ccr * 100, "%\n")
+# }
+
+# funHDDC gridsearch
+print("Running funHDDC gridsearch.....")
 drops <- c("X1")
 ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
-for (model in FUNHDDC_MODELS) {
-    result <- funHDDC(
-                      ecg_fdata,
-                      K = 2,
-                      init = "kmeans",
-                      threshold = FUNHDDC_THRESHOLD,
-                      model = model,
-                      itermax = FUNHDDC_ITER_MAX,
-                      nb.rep = 50
-    )
-    pdf("funHDDC_clusters.pdf")
-    plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
-    cf_matrix <- table(labels, result$class)
-    print(cf_matrix)
-    ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-    cat("The correct classification rate:", ccr * 100, "%\n")
+GRIDSEARCH_MODELS <- c("AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
+                    "ABkQkDk", "ABQkDk")
+GRIDSEARCH_INITS <- c("kmeans", "random")
+GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
+BEST_CCR <- 0
+BEST_MODEL <- ""
+BEST_INIT <- ""
+BEST_THRESHOLD <- 0
+for (model in GRIDSEARCH_MODELS) {
+    for (init in GRIDSEARCH_INITS) {
+        for (threshold in GRIDSEARCH_THRESHOLDS) {
+            cat("\n\n\n")
+            result <- funHDDC(
+                              ecg_fdata,
+                              K = 2,
+                              init = init,
+                              threshold = threshold,
+                              model = model,
+                              itermax = FUNHDDC_ITER_MAX,
+                              nb.rep = 50
+            )
+#             pdf("funHDDC_clusters.pdf")
+#             plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
+            cf_matrix <- table(labels, result$class)
+            print(cf_matrix)
+            ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+            if (ccr < 1 - ccr) {
+                ccr <- 1 - ccr
+            }
+            cat("model:", model, "threshold", threshold, 
+                "init:", init, "ccr:", ccr, "\n")
+            if (ccr >= BEST_CCR) {
+                BEST_CCR <- ccr
+                BEST_INIT <- init
+                BEST_MODEL <- model
+                BEST_THRESHOLD <- threshold
+            }
+        }
+    }
 }
+cat("Best Model:", BEST_MODEL, "\n")
+cat("Best Init:", BEST_INIT, "\n")
+cat("Best Threshold:", BEST_THRESHOLD, "\n")
+cat("Highest CCR:", BEST_CCR, "\n")
