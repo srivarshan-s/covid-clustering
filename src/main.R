@@ -81,6 +81,21 @@ change_labels <- function(labels) {
     return(labels)
 }
 
+find_misclassified_labels <- function(labels, outlier_labels) {
+    misclassified_labels <- c()
+    for (idx in 1:length(labels)) {
+        if (labels[idx] != result$class[idx]) {
+            misclassified_labels <- append(
+                                           misclassified_labels, 
+                                           paste("rep", as.character(idx), sep = "")
+            )
+        }
+    }
+    cat("Number of misclassified labels:", length(misclassified_labels), "\n")
+    cat("Number of outliers that are misclassified:", 
+        length(intersect(outlier_labels, misclassified_labels)), "\n")
+}
+
 
 
 #################### MAIN CODE #################################
@@ -157,6 +172,8 @@ lines(plot_fdata, col = "black")
 # Outlier detection
 if (DETECT_OUTLIERS) {
 
+    outlier_labels <- c()
+
     # Search for outliers in class 1
     print("Detecting outliers in Class 1.....")
     drops <- c("X1")
@@ -181,6 +198,7 @@ if (DETECT_OUTLIERS) {
               col = "blue"
         )
     }
+    outlier_labels <- append(outlier_labels, ecg_outliers$outliers)
 
     # Search for outliers in class 2
     print("Detecting outliers in Class 2.....")
@@ -206,6 +224,7 @@ if (DETECT_OUTLIERS) {
               col = "blue"
         )
     }
+    outlier_labels <- append(outlier_labels, ecg_outliers$outliers)
 }
 
 # # funHDDC algorithm
@@ -230,71 +249,58 @@ if (DETECT_OUTLIERS) {
 # }
 # plot.fd(ecg_fdata, col = result$class, lwd = 2, lty = 1)
 # cf_matrix <- table(labels, result$class)
+# ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
 # if (ccr < 1 - ccr) {
 #     labels <- change_labels(labels)
 #     cf_matrix <- table(labels, result$class)
 #     ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
 # }
 # print(cf_matrix)
-# ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
 # cat("The correct classification rate:", ccr * 100, "%\n")
+# find_misclassified_labels(labels, outlier_labels)
 
-# funHDDC gridsearch
-print("Running funHDDC gridsearch.....")
-drops <- c("X1")
-ecg_df <- df[, !(names(df) %in% drops)]
-ecg_fdata <- functional_data(ecg_df)
-GRIDSEARCH_INITS <- c("kmeans", "random")
-GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
-BEST_CCR <- 0
-BEST_INIT <- ""
-BEST_THRESHOLD <- 0
-for (init in GRIDSEARCH_INITS) {
-    for (threshold in GRIDSEARCH_THRESHOLDS) {
-        cat("\n\n\n")
-        set_seed()
-        result <- funHDDC(
-                          ecg_fdata,
-                          K = 2,
-                          init = init,
-                          threshold = threshold,
-                          model = MODELS,
-                          itermax = ITER_MAX,
-        )
-        cf_matrix <- table(labels, result$class)
-        ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-        if (ccr < 1 - ccr) {
-            labels <- change_labels(labels)
-            cf_matrix <- table(labels, result$class)
-            ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-        }
-        print(cf_matrix)
-        cat("threshold", threshold, 
-            "init:", init, "ccr:", ccr, "\n")
-        if (ccr >= BEST_CCR) {
-            BEST_CCR <- ccr
-            BEST_INIT <- init
-            BEST_THRESHOLD <- threshold
-        }
-    }
-}
-cat("Best Init:", BEST_INIT, "\n")
-cat("Best Threshold:", BEST_THRESHOLD, "\n")
-cat("Highest CCR:", BEST_CCR, "\n")
-
-# Find the number of misclassified data
-misclassified_labels <- c()
-for (idx in 1:length(labels)) {
-    if (labels[idx] != result$class[idx]) {
-        misclassified_labels <- append(
-                                       misclassified_labels, 
-                                       paste("rep", as.character(idx), sep = "")
-        )
-    }
-}
-cat("Number of misclassified labels:", length(misclassified_labels), "\n")
-
-# Find the number of outliers that are misclassified
+# # funHDDC gridsearch
+# print("Running funHDDC gridsearch.....")
+# drops <- c("X1")
+# ecg_df <- df[, !(names(df) %in% drops)]
+# ecg_fdata <- functional_data(ecg_df)
+# GRIDSEARCH_INITS <- c("kmeans", "random")
+# GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
+# BEST_CCR <- 0
+# BEST_INIT <- ""
+# BEST_THRESHOLD <- 0
+# for (init in GRIDSEARCH_INITS) {
+#     for (threshold in GRIDSEARCH_THRESHOLDS) {
+#         cat("\n\n\n")
+#         set_seed()
+#         result <- funHDDC(
+#                           ecg_fdata,
+#                           K = 2,
+#                           init = init,
+#                           threshold = threshold,
+#                           model = MODELS,
+#                           itermax = ITER_MAX,
+#         )
+#         cf_matrix <- table(labels, result$class)
+#         ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+#         if (ccr < 1 - ccr) {
+#             labels <- change_labels(labels)
+#             cf_matrix <- table(labels, result$class)
+#             ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+#         }
+#         print(cf_matrix)
+#         cat("threshold", threshold, 
+#             "init:", init, "ccr:", ccr, "\n")
+#         if (ccr >= BEST_CCR) {
+#             BEST_CCR <- ccr
+#             BEST_INIT <- init
+#             BEST_THRESHOLD <- threshold
+#         }
+#     }
+# }
+# cat("Best Init:", BEST_INIT, "\n")
+# cat("Best Threshold:", BEST_THRESHOLD, "\n")
+# cat("Highest CCR:", BEST_CCR, "\n")
 
 # # tfunHDDC algorithm
 # print("Running tfunHDDC algorithm.....")
@@ -323,3 +329,61 @@ cat("Number of misclassified labels:", length(misclassified_labels), "\n")
 # }
 # print(cf_matrix)
 # cat("The correct classification rate:", ccr * 100, "%\n")
+
+# tfunHDDC gridsearch
+print("Running tfunHDDC gridsearch.....")
+drops <- c("X1")
+ecg_df <- df[, !(names(df) %in% drops)]
+ecg_fdata <- functional_data(ecg_df)
+GRIDSEARCH_INITS <- c("kmeans", "random")
+GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
+GRIDSEARCH_DFUPDATE <- c("numeric", "approx")
+GRIDSEARCH_DCONSTR <- c("yes", "no")
+BEST_CCR <- 0
+BEST_INIT <- ""
+BEST_THRESHOLD <- 0
+BEST_DFUPDATE <- ""
+BEST_DCONSTR <- ""
+for (dconstr in GRIDSEARCH_DCONSTR) { for (dfupdate in GRIDSEARCH_DFUPDATE) {
+    for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
+        cat("\n\n\n")
+        set_seed()
+        result <- tfunHDDC(
+                           ecg_fdata,
+                           K = 2,
+                           init = init,
+                           threshold = threshold,
+                           model = MODELS,
+                           itermax = ITER_MAX,
+                           nb.rep = 1,
+                           dfstart = 50,
+                           dfupdate = dfupdate,
+                           dconstr = dconstr
+        )
+        cf_matrix <- table(labels, result$class)
+        ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+        if (ccr < 1 - ccr) {
+            labels <- change_labels(labels)
+            cf_matrix <- table(labels, result$class)
+            ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+        }
+        print(cf_matrix)
+        cat("threshold", threshold, 
+            "init:", init, 
+            "dfupdate:", dfupdate, 
+            "dconstr:", dconstr,
+            "ccr:", ccr, "\n")
+        if (ccr >= BEST_CCR) {
+            BEST_CCR <- ccr
+            BEST_INIT <- init
+            BEST_THRESHOLD <- threshold
+            BEST_DFUPDATE <- dfupdate
+            BEST_DCONSTR <- dconstr
+        }
+    } }
+} }
+cat("Best Init:", BEST_INIT, "\n")
+cat("Best Threshold:", BEST_THRESHOLD, "\n")
+cat("Best Update:", BEST_DFUPDATE, "\n")
+cat("Best Constraint:", BEST_DCONSTR, "\n")
+cat("Highest CCR:", BEST_CCR, "\n")
