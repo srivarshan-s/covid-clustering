@@ -81,7 +81,7 @@ change_labels <- function(labels) {
     return(labels)
 }
 
-find_misclassified_labels <- function(labels, outlier_labels) {
+find_misclassified_labels <- function(result, labels, outlier_labels) {
     misclassified_labels <- c()
     for (idx in 1:length(labels)) {
         if (labels[idx] != result$class[idx]) {
@@ -257,7 +257,7 @@ if (DETECT_OUTLIERS) {
 # }
 # print(cf_matrix)
 # cat("The correct classification rate:", ccr * 100, "%\n")
-# find_misclassified_labels(labels, outlier_labels)
+# find_misclassified_labels(result, labels, outlier_labels)
 
 # # funHDDC gridsearch
 # print("Running funHDDC gridsearch.....")
@@ -311,7 +311,7 @@ set_seed()
 result <- tfunHDDC(
   ecg_fdata,
   K = 2,
-  init = "random", # 'random', 'kmeans'
+  init = "kmeans", # 'random', 'kmeans'
   threshold = 0.001,
   model = MODELS,
   itermax = ITER_MAX,
@@ -329,7 +329,7 @@ if (ccr < 1 - ccr) {
 }
 print(cf_matrix)
 cat("The correct classification rate:", ccr * 100, "%\n")
-find_misclassified_labels(labels, outlier_labels)
+find_misclassified_labels(result, labels, outlier_labels)
 
 # # tfunHDDC gridsearch
 # print("Running tfunHDDC gridsearch.....")
