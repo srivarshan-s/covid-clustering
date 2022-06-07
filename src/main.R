@@ -15,7 +15,7 @@ library("funHDDC")
 #################### GLOBAL VARIABLES ##########################
 DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
-FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
+FOURIER_BASIS <- FALSE # TRUE -> fourier FALSE -> bspline 
 NBASIS_FOURIER <- 11
 NSPLINE_BSPLINE <- 20
 ITER_MAX <- 200
@@ -359,7 +359,7 @@ cat("Highest CCR:", BEST_CCR, "\n")
 #                            threshold = threshold,
 #                            model = MODELS,
 #                            itermax = ITER_MAX,
-#                            nb.rep = 1,
+#                            nb.rep = 20,
 #                            dfstart = 50,
 #                            dfupdate = dfupdate,
 #                            dconstr = dconstr
@@ -377,6 +377,7 @@ cat("Highest CCR:", BEST_CCR, "\n")
 #             "dfupdate:", dfupdate, 
 #             "dconstr:", dconstr,
 #             "ccr:", ccr, "\n")
+#         find_misclassified_labels(result, labels, outlier_labels)
 #         if (ccr >= BEST_CCR) {
 #             BEST_CCR <- ccr
 #             BEST_INIT <- init
@@ -386,6 +387,7 @@ cat("Highest CCR:", BEST_CCR, "\n")
 #         }
 #     } }
 # } }
+# cat("\n\n\n")
 # cat("Best Init:", BEST_INIT, "\n")
 # cat("Best Threshold:", BEST_THRESHOLD, "\n")
 # cat("Best Update:", BEST_DFUPDATE, "\n")
