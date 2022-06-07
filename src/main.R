@@ -13,9 +13,9 @@ library("funHDDC")
 
 
 #################### GLOBAL VARIABLES ##########################
-DETECT_OUTLIERS <- TRUE
+DETECT_OUTLIERS <- FALSE
 OUTLIER_TRIM <- 0.1
-FOURIER_BASIS <- FALSE # TRUE -> fourier FALSE -> bspline 
+FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
 NBASIS_FOURIER <- 11
 NSPLINE_BSPLINE <- 20
 ITER_MAX <- 200
@@ -102,18 +102,18 @@ find_misclassified_labels <- function(result, labels, outlier_labels) {
 
 # Read train data
 df_train <- read_tsv("data/ECG200_TRAIN.tsv", col_names = FALSE)
-print("Training data")
-print(df_train)
+# print("Training data")
+# print(df_train)
 
 # Read test data
 df_test <- read_tsv("data/ECG200_TEST.tsv", col_names = FALSE)
-print("Testing data")
-print(df_test)
+# print("Testing data")
+# print(df_test)
 
 # Merging the two dataframes
 df <- rbind(df_train, df_test)
-print("Merged data")
-print(df)
+# print("Merged data")
+# print(df)
 
 # Extract the labels
 labels <- extract_labels(df)
@@ -121,10 +121,10 @@ labels <- extract_labels(df)
 # Extracting the two classes
 df_class_1 <- filter(df, X1 == "-1")
 df_class_2 <- filter(df, X1 == "1")
-print("Class 1")
-print(df_class_1)
-print("Class 2")
-print(df_class_2)
+# print("Class 1")
+# print(df_class_1)
+# print("Class 2")
+# print(df_class_2)
 
 # Plot class 1
 drops <- c("X1")
@@ -280,6 +280,7 @@ for (init in GRIDSEARCH_INITS) {
                           threshold = threshold,
                           model = MODELS,
                           itermax = ITER_MAX,
+                          nb.rep = 20
         )
         cf_matrix <- table(labels, result$class)
         ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
