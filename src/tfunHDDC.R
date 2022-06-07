@@ -230,7 +230,7 @@ tfunHDDC  <-
     
     # Display
     if(show){
-      if(n>1) cat("cfunHDDC: \n")
+      if(n>1) cat("tfunHDDC: \n")
       
       model2print = sapply(model, function(x) sprintf("%*s", max(nchar(model)), x))
       K2print = as.character(K)
@@ -436,7 +436,7 @@ tfunHDDC  <-
   params$ICL = bic_icl$icl
   
   # We set the class
-  class(params) <- 'cfunHDDC'
+  class(params) <- 'tfunHDDC'
   
   return(params)
 }
