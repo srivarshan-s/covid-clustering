@@ -15,7 +15,7 @@ library("funHDDC")
 #################### GLOBAL VARIABLES ##########################
 DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
-FOURIER_BASIS <- FALSE # TRUE -> fourier FALSE -> bspline 
+FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
 NBASIS_FOURIER <- 11
 NSPLINE_BSPLINE <- 20
 ITER_MAX <- 200
@@ -359,7 +359,7 @@ for (dconstr in GRIDSEARCH_DCONSTR) { for (dfupdate in GRIDSEARCH_DFUPDATE) {
                            threshold = threshold,
                            model = MODELS,
                            itermax = ITER_MAX,
-                           nb.rep = 20,
+                           nb.rep = 1,
                            dfstart = 50,
                            dfupdate = dfupdate,
                            dconstr = dconstr
