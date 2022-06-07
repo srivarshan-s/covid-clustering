@@ -1,53 +1,64 @@
+[1] "done"
+[1] "done"
+[1] "done"
+[1] "Detecting outliers in Class 1....."
+Number of outliers in Class 1: 1 
+[1] "Detecting outliers in Class 2....."
+Number of outliers in Class 2: 21 
 [1] "Running funHDDC gridsearch....."
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2     0.001        151 -5,236.90
-2  AKJBQKDK 2     0.001        150 -5,281.87
+1 AKJBKQKDK 2     0.001        151 -5,235.54
+2  AKJBQKDK 2     0.001        150 -5,252.88
 3  AKBKQKDK 2     0.001        135 -6,954.76
 4   AKBQKDK 2     0.001        134 -6,963.31
-5    ABQKDK 2     0.001        133 -6,979.49
-6   ABKQKDK 2     0.001        134 -7,392.76
+5   ABKQKDK 2     0.001        134 -6,970.59
+6    ABQKDK 2     0.001        133 -6,979.49
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1 110  23
-     2  42  25
-threshold 0.001 init: kmeans ccr: 0.675 
+     1  39  28
+     2  20 113
+threshold 0.001 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2      0.01        140 -5,356.89
-2 AKJBKQKDK 2      0.01        111 -5,596.79
+1 AKJBKQKDK 2      0.01        141 -5,331.28
+2  AKJBQKDK 2      0.01        140 -5,356.89
 3  AKBKQKDK 2      0.01        128 -6,328.65
-4   AKBQKDK 2      0.01        127 -6,359.96
-5   ABKQKDK 2      0.01        120 -6,378.32
+4   ABKQKDK 2      0.01        127 -6,355.79
+5   AKBQKDK 2      0.01        127 -6,359.96
 6    ABQKDK 2      0.01        126 -6,387.14
 
-SELECTED: model  AKJBQKDK  with  2  clusters.
+SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
      1  38  29
      2  20 113
 threshold 0.01 init: kmeans ccr: 0.755 
+Number of misclassified labels: 49 
+Number of outliers that are misclassified: 2 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
 1 AKJBKQKDK 2      0.05        106 -5,586.75
-2  AKJBQKDK 2      0.05         92 -5,780.61
-3   AKBQKDK 2      0.05         87 -5,924.81
-4  AKBKQKDK 2      0.05         88 -5,929.76
-5   ABKQKDK 2      0.05         90 -5,934.52
-6    ABQKDK 2      0.05         86 -5,940.07
+2  AKJBQKDK 2      0.05        105 -5,616.40
+3    ABQKDK 2      0.05         84 -5,790.43
+4   AKBQKDK 2      0.05         85 -5,795.71
+5  AKBKQKDK 2      0.05         91 -5,911.63
+6   ABKQKDK 2      0.05         90 -5,934.52
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
@@ -56,55 +67,61 @@ labels   1   2
      1 115  18
      2  42  25
 threshold 0.05 init: kmeans ccr: 0.7 
+Number of misclassified labels: 60 
+Number of outliers that are misclassified: 7 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2       0.1         84 -5,806.83
-2 AKJBKQKDK 2       0.1         76 -5,846.87
+1 AKJBKQKDK 2       0.1         85 -5,803.01
+2  AKJBQKDK 2       0.1         84 -5,806.83
 3  AKBKQKDK 2       0.1         81 -5,911.38
-4   AKBQKDK 2       0.1         80 -5,915.26
-5    ABQKDK 2       0.1         79 -5,916.42
-6   ABKQKDK 2       0.1         72 -5,934.58
+4   ABKQKDK 2       0.1         80 -5,912.31
+5   AKBQKDK 2       0.1         80 -5,915.26
+6    ABQKDK 2       0.1         79 -5,916.42
 
-SELECTED: model  AKJBQKDK  with  2  clusters.
+SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
      1  40  27
      2  21 112
 threshold 0.1 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
-1  AKBKQKDK 2       0.2         81 -5,911.38
-2   AKBQKDK 2       0.2         80 -5,915.26
-3    ABQKDK 2       0.2         79 -5,916.42
-4  AKJBQKDK 2       0.2         65 -6,087.54
-5 AKJBKQKDK 2       0.2         66 -6,228.92
-6   ABKQKDK 2       0.2         63 -6,252.26
+1 AKJBKQKDK 2       0.2         85 -5,803.01
+2  AKBKQKDK 2       0.2         81 -5,911.38
+3   ABKQKDK 2       0.2         80 -5,912.31
+4   AKBQKDK 2       0.2         80 -5,915.26
+5    ABQKDK 2       0.2         79 -5,916.42
+6  AKJBQKDK 2       0.2         65 -6,087.54
 
-SELECTED: model  AKBKQKDK  with  2  clusters.
+SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1 112  21
-     2  27  40
+     1  40  27
+     2  21 112
 threshold 0.2 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
 1 AKJBKQKDK 2       0.3         66 -6,228.92
-2   ABKQKDK 2       0.3         63 -6,252.26
-3  AKBKQKDK 2       0.3         47 -6,652.50
-4    ABQKDK 2       0.3         45 -6,655.55
-5  AKJBQKDK 2       0.3         46 -6,656.71
-6   AKBQKDK 2       0.3         46 -6,656.71
+2  AKBKQKDK 2       0.3         64 -6,237.57
+3  AKJBQKDK 2       0.3         65 -6,243.56
+4   AKBQKDK 2       0.3         63 -6,248.74
+5   ABKQKDK 2       0.3         63 -6,252.26
+6    ABQKDK 2       0.3         62 -6,262.41
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
@@ -113,25 +130,29 @@ labels  1  2
      1 92 41
      2 40 27
 threshold 0.3 init: kmeans ccr: 0.595 
+Number of misclassified labels: 81 
+Number of outliers that are misclassified: 13 
 
 
 
 funHDDC: 
       model K threshold complexity       BIC
-1   ABKQKDK 2       0.4         55 -6,402.53
-2 AKJBKQKDK 2       0.4         57 -6,406.23
-3  AKBKQKDK 2       0.4         47 -6,652.50
-4    ABQKDK 2       0.4         45 -6,655.55
-5  AKJBQKDK 2       0.4         46 -6,656.71
-6   AKBQKDK 2       0.4         46 -6,656.71
+1    ABQKDK 2       0.4         54 -6,398.39
+2   AKBQKDK 2       0.4         55 -6,398.67
+3  AKJBQKDK 2       0.4         56 -6,402.19
+4   ABKQKDK 2       0.4         55 -6,402.53
+5  AKBKQKDK 2       0.4         56 -6,402.81
+6 AKJBKQKDK 2       0.4         57 -6,406.23
 
-SELECTED: model  ABKQKDK  with  2  clusters.
+SELECTED: model  ABQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1  24  43
-     2  15 118
+     1 118  15
+     2  43  24
 threshold 0.4 init: kmeans ccr: 0.71 
+Number of misclassified labels: 58 
+Number of outliers that are misclassified: 7 
 
 
 
@@ -151,6 +172,8 @@ labels   1   2
      1  62   5
      2  27 106
 threshold 0.001 init: random ccr: 0.84 
+Number of misclassified labels: 32 
+Number of outliers that are misclassified: 4 
 
 
 
@@ -170,6 +193,8 @@ labels   1   2
      1 105  28
      2   6  61
 threshold 0.01 init: random ccr: 0.83 
+Number of misclassified labels: 34 
+Number of outliers that are misclassified: 4 
 
 
 
@@ -189,6 +214,8 @@ labels   1   2
      1  61   6
      2  29 104
 threshold 0.05 init: random ccr: 0.825 
+Number of misclassified labels: 35 
+Number of outliers that are misclassified: 4 
 
 
 
@@ -208,6 +235,8 @@ labels  1  2
      1 65  2
      2 37 96
 threshold 0.1 init: random ccr: 0.805 
+Number of misclassified labels: 39 
+Number of outliers that are misclassified: 3 
 
 
 
@@ -227,6 +256,8 @@ labels  1  2
      1 61  6
      2 36 97
 threshold 0.2 init: random ccr: 0.79 
+Number of misclassified labels: 42 
+Number of outliers that are misclassified: 4 
 
 
 
@@ -246,6 +277,8 @@ labels  1  2
      1 97 36
      2  6 61
 threshold 0.3 init: random ccr: 0.79 
+Number of misclassified labels: 42 
+Number of outliers that are misclassified: 4 
 
 
 
@@ -265,7 +298,11 @@ labels  1  2
      1 61  6
      2 38 95
 threshold 0.4 init: random ccr: 0.78 
+Number of misclassified labels: 44 
+Number of outliers that are misclassified: 4 
+
+
+
 Best Init: random 
 Best Threshold: 0.001 
 Highest CCR: 0.84 
-Number of misclassified labels: 44 

@@ -1,1178 +1,308 @@
-[1] "Training data"
-[38;5;246m# A tibble: 100 × 97[39m
-      X1    X2    X3    X4    X5     X6     X7      X8     X9     X10     X11
-   [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m 1[39m    -[31m1[39m 0.502 0.542 0.722 1.43  2.14    2.28   1.94    1.47   1.01    0.380 
-[38;5;250m 2[39m     1 0.148 0.805 0.368 0.244 0.026[4m6[24m -[31m0[39m[31m.[39m[31m274[39m  0.096[4m7[24m -[31m0[39m[31m.[39m[31m748[39m -[31m1[39m[31m.[39m[31m61[39m   -[31m1[39m[31m.[39m[31m18[39m  
-[38;5;250m 3[39m    -[31m1[39m 0.317 0.243 0.370 1.06  1.68    1.76   1.70    1.61   1.17    0.500 
-[38;5;250m 4[39m    -[31m1[39m 1.17  2.08  1.76  1.61  1.95    1.30   0.459   0.516  0.852   0.989 
-[38;5;250m 5[39m     1 0.649 0.752 2.64  3.46  2.12    0.521 -[31m0[39m[31m.[39m[31m189[39m   0.781  0.934   0.701 
-[38;5;250m 6[39m     1 0.405 1.28  2.52  1.30  1.45    0.474 -[31m1[39m[31m.[39m[31m40[39m   -[31m0[39m[31m.[39m[31m647[39m  0.432   0.132 
-[38;5;250m 7[39m    -[31m1[39m 1.21  2.03  2.45  2.74  2.75    2.28   1.53    0.761  0.188  -[31m0[39m[31m.[39m[31m0[39m[31m29[4m1[24m[39m
-[38;5;250m 8[39m    -[31m1[39m 0.598 1.10  1.68  2.48  2.80    2.44   1.72    1.01   0.257  -[31m0[39m[31m.[39m[31m222[39m 
-[38;5;250m 9[39m     1 0.328 1.21  2.60  2.21  1.62   -[31m0[39m[31m.[39m[31m239[39m -[31m1[39m[31m.[39m[31m60[39m   -[31m0[39m[31m.[39m[31m602[39m -[31m0[39m[31m.[39m[31m0[39m[31m86[4m6[24m[39m  0.026[4m6[24m
-[38;5;250m10[39m     1 1.67  2.85  2.52  2.17  0.720   0.725  1.64    1.29   1.61    1.40  
-[38;5;246m# … with 90 more rows, and 86 more variables: X12 <dbl>, X13 <dbl>, X14 <dbl>,[39m
-[38;5;246m#   X15 <dbl>, X16 <dbl>, X17 <dbl>, X18 <dbl>, X19 <dbl>, X20 <dbl>,[39m
-[38;5;246m#   X21 <dbl>, X22 <dbl>, X23 <dbl>, X24 <dbl>, X25 <dbl>, X26 <dbl>,[39m
-[38;5;246m#   X27 <dbl>, X28 <dbl>, X29 <dbl>, X30 <dbl>, X31 <dbl>, X32 <dbl>,[39m
-[38;5;246m#   X33 <dbl>, X34 <dbl>, X35 <dbl>, X36 <dbl>, X37 <dbl>, X38 <dbl>,[39m
-[38;5;246m#   X39 <dbl>, X40 <dbl>, X41 <dbl>, X42 <dbl>, X43 <dbl>, X44 <dbl>,[39m
-[38;5;246m#   X45 <dbl>, X46 <dbl>, X47 <dbl>, X48 <dbl>, X49 <dbl>, X50 <dbl>, …[39m
-[1] "Testing data"
-[38;5;246m# A tibble: 100 × 97[39m
-      X1    X2    X3    X4    X5      X6     X7     X8     X9      X10     X11
-   [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m    [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m 1[39m     1 0.425 1.42  2.67   3.30  2.26    0.165 -[31m0[39m[31m.[39m[31m960[39m  0.283  0.843    0.683 
-[38;5;250m 2[39m     1 0.654 2.18  3.64   2.28  0.978  -[31m0[39m[31m.[39m[31m388[39m -[31m0[39m[31m.[39m[31m912[39m -[31m0[39m[31m.[39m[31m148[39m  0.305   -[31m0[39m[31m.[39m[31m230[39m 
-[38;5;250m 3[39m     1 0.405 0.554 0.724  1.45  2.01    1.62   1.20   1.12   0.562   -[31m0[39m[31m.[39m[31m0[39m[31m11[4m6[24m[39m
-[38;5;250m 4[39m     1 1.09  2.01  2.30   1.63  0.637  -[31m0[39m[31m.[39m[31m141[39m  0.548  1.08   0.897    1.14  
-[38;5;250m 5[39m    -[31m1[39m 0.444 0.947 1.92   2.16  1.50    0.965  0.223 -[31m0[39m[31m.[39m[31m425[39m  0.121    0.830 
-[38;5;250m 6[39m     1 0.209 1.27  2.82   3.59  2.22    0.570 -[31m0[39m[31m.[39m[31m939[39m -[31m0[39m[31m.[39m[31m813[39m -[31m0[39m[31m.[39m[31m00[39m[31m9[4m3[24m[4m6[24m[39m -[31m0[39m[31m.[39m[31m266[39m 
-[38;5;250m 7[39m     1 1.09  1.85  1.83   1.55  1.38    1.00   0.255 -[31m0[39m[31m.[39m[31m333[39m -[31m0[39m[31m.[39m[31m444[39m   -[31m0[39m[31m.[39m[31m138[39m 
-[38;5;250m 8[39m     1 1.71  2.75  1.68   1.24 -[31m0[39m[31m.[39m[31m0[39m[31m38[4m0[24m[39m -[31m0[39m[31m.[39m[31m218[39m  0.790  0.547  0.302    0.339 
-[38;5;250m 9[39m     1 1.62  2.95  2.70   2.70  1.07    0.210  1.16   1.38   0.995    0.948 
-[38;5;250m10[39m    -[31m1[39m 0.796 0.950 1.15   1.75  2.43    2.67   2.46   2.07   1.62     1.09  
-[38;5;246m# … with 90 more rows, and 86 more variables: X12 <dbl>, X13 <dbl>, X14 <dbl>,[39m
-[38;5;246m#   X15 <dbl>, X16 <dbl>, X17 <dbl>, X18 <dbl>, X19 <dbl>, X20 <dbl>,[39m
-[38;5;246m#   X21 <dbl>, X22 <dbl>, X23 <dbl>, X24 <dbl>, X25 <dbl>, X26 <dbl>,[39m
-[38;5;246m#   X27 <dbl>, X28 <dbl>, X29 <dbl>, X30 <dbl>, X31 <dbl>, X32 <dbl>,[39m
-[38;5;246m#   X33 <dbl>, X34 <dbl>, X35 <dbl>, X36 <dbl>, X37 <dbl>, X38 <dbl>,[39m
-[38;5;246m#   X39 <dbl>, X40 <dbl>, X41 <dbl>, X42 <dbl>, X43 <dbl>, X44 <dbl>,[39m
-[38;5;246m#   X45 <dbl>, X46 <dbl>, X47 <dbl>, X48 <dbl>, X49 <dbl>, X50 <dbl>, …[39m
-[1] "Merged data"
-[38;5;246m# A tibble: 200 × 97[39m
-      X1    X2    X3    X4    X5     X6     X7      X8     X9     X10     X11
-   [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m 1[39m    -[31m1[39m 0.502 0.542 0.722 1.43  2.14    2.28   1.94    1.47   1.01    0.380 
-[38;5;250m 2[39m     1 0.148 0.805 0.368 0.244 0.026[4m6[24m -[31m0[39m[31m.[39m[31m274[39m  0.096[4m7[24m -[31m0[39m[31m.[39m[31m748[39m -[31m1[39m[31m.[39m[31m61[39m   -[31m1[39m[31m.[39m[31m18[39m  
-[38;5;250m 3[39m    -[31m1[39m 0.317 0.243 0.370 1.06  1.68    1.76   1.70    1.61   1.17    0.500 
-[38;5;250m 4[39m    -[31m1[39m 1.17  2.08  1.76  1.61  1.95    1.30   0.459   0.516  0.852   0.989 
-[38;5;250m 5[39m     1 0.649 0.752 2.64  3.46  2.12    0.521 -[31m0[39m[31m.[39m[31m189[39m   0.781  0.934   0.701 
-[38;5;250m 6[39m     1 0.405 1.28  2.52  1.30  1.45    0.474 -[31m1[39m[31m.[39m[31m40[39m   -[31m0[39m[31m.[39m[31m647[39m  0.432   0.132 
-[38;5;250m 7[39m    -[31m1[39m 1.21  2.03  2.45  2.74  2.75    2.28   1.53    0.761  0.188  -[31m0[39m[31m.[39m[31m0[39m[31m29[4m1[24m[39m
-[38;5;250m 8[39m    -[31m1[39m 0.598 1.10  1.68  2.48  2.80    2.44   1.72    1.01   0.257  -[31m0[39m[31m.[39m[31m222[39m 
-[38;5;250m 9[39m     1 0.328 1.21  2.60  2.21  1.62   -[31m0[39m[31m.[39m[31m239[39m -[31m1[39m[31m.[39m[31m60[39m   -[31m0[39m[31m.[39m[31m602[39m -[31m0[39m[31m.[39m[31m0[39m[31m86[4m6[24m[39m  0.026[4m6[24m
-[38;5;250m10[39m     1 1.67  2.85  2.52  2.17  0.720   0.725  1.64    1.29   1.61    1.40  
-[38;5;246m# … with 190 more rows, and 86 more variables: X12 <dbl>, X13 <dbl>, X14 <dbl>,[39m
-[38;5;246m#   X15 <dbl>, X16 <dbl>, X17 <dbl>, X18 <dbl>, X19 <dbl>, X20 <dbl>,[39m
-[38;5;246m#   X21 <dbl>, X22 <dbl>, X23 <dbl>, X24 <dbl>, X25 <dbl>, X26 <dbl>,[39m
-[38;5;246m#   X27 <dbl>, X28 <dbl>, X29 <dbl>, X30 <dbl>, X31 <dbl>, X32 <dbl>,[39m
-[38;5;246m#   X33 <dbl>, X34 <dbl>, X35 <dbl>, X36 <dbl>, X37 <dbl>, X38 <dbl>,[39m
-[38;5;246m#   X39 <dbl>, X40 <dbl>, X41 <dbl>, X42 <dbl>, X43 <dbl>, X44 <dbl>,[39m
-[38;5;246m#   X45 <dbl>, X46 <dbl>, X47 <dbl>, X48 <dbl>, X49 <dbl>, X50 <dbl>, …[39m
-[1] "Class 1"
-[38;5;246m# A tibble: 67 × 97[39m
-      X1    X2    X3    X4    X5      X6    X7    X8    X9    X10     X11
-   [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m 1[39m    -[31m1[39m 0.502 0.542 0.722 1.43   2.14   2.28  1.94  1.47   1.01   0.380 
-[38;5;250m 2[39m    -[31m1[39m 0.317 0.243 0.370 1.06   1.68   1.76  1.70  1.61   1.17   0.500 
-[38;5;250m 3[39m    -[31m1[39m 1.17  2.08  1.76  1.61   1.95   1.30  0.459 0.516  0.852  0.989 
-[38;5;250m 4[39m    -[31m1[39m 1.21  2.03  2.45  2.74   2.75   2.28  1.53  0.761  0.188 -[31m0[39m[31m.[39m[31m0[39m[31m29[4m1[24m[39m
-[38;5;250m 5[39m    -[31m1[39m 0.598 1.10  1.68  2.48   2.80   2.44  1.72  1.01   0.257 -[31m0[39m[31m.[39m[31m222[39m 
-[38;5;250m 6[39m    -[31m1[39m 0.501 0.729 0.834 1.26   2.00   2.50  2.45  2.22   2.12   1.92  
-[38;5;250m 7[39m    -[31m1[39m 1.09  1.56  1.37  1.25   1.49   1.68  1.23  0.344 -[31m0[39m[31m.[39m[31m335[39m -[31m0[39m[31m.[39m[31m729[39m 
-[38;5;250m 8[39m    -[31m1[39m 0.526 1.01  1.79  2.36   2.30   2.09  1.97  1.51   0.750  0.115 
-[38;5;250m 9[39m    -[31m1[39m 1.35  2.83  2.64  1.22  -[31m0[39m[31m.[39m[31m0[39m[31m56[4m7[24m[39m 1.20  0.725 0.967  0.550 -[31m0[39m[31m.[39m[31m989[39m 
-[38;5;250m10[39m    -[31m1[39m 0.203 0.462 0.748 0.997  0.999  0.849 0.876 1.01   0.808  0.161 
-[38;5;246m# … with 57 more rows, and 86 more variables: X12 <dbl>, X13 <dbl>, X14 <dbl>,[39m
-[38;5;246m#   X15 <dbl>, X16 <dbl>, X17 <dbl>, X18 <dbl>, X19 <dbl>, X20 <dbl>,[39m
-[38;5;246m#   X21 <dbl>, X22 <dbl>, X23 <dbl>, X24 <dbl>, X25 <dbl>, X26 <dbl>,[39m
-[38;5;246m#   X27 <dbl>, X28 <dbl>, X29 <dbl>, X30 <dbl>, X31 <dbl>, X32 <dbl>,[39m
-[38;5;246m#   X33 <dbl>, X34 <dbl>, X35 <dbl>, X36 <dbl>, X37 <dbl>, X38 <dbl>,[39m
-[38;5;246m#   X39 <dbl>, X40 <dbl>, X41 <dbl>, X42 <dbl>, X43 <dbl>, X44 <dbl>,[39m
-[38;5;246m#   X45 <dbl>, X46 <dbl>, X47 <dbl>, X48 <dbl>, X49 <dbl>, X50 <dbl>, …[39m
-[1] "Class 2"
-[38;5;246m# A tibble: 133 × 97[39m
-      X1     X2     X3    X4     X5      X6      X7      X8     X9     X10
-   [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m  [3m[38;5;246m<dbl>[39m[23m   [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m 1[39m     1  0.148  0.805 0.368  0.244  0.026[4m6[24m -[31m0[39m[31m.[39m[31m274[39m   0.096[4m7[24m -[31m0[39m[31m.[39m[31m748[39m -[31m1[39m[31m.[39m[31m61[39m  
-[38;5;250m 2[39m     1  0.649  0.752 2.64   3.46   2.12    0.521  -[31m0[39m[31m.[39m[31m189[39m   0.781  0.934 
-[38;5;250m 3[39m     1  0.405  1.28  2.52   1.30   1.45    0.474  -[31m1[39m[31m.[39m[31m40[39m   -[31m0[39m[31m.[39m[31m647[39m  0.432 
-[38;5;250m 4[39m     1  0.328  1.21  2.60   2.21   1.62   -[31m0[39m[31m.[39m[31m239[39m  -[31m1[39m[31m.[39m[31m60[39m   -[31m0[39m[31m.[39m[31m602[39m -[31m0[39m[31m.[39m[31m0[39m[31m86[4m6[24m[39m
-[38;5;250m 5[39m     1  1.67   2.85  2.52   2.17   0.720   0.725   1.64    1.29   1.61  
-[38;5;250m 6[39m     1  0.482  0.987 1.44   2.19   2.52    1.88    1.09    0.353 -[31m0[39m[31m.[39m[31m294[39m 
-[38;5;250m 7[39m     1  0.275  0.481 0.919  1.54   2.05    2.25    1.88    1.22   0.581 
-[38;5;250m 8[39m     1 -[31m0[39m[31m.[39m[31m706[39m -[31m0[39m[31m.[39m[31m226[39m 0.216 -[31m0[39m[31m.[39m[31m318[39m -[31m0[39m[31m.[39m[31m649[39m  -[31m1[39m[31m.[39m[31m22[39m   -[31m1[39m[31m.[39m[31m52[39m   -[31m1[39m[31m.[39m[31m51[39m  -[31m1[39m[31m.[39m[31m55[39m  
-[38;5;250m 9[39m     1  0.988  2.81  3.85   2.38   1.70    0.078[4m6[24m -[31m0[39m[31m.[39m[31m597[39m   0.827  0.871 
-[38;5;250m10[39m     1  2.25   3.54  2.89   2.72   0.862   0.376   1.64    1.28   1.16  
-[38;5;246m# … with 123 more rows, and 87 more variables: X11 <dbl>, X12 <dbl>, X13 <dbl>,[39m
-[38;5;246m#   X14 <dbl>, X15 <dbl>, X16 <dbl>, X17 <dbl>, X18 <dbl>, X19 <dbl>,[39m
-[38;5;246m#   X20 <dbl>, X21 <dbl>, X22 <dbl>, X23 <dbl>, X24 <dbl>, X25 <dbl>,[39m
-[38;5;246m#   X26 <dbl>, X27 <dbl>, X28 <dbl>, X29 <dbl>, X30 <dbl>, X31 <dbl>,[39m
-[38;5;246m#   X32 <dbl>, X33 <dbl>, X34 <dbl>, X35 <dbl>, X36 <dbl>, X37 <dbl>,[39m
-[38;5;246m#   X38 <dbl>, X39 <dbl>, X40 <dbl>, X41 <dbl>, X42 <dbl>, X43 <dbl>,[39m
-[38;5;246m#   X44 <dbl>, X45 <dbl>, X46 <dbl>, X47 <dbl>, X48 <dbl>, X49 <dbl>, …[39m
 [1] "done"
 [1] "done"
 [1] "done"
-[1] "Running tfunHDDC gridsearch....."
+[1] "Detecting outliers in Class 1....."
+Number of outliers in Class 1: 1 
+[1] "Detecting outliers in Class 2....."
+Number of outliers in Class 2: 21 
+[1] "Running funHDDC gridsearch....."
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2     0.001        151 -4,653.84
-2 AKJBKQKDK 2     0.001        152 -4,866.89
-3    ABQKDK 2     0.001        134 -6,017.44
-4   AKBQKDK 2     0.001        135 -6,018.13
-5  AKBKQKDK 2     0.001        136 -6,022.98
-6   ABKQKDK 2     0.001        135 -6,669.88
+1 AKJBKQKDK 2     0.001        151 -5,235.54
+2  AKJBQKDK 2     0.001        150 -5,252.88
+3  AKBKQKDK 2     0.001        135 -6,954.76
+4   AKBQKDK 2     0.001        134 -6,963.31
+5   ABKQKDK 2     0.001        134 -6,970.59
+6    ABQKDK 2     0.001        133 -6,979.49
 
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  38  29
-     2  20 113
-threshold 0.001 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.01        136 -4,795.53
-2 AKJBKQKDK 2      0.01        120 -5,033.59
-3    ABQKDK 2      0.01        132 -5,914.55
-4  AKBKQKDK 2      0.01        134 -5,915.38
-5   AKBQKDK 2      0.01        133 -5,917.53
-6   ABKQKDK 2      0.01        135 -6,669.89
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
+SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
      1  39  28
      2  20 113
-threshold 0.01 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.76 
+threshold 0.001 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2      0.05        101 -5,003.75
-2    ABQKDK 2      0.05         94 -5,191.47
-3   AKBQKDK 2      0.05         95 -5,196.75
-4  AKBKQKDK 2      0.05         96 -5,198.08
-5 AKJBKQKDK 2      0.05         98 -5,307.96
-6   ABKQKDK 2      0.05         99 -5,430.94
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  33  34
-     2  19 114
-threshold 0.05 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.735 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2       0.1         85 -5,170.92
-2    ABQKDK 2       0.1         80 -5,268.61
-3  AKBKQKDK 2       0.1         82 -5,271.11
-4   AKBQKDK 2       0.1         81 -5,273.91
-5 AKJBKQKDK 2       0.1         77 -5,378.78
-6   ABKQKDK 2       0.1         73 -5,436.95
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  20 113
-threshold 0.1 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.2         64 -5,342.47
-2 AKJBKQKDK 2       0.2         58 -5,397.94
-3  AKJBQKDK 2       0.2         57 -5,410.99
-4  AKBKQKDK 2       0.2         57 -5,415.06
-5    ABQKDK 2       0.2         55 -5,422.92
-6   AKBQKDK 2       0.2         56 -5,428.22
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  31  36
-threshold 0.2 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.3         46 -5,761.67
-2  AKBKQKDK 2       0.3         48 -5,764.62
-3  AKJBQKDK 2       0.3         47 -5,765.95
-4   AKBQKDK 2       0.3         47 -5,765.95
-5   ABKQKDK 2       0.3         56 -6,050.07
-6 AKJBKQKDK 2       0.3         58 -6,057.25
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.3 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.4         46 -5,761.67
-2  AKBKQKDK 2       0.4         48 -5,764.62
-3  AKJBQKDK 2       0.4         47 -5,765.95
-4   AKBQKDK 2       0.4         47 -5,765.95
-5   ABKQKDK 2       0.4         56 -6,050.07
-6 AKJBKQKDK 2       0.4         58 -6,057.25
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.4 init: kmeans dfupdate: numeric dconstr: yes ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2     0.001        152 -4,579.38
-2  AKJBQKDK 2     0.001        151 -4,611.53
-3    ABQKDK 2     0.001        134 -6,017.44
-4   AKBQKDK 2     0.001        135 -6,018.13
-5   ABKQKDK 2     0.001        135 -6,022.09
-6  AKBKQKDK 2     0.001        136 -6,022.98
+1 AKJBKQKDK 2      0.01        141 -5,331.28
+2  AKJBQKDK 2      0.01        140 -5,356.89
+3  AKBKQKDK 2      0.01        128 -6,328.65
+4   ABKQKDK 2      0.01        127 -6,355.79
+5   AKBQKDK 2      0.01        127 -6,359.96
+6    ABQKDK 2      0.01        126 -6,387.14
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels  1  2
-     1 98 35
-     2  6 61
-threshold 0.001 init: random dfupdate: numeric dconstr: yes ccr: 0.795 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.01        140 -4,662.99
-2  AKJBQKDK 2      0.01        145 -4,742.45
-3  AKBKQKDK 2      0.01        127 -5,858.15
-4    ABQKDK 2      0.01        132 -5,914.55
-5   AKBQKDK 2      0.01        133 -5,917.53
-6   ABKQKDK 2      0.01        133 -5,918.96
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels  1  2
-     1 61  6
-     2 35 98
-threshold 0.01 init: random dfupdate: numeric dconstr: yes ccr: 0.795 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.05        115 -4,962.87
-2  AKJBQKDK 2      0.05         91 -5,071.30
-3   AKBQKDK 2      0.05        101 -5,225.76
-4   ABKQKDK 2      0.05        113 -5,279.37
-5  AKBKQKDK 2      0.05        114 -5,284.23
-6    ABQKDK 2      0.05        112 -5,308.13
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 124   9
-     2  32  35
-threshold 0.05 init: random dfupdate: numeric dconstr: yes ccr: 0.795 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.1         94 -5,087.97
-2  AKJBQKDK 2       0.1         84 -5,113.25
-3  AKBKQKDK 2       0.1         89 -5,172.60
-4   ABKQKDK 2       0.1         88 -5,186.96
-5    ABQKDK 2       0.1         94 -5,205.45
-6   AKBQKDK 2       0.1         88 -5,255.21
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  10  57
-threshold 0.1 init: random dfupdate: numeric dconstr: yes ccr: 0.855 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.2         75 -5,154.72
-2   ABKQKDK 2       0.2         71 -5,238.63
-3    ABQKDK 2       0.2         70 -5,248.44
-4  AKJBQKDK 2       0.2         74 -5,249.27
-5   AKBQKDK 2       0.2         71 -5,253.16
-6  AKBKQKDK 2       0.2         82 -5,273.73
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  43  24
-     2  22 111
-threshold 0.2 init: random dfupdate: numeric dconstr: yes ccr: 0.77 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.3         65 -5,244.84
-2   ABKQKDK 2       0.3         73 -5,373.08
-3   AKBQKDK 2       0.3         73 -5,375.94
-4    ABQKDK 2       0.3         63 -5,380.64
-5 AKJBKQKDK 2       0.3         67 -5,426.24
-6  AKJBQKDK 2       0.3         66 -5,448.08
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  56  11
-     2  29 104
-threshold 0.3 init: random dfupdate: numeric dconstr: yes ccr: 0.8 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.4         73 -5,373.08
-2    ABQKDK 2       0.4         63 -5,380.64
-3   AKBQKDK 2       0.4         64 -5,385.20
-4  AKJBQKDK 2       0.4         57 -5,410.99
-5  AKBKQKDK 2       0.4         57 -5,415.06
-6 AKJBKQKDK 2       0.4         67 -5,426.24
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  34  33
-     2  10 123
-threshold 0.4 init: random dfupdate: numeric dconstr: yes ccr: 0.785 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2     0.001        151 -4,653.84
-2 AKJBKQKDK 2     0.001        152 -4,866.89
-3    ABQKDK 2     0.001        134 -6,017.44
-4   AKBQKDK 2     0.001        135 -6,018.13
-5  AKBKQKDK 2     0.001        136 -6,022.98
-6   ABKQKDK 2     0.001        135 -6,669.88
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
      1  38  29
      2  20 113
-threshold 0.001 init: kmeans dfupdate: approx dconstr: yes ccr: 0.755 
+threshold 0.01 init: kmeans ccr: 0.755 
+Number of misclassified labels: 49 
+Number of outliers that are misclassified: 2 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2      0.01        136 -4,795.53
-2 AKJBKQKDK 2      0.01        120 -5,033.59
-3    ABQKDK 2      0.01        132 -5,914.55
-4  AKBKQKDK 2      0.01        134 -5,915.38
-5   AKBQKDK 2      0.01        133 -5,917.53
-6   ABKQKDK 2      0.01        135 -6,669.89
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  39  28
-     2  20 113
-threshold 0.01 init: kmeans dfupdate: approx dconstr: yes ccr: 0.76 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.05        101 -5,003.75
-2    ABQKDK 2      0.05         94 -5,191.47
-3   AKBQKDK 2      0.05         95 -5,196.75
-4  AKBKQKDK 2      0.05         96 -5,198.08
-5 AKJBKQKDK 2      0.05         98 -5,307.96
-6   ABKQKDK 2      0.05         99 -5,430.94
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  33  34
-     2  19 114
-threshold 0.05 init: kmeans dfupdate: approx dconstr: yes ccr: 0.735 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2       0.1         85 -5,170.92
-2    ABQKDK 2       0.1         80 -5,268.61
-3  AKBKQKDK 2       0.1         82 -5,271.11
-4   AKBQKDK 2       0.1         81 -5,273.91
-5 AKJBKQKDK 2       0.1         77 -5,378.78
-6   ABKQKDK 2       0.1         73 -5,436.95
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  20 113
-threshold 0.1 init: kmeans dfupdate: approx dconstr: yes ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.2         64 -5,342.47
-2 AKJBKQKDK 2       0.2         58 -5,397.94
-3  AKJBQKDK 2       0.2         57 -5,410.99
-4  AKBKQKDK 2       0.2         57 -5,415.06
-5    ABQKDK 2       0.2         55 -5,422.92
-6   AKBQKDK 2       0.2         56 -5,428.22
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  31  36
-threshold 0.2 init: kmeans dfupdate: approx dconstr: yes ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.3         46 -5,761.67
-2  AKBKQKDK 2       0.3         48 -5,764.62
-3  AKJBQKDK 2       0.3         47 -5,765.95
-4   AKBQKDK 2       0.3         47 -5,765.95
-5   ABKQKDK 2       0.3         56 -6,050.07
-6 AKJBKQKDK 2       0.3         58 -6,057.25
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.3 init: kmeans dfupdate: approx dconstr: yes ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.4         46 -5,761.67
-2  AKBKQKDK 2       0.4         48 -5,764.62
-3  AKJBQKDK 2       0.4         47 -5,765.95
-4   AKBQKDK 2       0.4         47 -5,765.95
-5   ABKQKDK 2       0.4         56 -6,050.07
-6 AKJBKQKDK 2       0.4         58 -6,057.25
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.4 init: kmeans dfupdate: approx dconstr: yes ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2     0.001        152 -4,579.38
-2  AKJBQKDK 2     0.001        151 -4,611.53
-3    ABQKDK 2     0.001        134 -6,017.44
-4   AKBQKDK 2     0.001        135 -6,018.13
-5   ABKQKDK 2     0.001        135 -6,022.09
-6  AKBKQKDK 2     0.001        136 -6,022.98
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels  1  2
-     1 98 35
-     2  6 61
-threshold 0.001 init: random dfupdate: approx dconstr: yes ccr: 0.795 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.01        140 -4,662.99
-2  AKJBQKDK 2      0.01        145 -4,742.45
-3  AKBKQKDK 2      0.01        127 -5,858.15
-4    ABQKDK 2      0.01        132 -5,914.55
-5   AKBQKDK 2      0.01        133 -5,917.53
-6   ABKQKDK 2      0.01        133 -5,918.96
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels  1  2
-     1 61  6
-     2 35 98
-threshold 0.01 init: random dfupdate: approx dconstr: yes ccr: 0.795 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.05        115 -4,962.87
-2  AKJBQKDK 2      0.05         91 -5,071.30
-3   AKBQKDK 2      0.05        101 -5,225.76
-4   ABKQKDK 2      0.05        113 -5,279.37
-5  AKBKQKDK 2      0.05        114 -5,284.23
-6    ABQKDK 2      0.05        112 -5,308.13
+1 AKJBKQKDK 2      0.05        106 -5,586.75
+2  AKJBQKDK 2      0.05        105 -5,616.40
+3    ABQKDK 2      0.05         84 -5,790.43
+4   AKBQKDK 2      0.05         85 -5,795.71
+5  AKBKQKDK 2      0.05         91 -5,911.63
+6   ABKQKDK 2      0.05         90 -5,934.52
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1 124   9
-     2  32  35
-threshold 0.05 init: random dfupdate: approx dconstr: yes ccr: 0.795 
+     1 115  18
+     2  42  25
+threshold 0.05 init: kmeans ccr: 0.7 
+Number of misclassified labels: 60 
+Number of outliers that are misclassified: 7 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.1         94 -5,087.97
-2  AKJBQKDK 2       0.1         84 -5,113.25
-3  AKBKQKDK 2       0.1         89 -5,172.60
-4   ABKQKDK 2       0.1         88 -5,186.96
-5    ABQKDK 2       0.1         94 -5,205.45
-6   AKBQKDK 2       0.1         88 -5,255.21
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  10  57
-threshold 0.1 init: random dfupdate: approx dconstr: yes ccr: 0.855 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.2         75 -5,154.72
-2   ABKQKDK 2       0.2         71 -5,238.63
-3    ABQKDK 2       0.2         70 -5,248.44
-4  AKJBQKDK 2       0.2         74 -5,249.27
-5   AKBQKDK 2       0.2         71 -5,253.16
-6  AKBKQKDK 2       0.2         82 -5,273.73
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  43  24
-     2  22 111
-threshold 0.2 init: random dfupdate: approx dconstr: yes ccr: 0.77 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.3         65 -5,244.84
-2   ABKQKDK 2       0.3         73 -5,373.08
-3   AKBQKDK 2       0.3         73 -5,375.94
-4    ABQKDK 2       0.3         63 -5,380.64
-5 AKJBKQKDK 2       0.3         67 -5,426.24
-6  AKJBQKDK 2       0.3         66 -5,448.08
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  56  11
-     2  29 104
-threshold 0.3 init: random dfupdate: approx dconstr: yes ccr: 0.8 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.4         73 -5,373.08
-2    ABQKDK 2       0.4         63 -5,380.64
-3   AKBQKDK 2       0.4         64 -5,385.20
-4  AKJBQKDK 2       0.4         57 -5,410.99
-5  AKBKQKDK 2       0.4         57 -5,415.06
-6 AKJBKQKDK 2       0.4         67 -5,426.24
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  34  33
-     2  10 123
-threshold 0.4 init: random dfupdate: approx dconstr: yes ccr: 0.785 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2     0.001        152 -4,649.38
-2 AKJBKQKDK 2     0.001        153 -4,851.24
-3   AKBQKDK 2     0.001        136 -6,015.20
-4    ABQKDK 2     0.001        135 -6,018.12
-5  AKBKQKDK 2     0.001        137 -6,019.15
-6   ABKQKDK 2     0.001        136 -6,675.05
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  38  29
-     2  20 113
-threshold 0.001 init: kmeans dfupdate: numeric dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.01        149 -4,668.13
-2 AKJBKQKDK 2      0.01        121 -5,029.44
-3  AKBKQKDK 2      0.01        135 -5,912.83
-4    ABQKDK 2      0.01        133 -5,917.20
-5   AKBQKDK 2      0.01        134 -5,918.00
-6   ABKQKDK 2      0.01        136 -6,675.17
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  35  32
-     2  19 114
-threshold 0.01 init: kmeans dfupdate: numeric dconstr: no ccr: 0.745 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.05        102 -5,005.12
-2  AKBKQKDK 2      0.05         97 -5,186.14
-3    ABQKDK 2      0.05         95 -5,187.13
-4   AKBQKDK 2      0.05         96 -5,192.30
-5 AKJBKQKDK 2      0.05         99 -5,309.44
-6   ABKQKDK 2      0.05        100 -5,430.40
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  32  35
-     2  19 114
-threshold 0.05 init: kmeans dfupdate: numeric dconstr: no ccr: 0.73 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2       0.1         86 -5,174.07
-2  AKBKQKDK 2       0.1         83 -5,269.00
-3    ABQKDK 2       0.1         81 -5,271.41
-4   AKBQKDK 2       0.1         82 -5,276.67
-5 AKJBKQKDK 2       0.1         78 -5,368.09
-6   ABKQKDK 2       0.1         74 -5,425.37
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  20 113
-threshold 0.1 init: kmeans dfupdate: numeric dconstr: no ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.2         65 -5,347.38
-2 AKJBKQKDK 2       0.2         59 -5,399.20
-3  AKJBQKDK 2       0.2         58 -5,416.21
-4  AKBKQKDK 2       0.2         58 -5,416.29
-5    ABQKDK 2       0.2         56 -5,428.13
-6   AKBQKDK 2       0.2         57 -5,433.43
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  31  36
-threshold 0.2 init: kmeans dfupdate: numeric dconstr: no ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.3         49 -5,764.21
-2    ABQKDK 2       0.3         47 -5,765.01
-3  AKJBQKDK 2       0.3         48 -5,769.15
-4   AKBQKDK 2       0.3         48 -5,769.15
-5   ABKQKDK 2       0.3         57 -6,049.06
-6 AKJBKQKDK 2       0.3         59 -6,056.61
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  30  37
-threshold 0.3 init: kmeans dfupdate: numeric dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.4         49 -5,764.21
-2    ABQKDK 2       0.4         47 -5,765.01
-3  AKJBQKDK 2       0.4         48 -5,769.15
-4   AKBQKDK 2       0.4         48 -5,769.15
-5   ABKQKDK 2       0.4         57 -6,049.06
-6 AKJBKQKDK 2       0.4         59 -6,056.61
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  30  37
-threshold 0.4 init: kmeans dfupdate: numeric dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2     0.001        153 -4,594.28
-2  AKJBQKDK 2     0.001        152 -4,613.15
-3   AKBQKDK 2     0.001        136 -6,015.20
-4    ABQKDK 2     0.001        135 -6,018.12
-5  AKBKQKDK 2     0.001        137 -6,019.15
-6   ABKQKDK 2     0.001        136 -6,023.01
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  41  26
-     2  33 100
-threshold 0.001 init: random dfupdate: numeric dconstr: no ccr: 0.705 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.01        141 -4,687.10
-2  AKJBQKDK 2      0.01        140 -4,871.00
-3  AKBKQKDK 2      0.01        128 -5,862.26
-4    ABQKDK 2      0.01        133 -5,917.20
-5   AKBQKDK 2      0.01        134 -5,918.00
-6   ABKQKDK 2      0.01        134 -5,921.32
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 110  23
-     2  10  57
-threshold 0.01 init: random dfupdate: numeric dconstr: no ccr: 0.835 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.05        102 -4,926.08
-2  AKJBQKDK 2      0.05         92 -5,076.40
-3    ABQKDK 2      0.05        101 -5,226.18
-4   AKBQKDK 2      0.05        102 -5,230.80
-5   ABKQKDK 2      0.05        114 -5,284.05
-6  AKBKQKDK 2      0.05        115 -5,289.06
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  45  22
-     2  33 100
-threshold 0.05 init: random dfupdate: numeric dconstr: no ccr: 0.725 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.1         86 -5,040.55
-2  AKJBQKDK 2       0.1         85 -5,118.19
-3  AKBKQKDK 2       0.1         90 -5,173.44
-4   ABKQKDK 2       0.1         89 -5,187.48
-5    ABQKDK 2       0.1         95 -5,210.73
-6   AKBQKDK 2       0.1         89 -5,232.41
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 111  22
-     2  16  51
-threshold 0.1 init: random dfupdate: numeric dconstr: no ccr: 0.81 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.2         76 -5,159.98
-2   ABKQKDK 2       0.2         72 -5,242.50
-3    ABQKDK 2       0.2         71 -5,253.74
-4  AKJBQKDK 2       0.2         75 -5,254.56
-5   AKBQKDK 2       0.2         72 -5,258.45
-6  AKBKQKDK 2       0.2         83 -5,277.20
-
-SELECTED: model  AKJBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  43  24
-     2  22 111
-threshold 0.2 init: random dfupdate: numeric dconstr: no ccr: 0.77 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.3         66 -5,249.83
-2   ABKQKDK 2       0.3         74 -5,378.12
-3    ABQKDK 2       0.3         64 -5,384.42
-4   AKBQKDK 2       0.3         65 -5,388.46
-5  AKJBQKDK 2       0.3         58 -5,416.21
-6 AKJBKQKDK 2       0.3         68 -5,428.15
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 104  29
-     2  11  56
-threshold 0.3 init: random dfupdate: numeric dconstr: no ccr: 0.8 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.4         74 -5,378.12
-2    ABQKDK 2       0.4         64 -5,384.42
-3   AKBQKDK 2       0.4         65 -5,388.46
-4  AKJBQKDK 2       0.4         58 -5,416.21
-5 AKJBKQKDK 2       0.4         68 -5,428.15
-6  AKBKQKDK 2       0.4         67 -5,432.00
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  34  33
-     2  10 123
-threshold 0.4 init: random dfupdate: numeric dconstr: no ccr: 0.785 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2     0.001        152 -4,662.96
-2 AKJBKQKDK 2     0.001        153 -4,879.55
-3    ABQKDK 2     0.001        135 -6,022.74
-4   AKBQKDK 2     0.001        136 -6,023.43
-5  AKBKQKDK 2     0.001        137 -6,028.28
-6   ABKQKDK 2     0.001        136 -6,675.18
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  38  29
-     2  20 113
-threshold 0.001 init: kmeans dfupdate: approx dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.01        149 -4,674.29
-2 AKJBKQKDK 2      0.01        121 -5,050.35
-3    ABQKDK 2      0.01        133 -5,919.85
-4  AKBKQKDK 2      0.01        135 -5,920.68
-5   AKBQKDK 2      0.01        134 -5,922.83
-6   ABKQKDK 2      0.01        136 -6,675.19
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  36  31
-     2  19 114
-threshold 0.01 init: kmeans dfupdate: approx dconstr: no ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2      0.05        102 -5,009.09
-2    ABQKDK 2      0.05         95 -5,196.83
-3   AKBQKDK 2      0.05         96 -5,202.11
-4  AKBKQKDK 2      0.05         97 -5,203.54
-5 AKJBKQKDK 2      0.05         99 -5,330.09
-6   ABKQKDK 2      0.05        100 -5,441.14
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  33  34
-     2  19 114
-threshold 0.05 init: kmeans dfupdate: approx dconstr: no ccr: 0.735 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKJBQKDK 2       0.1         86 -5,176.38
-2    ABQKDK 2       0.1         81 -5,273.91
-3  AKBKQKDK 2       0.1         83 -5,276.49
-4   AKBQKDK 2       0.1         82 -5,279.21
-5 AKJBKQKDK 2       0.1         78 -5,402.26
-6   ABKQKDK 2       0.1         81 -5,456.08
-
-SELECTED: model  AKJBQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  20 113
-threshold 0.1 init: kmeans dfupdate: approx dconstr: no ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1   ABKQKDK 2       0.2         65 -5,347.77
-2 AKJBKQKDK 2       0.2         59 -5,404.01
-3  AKJBQKDK 2       0.2         58 -5,416.33
-4  AKBKQKDK 2       0.2         58 -5,420.86
-5    ABQKDK 2       0.2         56 -5,428.22
-6   AKBQKDK 2       0.2         57 -5,433.52
-
-SELECTED: model  ABKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 114  19
-     2  31  36
-threshold 0.2 init: kmeans dfupdate: approx dconstr: no ccr: 0.75 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.3         47 -5,766.96
-2  AKBKQKDK 2       0.3         49 -5,769.92
-3  AKJBQKDK 2       0.3         48 -5,771.25
-4   AKBQKDK 2       0.3         48 -5,771.25
-5   ABKQKDK 2       0.3         57 -6,078.77
-6 AKJBKQKDK 2       0.3         59 -6,086.67
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.3 init: kmeans dfupdate: approx dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1    ABQKDK 2       0.4         47 -5,766.96
-2  AKBKQKDK 2       0.4         49 -5,769.92
-3  AKJBQKDK 2       0.4         48 -5,771.25
-4   AKBQKDK 2       0.4         48 -5,771.25
-5   ABKQKDK 2       0.4         57 -6,078.77
-6 AKJBKQKDK 2       0.4         59 -6,086.67
-
-SELECTED: model  ABQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1  37  30
-     2  19 114
-threshold 0.4 init: kmeans dfupdate: approx dconstr: no ccr: 0.755 
-
-
-
-cfunHDDC: 
-      model K threshold complexity       BIC
-1 AKJBKQKDK 2     0.001        153 -4,613.06
-2  AKJBQKDK 2     0.001        152 -4,623.76
-3    ABQKDK 2     0.001        135 -6,022.74
-4   AKBQKDK 2     0.001        136 -6,023.43
-5   ABKQKDK 2     0.001        136 -6,027.39
-6  AKBKQKDK 2     0.001        137 -6,028.28
+1 AKJBKQKDK 2       0.1         85 -5,803.01
+2  AKJBQKDK 2       0.1         84 -5,806.83
+3  AKBKQKDK 2       0.1         81 -5,911.38
+4   ABKQKDK 2       0.1         80 -5,912.31
+5   AKBQKDK 2       0.1         80 -5,915.26
+6    ABQKDK 2       0.1         79 -5,916.42
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
      1  40  27
-     2  33 100
-threshold 0.001 init: random dfupdate: approx dconstr: no ccr: 0.7 
+     2  21 112
+threshold 0.1 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2      0.01        150 -4,674.00
-2  AKJBQKDK 2      0.01        149 -4,674.29
-3    ABQKDK 2      0.01        133 -5,919.85
-4  AKBKQKDK 2      0.01        135 -5,920.68
-5   AKBQKDK 2      0.01        134 -5,922.83
-6   ABKQKDK 2      0.01        134 -5,924.25
+1 AKJBKQKDK 2       0.2         85 -5,803.01
+2  AKBKQKDK 2       0.2         81 -5,911.38
+3   ABKQKDK 2       0.2         80 -5,912.31
+4   AKBQKDK 2       0.2         80 -5,915.26
+5    ABQKDK 2       0.2         79 -5,916.42
+6  AKJBQKDK 2       0.2         65 -6,087.54
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1 114  19
-     2  31  36
-threshold 0.01 init: random dfupdate: approx dconstr: no ccr: 0.75 
+     1  40  27
+     2  21 112
+threshold 0.2 init: kmeans ccr: 0.76 
+Number of misclassified labels: 48 
+Number of outliers that are misclassified: 2 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1  AKJBQKDK 2      0.05        102 -5,009.09
-2 AKJBKQKDK 2      0.05        110 -5,014.89
-3    ABQKDK 2      0.05        101 -5,226.78
-4   AKBQKDK 2      0.05        102 -5,231.52
-5   ABKQKDK 2      0.05        114 -5,285.82
-6  AKBKQKDK 2      0.05        115 -5,290.67
+1 AKJBKQKDK 2       0.3         66 -6,228.92
+2  AKBKQKDK 2       0.3         64 -6,237.57
+3  AKJBQKDK 2       0.3         65 -6,243.56
+4   AKBQKDK 2       0.3         63 -6,248.74
+5   ABKQKDK 2       0.3         63 -6,252.26
+6    ABQKDK 2       0.3         62 -6,262.41
 
-SELECTED: model  AKJBQKDK  with  2  clusters.
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels  1  2
+     1 92 41
+     2 40 27
+threshold 0.3 init: kmeans ccr: 0.595 
+Number of misclassified labels: 81 
+Number of outliers that are misclassified: 13 
+
+
+
+funHDDC: 
+      model K threshold complexity       BIC
+1    ABQKDK 2       0.4         54 -6,398.39
+2   AKBQKDK 2       0.4         55 -6,398.67
+3  AKJBQKDK 2       0.4         56 -6,402.19
+4   ABKQKDK 2       0.4         55 -6,402.53
+5  AKBKQKDK 2       0.4         56 -6,402.81
+6 AKJBKQKDK 2       0.4         57 -6,406.23
+
+SELECTED: model  ABQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1  33  34
-     2  19 114
-threshold 0.05 init: random dfupdate: approx dconstr: no ccr: 0.735 
+     1 118  15
+     2  43  24
+threshold 0.4 init: kmeans ccr: 0.71 
+Number of misclassified labels: 58 
+Number of outliers that are misclassified: 7 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.1         95 -5,024.88
-2  AKJBQKDK 2       0.1         85 -5,066.82
-3  AKBKQKDK 2       0.1         90 -5,191.71
-4   ABKQKDK 2       0.1         89 -5,192.29
-5   AKBQKDK 2       0.1         89 -5,198.40
-6    ABQKDK 2       0.1         95 -5,211.07
+1 AKJBKQKDK 2     0.001        151 -4,835.28
+2  AKJBQKDK 2     0.001        150 -4,931.86
+3  AKBKQKDK 2     0.001        135 -6,425.51
+4   AKBQKDK 2     0.001        134 -6,611.62
+5    ABQKDK 2     0.001        131 -6,932.49
+6   ABKQKDK 2     0.001        134 -6,967.27
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1 114  19
-     2  34  33
-threshold 0.1 init: random dfupdate: approx dconstr: no ccr: 0.735 
+     1  62   5
+     2  27 106
+threshold 0.001 init: random ccr: 0.84 
+Number of misclassified labels: 32 
+Number of outliers that are misclassified: 4 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1 AKJBKQKDK 2       0.2         76 -5,166.38
-2   ABKQKDK 2       0.2         81 -5,205.08
-3  AKBKQKDK 2       0.2         73 -5,231.29
-4  AKJBQKDK 2       0.2         75 -5,254.57
-5   AKBQKDK 2       0.2         72 -5,342.68
-6    ABQKDK 2       0.2         73 -5,377.99
+1 AKJBKQKDK 2      0.01        141 -4,921.18
+2  AKJBQKDK 2      0.01        140 -5,206.79
+3  AKBKQKDK 2      0.01        130 -6,064.37
+4    ABQKDK 2      0.01        122 -6,090.71
+5   ABKQKDK 2      0.01        123 -6,092.59
+6   AKBQKDK 2      0.01        124 -6,184.81
 
 SELECTED: model  AKJBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
 labels   1   2
-     1  43  24
-     2  22 111
-threshold 0.2 init: random dfupdate: approx dconstr: no ccr: 0.77 
+     1 105  28
+     2   6  61
+threshold 0.01 init: random ccr: 0.83 
+Number of misclassified labels: 34 
+Number of outliers that are misclassified: 4 
 
 
 
-cfunHDDC: 
+funHDDC: 
       model K threshold complexity       BIC
-1  AKBKQKDK 2       0.3         66 -5,271.39
-2    ABQKDK 2       0.3         71 -5,379.88
-3   ABKQKDK 2       0.3         65 -5,385.94
-4   AKBQKDK 2       0.3         65 -5,390.50
-5 AKJBKQKDK 2       0.3         59 -5,404.01
-6  AKJBQKDK 2       0.3         58 -5,416.33
+1 AKJBKQKDK 2      0.05         93 -5,187.41
+2  AKBKQKDK 2      0.05         88 -5,223.82
+3  AKJBQKDK 2      0.05        105 -5,459.18
+4   ABKQKDK 2      0.05         79 -5,676.23
+5    ABQKDK 2      0.05        101 -5,798.56
+6   AKBQKDK 2      0.05         98 -5,808.17
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels   1   2
+     1  61   6
+     2  29 104
+threshold 0.05 init: random ccr: 0.825 
+Number of misclassified labels: 35 
+Number of outliers that are misclassified: 4 
+
+
+
+funHDDC: 
+      model K threshold complexity       BIC
+1 AKJBKQKDK 2       0.1         85 -5,158.67
+2  AKBKQKDK 2       0.1         88 -5,435.06
+3   ABKQKDK 2       0.1         80 -5,563.84
+4  AKJBQKDK 2       0.1         96 -5,620.52
+5    ABQKDK 2       0.1         84 -5,790.43
+6   AKBQKDK 2       0.1         85 -5,795.71
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels  1  2
+     1 65  2
+     2 37 96
+threshold 0.1 init: random ccr: 0.805 
+Number of misclassified labels: 39 
+Number of outliers that are misclassified: 3 
+
+
+
+funHDDC: 
+      model K threshold complexity       BIC
+1 AKJBKQKDK 2       0.2         66 -5,486.32
+2  AKBKQKDK 2       0.2         64 -5,514.17
+3  AKJBQKDK 2       0.2         84 -5,806.83
+4   ABKQKDK 2       0.2         80 -5,889.42
+5    ABQKDK 2       0.2         86 -5,948.64
+6   AKBQKDK 2       0.2         87 -5,951.43
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels  1  2
+     1 61  6
+     2 36 97
+threshold 0.2 init: random ccr: 0.79 
+Number of misclassified labels: 42 
+Number of outliers that are misclassified: 4 
+
+
+
+funHDDC: 
+      model K threshold complexity       BIC
+1 AKJBKQKDK 2       0.3         66 -5,486.32
+2  AKBKQKDK 2       0.3         64 -5,521.10
+3   ABKQKDK 2       0.3         55 -5,998.65
+4  AKJBQKDK 2       0.3         75 -6,054.01
+5   AKBQKDK 2       0.3         64 -6,058.67
+6    ABQKDK 2       0.3         71 -6,148.55
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels  1  2
+     1 97 36
+     2  6 61
+threshold 0.3 init: random ccr: 0.79 
+Number of misclassified labels: 42 
+Number of outliers that are misclassified: 4 
+
+
+
+funHDDC: 
+      model K threshold complexity       BIC
+1  AKBKQKDK 2       0.4         56 -5,766.74
+2 AKJBKQKDK 2       0.4         57 -5,768.76
+3   ABKQKDK 2       0.4         55 -5,998.65
+4  AKJBQKDK 2       0.4         65 -6,243.56
+5   AKBQKDK 2       0.4         63 -6,248.74
+6    ABQKDK 2       0.4         62 -6,250.96
 
 SELECTED: model  AKBKQKDK  with  2  clusters.
 Selection Criterion: BIC.
       
-labels   1   2
-     1  53  14
-     2  28 105
-threshold 0.3 init: random dfupdate: approx dconstr: no ccr: 0.79 
+labels  1  2
+     1 61  6
+     2 38 95
+threshold 0.4 init: random ccr: 0.78 
+Number of misclassified labels: 44 
+Number of outliers that are misclassified: 4 
 
 
 
-cfunHDDC: 
-      model K threshold complexity       BIC
-1  AKBKQKDK 2       0.4         66 -5,383.47
-2    ABQKDK 2       0.4         64 -5,385.94
-3   AKBQKDK 2       0.4         65 -5,390.50
-4 AKJBKQKDK 2       0.4         59 -5,404.01
-5  AKJBQKDK 2       0.4         58 -5,416.33
-6   ABKQKDK 2       0.4         57 -5,422.31
-
-SELECTED: model  AKBKQKDK  with  2  clusters.
-Selection Criterion: BIC.
-      
-labels   1   2
-     1 121  12
-     2  36  31
-threshold 0.4 init: random dfupdate: approx dconstr: no ccr: 0.76 
 Best Init: random 
-Best Threshold: 0.1 
-Best Update: approx 
-Best Constraint: yes 
-Highest CCR: 0.855 
+Best Threshold: 0.001 
+Highest CCR: 0.84 
