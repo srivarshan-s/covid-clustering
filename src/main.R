@@ -1,6 +1,7 @@
 #################### ENIRONMENT SETUP ##########################
 setwd("~/Documents/functional-data-clustering")
 source("~/Documents/functional-data-clustering/src/tfunHDDC.R")
+source("~/Documents/functional-data-clustering/src/cfunHDDC.R")
 
 
 
@@ -393,3 +394,32 @@ if (DETECT_OUTLIERS) {
 # cat("Best Update:", BEST_DFUPDATE, "\n")
 # cat("Best Constraint:", BEST_DCONSTR, "\n")
 # cat("Highest CCR:", BEST_CCR, "\n")
+
+# cfunHDDC algorithm
+print("Running cfunHDDC algorithm.....")
+drops <- c("X1")
+ecg_df <- df[, !(names(df) %in% drops)]
+ecg_fdata <- functional_data(ecg_df)
+set_seed()
+result <- cfunHDDC(
+  ecg_fdata,
+  K = 2,
+  init = "kmeans", # 'random', 'kmeans'
+  threshold = 0.1,
+  model = MODELS,
+  itermax = ITER_MAX,
+  nb.rep = 1,
+  alphamin = 0.5
+)
+cf_matrix <- table(labels, result$class)
+ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+if (ccr < 1 - ccr) {
+  labels <- change_labels(labels)
+  cf_matrix <- table(labels, result$class)
+  ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+}
+print(cf_matrix)
+cat("The correct classification rate:", ccr * 100, "%\n")
+find_misclassified_labels(result, labels, outlier_labels)
+eta_vals <- c(result$etax[1], result$etax[2])
+cat("Eta values:", eta_vals, "\n")
