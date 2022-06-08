@@ -359,7 +359,7 @@ for (dconstr in GRIDSEARCH_DCONSTR) { for (dfupdate in GRIDSEARCH_DFUPDATE) {
                            threshold = threshold,
                            model = MODELS,
                            itermax = ITER_MAX,
-                           nb.rep = 1,
+                           nb.rep = 20,
                            dfstart = 50,
                            dfupdate = dfupdate,
                            dconstr = dconstr
