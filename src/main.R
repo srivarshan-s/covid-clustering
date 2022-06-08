@@ -467,7 +467,7 @@ for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
             "alphamin:", alphamin,
             "ccr:", ccr, "\n")
         find_misclassified_labels(result, labels, outlier_labels)
-        find_eta_values()
+        find_eta_values(result)
         if (ccr >= BEST_CCR) {
             BEST_CCR <- ccr
             BEST_INIT <- init
