@@ -1,4 +1,4 @@
-funHDDC1  <-
+cfunHDDC  <-
   function(data, K=1:10, model="AkjBkQkDk", alphamin=c(0.5),threshold=0.1, itermax=200, eps=1e-6,init='random', criterion="bic",
            algo='EM', d_select="Cattell",  init.vector=NULL, show=TRUE, mini.nb=c(5, 10),
            min.individuals=2, mc.cores=1, nb.rep=2, keepAllRes=TRUE, kmeans.control = list(), d_max=100){
