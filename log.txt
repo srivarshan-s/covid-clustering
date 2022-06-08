@@ -1,6 +1,10 @@
 [1] "done"
 [1] "done"
 [1] "done"
+[1] "Detecting outliers in Class 1....."
+Number of outliers in Class 1: 1 
+[1] "Detecting outliers in Class 2....."
+Number of outliers in Class 2: 21 
 [1] "Running cfunHDDC algorithm....."
 cfunHDDC: 
       model K threshold complexity       BIC
@@ -18,3 +22,6 @@ labels   1   2
      1  33  34
      2  19 114
 The correct classification rate: 73.5 %
+Number of misclassified labels: 53 
+Number of outliers that are misclassified: 3 
+Eta values: 5.660802 13.39439 
