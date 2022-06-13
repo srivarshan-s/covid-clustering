@@ -1,17 +1,9 @@
 # **NOTES**
 
-1. Perform funHDDC again with all the models and change the parameters
+1. If we stay with Bspline we have to tune the cfunHDDC algorithm
 
-2. Perform tfunHDDC algorithm in a similar fashion to funHDDC
+2. Number of outliers for cfunHDDC
 
-3. Try out cfunHDDC
-   
-   1. Set alpha from 0.8 to 0.95 with 0.05 increments and also 0.5, 0.6, 0.7
-   
-   2. Try changing alphamin
-   
-   3. Try varying the threshold
-   
-   4. This algorithm only works with fourier basis not bspline basis
-   
-   5. Get the eta value
+3. Picture that plots curve by curve original vs fourier vs bspline (also repeat with new number)
+
+4. Play with different number of splines for fourier
