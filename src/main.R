@@ -462,12 +462,17 @@ for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
             ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
         }
         print(cf_matrix)
-        cat("threshold", threshold, 
-            "init:", init, 
+        cfun_outliers <- length(result$outlier[result$outlier == 0])
+        if (200 - cfun_outliers < cfun_outliers) {
+          cfun_outliers <- 200 - cfun_outliers
+        }
+        cat("threshold", threshold,
+            "init:", init,
             "alphamin:", alphamin,
             "ccr:", ccr, "\n")
         find_misclassified_labels(result, labels, outlier_labels)
         find_eta_values(result)
+        cat("num of cfunHDCC outliers:", cfun_outliers, "\n")
         if (ccr >= BEST_CCR) {
             BEST_CCR <- ccr
             BEST_INIT <- init
