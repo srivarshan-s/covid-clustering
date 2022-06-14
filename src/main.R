@@ -102,6 +102,23 @@ find_eta_values <- function(result) {
     cat("Eta values:", eta_vals, "\n")
 }
 
+cfunHDDC_outliers <- function(labels, outliers) {
+  class1_outliers <- 0
+  class2_outliers <- 0
+  for (idx in 1:length(labels)) {
+    if (labels[idx] == 1 && outliers[idx] == 1) {
+      class1_outliers <- class1_outliers + 1
+    }
+    if (labels[idx] == 2 && outliers[idx] == 1) {
+      class2_outliers <- class2_outliers + 1
+    }
+  }
+  cat("Number of outliers in Class 1:", class1_outliers, 
+      "/", length(labels[labels == 1]), "\n")
+  cat("Number of outliers in Class 2:", class2_outliers, "/", 
+      length(labels[labels == 2]), "\n")
+}
+
 
 
 #################### MAIN CODE #################################
@@ -427,6 +444,9 @@ if (DETECT_OUTLIERS) {
 # cat("The correct classification rate:", ccr * 100, "%\n")
 # find_misclassified_labels(result, labels, outlier_labels)
 # find_eta_values(result)
+# class1_outliers <- 0
+# class2_outliers <- 0
+# cfunHDDC_outliers(labels, result$outlier)
 
 # cfunHDDC gridsearch
 print("Running cfunHDDC gridsearch.....")
@@ -462,17 +482,13 @@ for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
             ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
         }
         print(cf_matrix)
-        cfun_outliers <- length(result$outlier[result$outlier == 0])
-        if (200 - cfun_outliers < cfun_outliers) {
-          cfun_outliers <- 200 - cfun_outliers
-        }
         cat("threshold", threshold,
             "init:", init,
             "alphamin:", alphamin,
             "ccr:", ccr, "\n")
         find_misclassified_labels(result, labels, outlier_labels)
         find_eta_values(result)
-        cat("num of cfunHDCC outliers:", cfun_outliers, "\n")
+        cfunHDDC_outliers(labels, result$outlier)
         if (ccr >= BEST_CCR) {
             BEST_CCR <- ccr
             BEST_INIT <- init

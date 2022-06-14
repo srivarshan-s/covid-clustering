@@ -28,6 +28,8 @@ threshold 0.001 init: kmeans alphamin: 0.5 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 4.851801 12.54592 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 106 / 133 
 
 
 
@@ -50,6 +52,8 @@ threshold 0.001 init: kmeans alphamin: 0.6 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 4.851801 12.54592 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 106 / 133 
 
 
 
@@ -72,6 +76,8 @@ threshold 0.001 init: kmeans alphamin: 0.7 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 4.881624 12.56158 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 106 / 133 
 
 
 
@@ -94,6 +100,8 @@ threshold 0.001 init: kmeans alphamin: 0.8 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 5.192161 12.9742 
+Number of outliers in Class 1: 28 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -116,6 +124,8 @@ threshold 0.001 init: kmeans alphamin: 0.85 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 5.634242 12.22906 
+Number of outliers in Class 1: 29 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -138,6 +148,8 @@ threshold 0.001 init: kmeans alphamin: 0.9 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 5.775491 12.1989 
+Number of outliers in Class 1: 33 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -160,6 +172,8 @@ threshold 0.001 init: kmeans alphamin: 0.95 ccr: 0.755
 Number of misclassified labels: 49 
 Number of outliers that are misclassified: 2 
 Eta values: 7.390356 12.47509 
+Number of outliers in Class 1: 39 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -182,6 +196,8 @@ threshold 0.01 init: kmeans alphamin: 0.5 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 3 
 Eta values: 4.916504 12.98552 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 107 / 133 
 
 
 
@@ -204,6 +220,8 @@ threshold 0.01 init: kmeans alphamin: 0.6 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 3 
 Eta values: 4.916504 12.98552 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 107 / 133 
 
 
 
@@ -226,6 +244,8 @@ threshold 0.01 init: kmeans alphamin: 0.7 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 3 
 Eta values: 4.941505 13.02134 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 107 / 133 
 
 
 
@@ -248,6 +268,8 @@ threshold 0.01 init: kmeans alphamin: 0.8 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 3 
 Eta values: 5.099383 13.04572 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 107 / 133 
 
 
 
@@ -270,6 +292,8 @@ threshold 0.01 init: kmeans alphamin: 0.85 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 3 
 Eta values: 5.117947 12.64636 
+Number of outliers in Class 1: 29 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -292,6 +316,8 @@ threshold 0.01 init: kmeans alphamin: 0.9 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 3 
 Eta values: 6.287614 11.33169 
+Number of outliers in Class 1: 31 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -314,6 +340,8 @@ threshold 0.01 init: kmeans alphamin: 0.95 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 2 
 Eta values: 5.20952 13.98913 
+Number of outliers in Class 1: 48 / 67 
+Number of outliers in Class 2: 130 / 133 
 
 
 
@@ -336,6 +364,8 @@ threshold 0.05 init: kmeans alphamin: 0.5 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 3.660024 15.92869 
+Number of outliers in Class 1: 19 / 67 
+Number of outliers in Class 2: 108 / 133 
 
 
 
@@ -358,6 +388,8 @@ threshold 0.05 init: kmeans alphamin: 0.6 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 3.714448 15.7564 
+Number of outliers in Class 1: 19 / 67 
+Number of outliers in Class 2: 108 / 133 
 
 
 
@@ -380,6 +412,8 @@ threshold 0.05 init: kmeans alphamin: 0.7 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 3.807025 15.36336 
+Number of outliers in Class 1: 21 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -402,6 +436,8 @@ threshold 0.05 init: kmeans alphamin: 0.8 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 2 
 Eta values: 4.336278 14.6707 
+Number of outliers in Class 1: 28 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -424,6 +460,8 @@ threshold 0.05 init: kmeans alphamin: 0.85 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 2 
 Eta values: 4.698932 14.18823 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -446,6 +484,8 @@ threshold 0.05 init: kmeans alphamin: 0.9 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 2 
 Eta values: 4.896812 13.49985 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 111 / 133 
 
 
 
@@ -468,6 +508,8 @@ threshold 0.05 init: kmeans alphamin: 0.95 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 2 
 Eta values: 12.96076 14.18095 
+Number of outliers in Class 1: 38 / 67 
+Number of outliers in Class 2: 117 / 133 
 
 
 
@@ -490,6 +532,8 @@ threshold 0.1 init: kmeans alphamin: 0.5 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 13.83218 4.715653 
+Number of outliers in Class 1: 108 / 133 
+Number of outliers in Class 2: 20 / 67 
 
 
 
@@ -512,6 +556,8 @@ threshold 0.1 init: kmeans alphamin: 0.6 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 13.77458 4.755339 
+Number of outliers in Class 1: 108 / 133 
+Number of outliers in Class 2: 20 / 67 
 
 
 
@@ -534,6 +580,8 @@ threshold 0.1 init: kmeans alphamin: 0.7 ccr: 0.725
 Number of misclassified labels: 55 
 Number of outliers that are misclassified: 3 
 Eta values: 13.73522 4.932894 
+Number of outliers in Class 1: 110 / 133 
+Number of outliers in Class 2: 24 / 67 
 
 
 
@@ -556,6 +604,8 @@ threshold 0.1 init: kmeans alphamin: 0.8 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 2 
 Eta values: 9.991508 14.6662 
+Number of outliers in Class 1: 36 / 67 
+Number of outliers in Class 2: 117 / 133 
 
 
 
@@ -578,6 +628,8 @@ threshold 0.1 init: kmeans alphamin: 0.85 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 2 
 Eta values: 9.959099 14.62584 
+Number of outliers in Class 1: 36 / 67 
+Number of outliers in Class 2: 117 / 133 
 
 
 
@@ -600,6 +652,8 @@ threshold 0.1 init: kmeans alphamin: 0.9 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 2 
 Eta values: 9.880587 14.43394 
+Number of outliers in Class 1: 38 / 67 
+Number of outliers in Class 2: 117 / 133 
 
 
 
@@ -622,6 +676,8 @@ threshold 0.1 init: kmeans alphamin: 0.95 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 2 
 Eta values: 14.60717 3.738225 
+Number of outliers in Class 1: 117 / 133 
+Number of outliers in Class 2: 36 / 67 
 
 
 
@@ -644,6 +700,8 @@ threshold 0.2 init: kmeans alphamin: 0.5 ccr: 0.755
 Number of misclassified labels: 49 
 Number of outliers that are misclassified: 2 
 Eta values: 12.09131 5.371083 
+Number of outliers in Class 1: 108 / 133 
+Number of outliers in Class 2: 25 / 67 
 
 
 
@@ -666,6 +724,8 @@ threshold 0.2 init: kmeans alphamin: 0.6 ccr: 0.755
 Number of misclassified labels: 49 
 Number of outliers that are misclassified: 2 
 Eta values: 12.10309 5.376286 
+Number of outliers in Class 1: 108 / 133 
+Number of outliers in Class 2: 25 / 67 
 
 
 
@@ -688,6 +748,8 @@ threshold 0.2 init: kmeans alphamin: 0.7 ccr: 0.755
 Number of misclassified labels: 49 
 Number of outliers that are misclassified: 2 
 Eta values: 12.14522 5.319775 
+Number of outliers in Class 1: 108 / 133 
+Number of outliers in Class 2: 25 / 67 
 
 
 
@@ -710,6 +772,8 @@ threshold 0.2 init: kmeans alphamin: 0.8 ccr: 0.755
 Number of misclassified labels: 49 
 Number of outliers that are misclassified: 2 
 Eta values: 12.09836 4.748381 
+Number of outliers in Class 1: 113 / 133 
+Number of outliers in Class 2: 30 / 67 
 
 
 
@@ -732,6 +796,8 @@ threshold 0.2 init: kmeans alphamin: 0.85 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 2 
 Eta values: 4.780299 13.42369 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 111 / 133 
 
 
 
@@ -754,6 +820,8 @@ threshold 0.2 init: kmeans alphamin: 0.9 ccr: 0.76
 Number of misclassified labels: 48 
 Number of outliers that are misclassified: 2 
 Eta values: 4.10241 19.68735 
+Number of outliers in Class 1: 46 / 67 
+Number of outliers in Class 2: 129 / 133 
 
 
 
@@ -776,6 +844,8 @@ threshold 0.2 init: kmeans alphamin: 0.95 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 2 
 Eta values: 4.615807 19.27739 
+Number of outliers in Class 1: 50 / 67 
+Number of outliers in Class 2: 132 / 133 
 
 
 
@@ -798,6 +868,8 @@ threshold 0.3 init: kmeans alphamin: 0.5 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 5.417174 21.87661 
+Number of outliers in Class 1: 19 / 67 
+Number of outliers in Class 2: 101 / 133 
 
 
 
@@ -820,6 +892,8 @@ threshold 0.3 init: kmeans alphamin: 0.6 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 4.373444 24.07831 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 104 / 133 
 
 
 
@@ -842,6 +916,8 @@ threshold 0.3 init: kmeans alphamin: 0.7 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 4.403296 23.9974 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 104 / 133 
 
 
 
@@ -864,6 +940,8 @@ threshold 0.3 init: kmeans alphamin: 0.8 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 4.392968 23.83858 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -886,6 +964,8 @@ threshold 0.3 init: kmeans alphamin: 0.85 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 3.829425 23.60799 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -908,6 +988,8 @@ threshold 0.3 init: kmeans alphamin: 0.9 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 2 
 Eta values: 4.80912 22.14721 
+Number of outliers in Class 1: 29 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -930,6 +1012,8 @@ threshold 0.3 init: kmeans alphamin: 0.95 ccr: 0.55
 Number of misclassified labels: 90 
 Number of outliers that are misclassified: 14 
 Eta values: 5.93394 3.494555 
+Number of outliers in Class 1: 127 / 133 
+Number of outliers in Class 2: 48 / 67 
 
 
 
@@ -952,6 +1036,8 @@ threshold 0.4 init: kmeans alphamin: 0.5 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 5.417174 21.87661 
+Number of outliers in Class 1: 19 / 67 
+Number of outliers in Class 2: 101 / 133 
 
 
 
@@ -974,6 +1060,8 @@ threshold 0.4 init: kmeans alphamin: 0.6 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 4.373444 24.07831 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 104 / 133 
 
 
 
@@ -996,6 +1084,8 @@ threshold 0.4 init: kmeans alphamin: 0.7 ccr: 0.735
 Number of misclassified labels: 53 
 Number of outliers that are misclassified: 3 
 Eta values: 4.403296 23.9974 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 104 / 133 
 
 
 
@@ -1018,6 +1108,8 @@ threshold 0.4 init: kmeans alphamin: 0.8 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 4.392968 23.83858 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -1040,6 +1132,8 @@ threshold 0.4 init: kmeans alphamin: 0.85 ccr: 0.74
 Number of misclassified labels: 52 
 Number of outliers that are misclassified: 2 
 Eta values: 3.829425 23.60799 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 110 / 133 
 
 
 
@@ -1062,6 +1156,8 @@ threshold 0.4 init: kmeans alphamin: 0.9 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 2 
 Eta values: 4.80912 22.14721 
+Number of outliers in Class 1: 29 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -1084,6 +1180,8 @@ threshold 0.4 init: kmeans alphamin: 0.95 ccr: 0.75
 Number of misclassified labels: 50 
 Number of outliers that are misclassified: 2 
 Eta values: 9.864785 5.109795 
+Number of outliers in Class 1: 123 / 133 
+Number of outliers in Class 2: 36 / 67 
 
 
 
@@ -1106,6 +1204,8 @@ threshold 0.001 init: random alphamin: 0.5 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 7.340147 8.721371 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -1128,6 +1228,8 @@ threshold 0.001 init: random alphamin: 0.6 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 7.340147 8.721371 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -1150,6 +1252,8 @@ threshold 0.001 init: random alphamin: 0.7 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 7.360263 8.758391 
+Number of outliers in Class 1: 26 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -1172,6 +1276,8 @@ threshold 0.001 init: random alphamin: 0.8 ccr: 0.78
 Number of misclassified labels: 44 
 Number of outliers that are misclassified: 4 
 Eta values: 8.944482 7.134026 
+Number of outliers in Class 1: 50 / 67 
+Number of outliers in Class 2: 123 / 133 
 
 
 
@@ -1194,6 +1300,8 @@ threshold 0.001 init: random alphamin: 0.85 ccr: 0.79
 Number of misclassified labels: 42 
 Number of outliers that are misclassified: 4 
 Eta values: 5.628841 6.529131 
+Number of outliers in Class 1: 47 / 67 
+Number of outliers in Class 2: 120 / 133 
 
 
 
@@ -1216,6 +1324,8 @@ threshold 0.001 init: random alphamin: 0.9 ccr: 0.795
 Number of misclassified labels: 41 
 Number of outliers that are misclassified: 4 
 Eta values: 7.463936 4.749399 
+Number of outliers in Class 1: 54 / 67 
+Number of outliers in Class 2: 122 / 133 
 
 
 
@@ -1238,6 +1348,8 @@ threshold 0.001 init: random alphamin: 0.95 ccr: 0.795
 Number of misclassified labels: 41 
 Number of outliers that are misclassified: 4 
 Eta values: 4.902774 7.874592 
+Number of outliers in Class 1: 125 / 133 
+Number of outliers in Class 2: 54 / 67 
 
 
 
@@ -1260,6 +1372,8 @@ threshold 0.01 init: random alphamin: 0.5 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 8.915587 6.530792 
+Number of outliers in Class 1: 105 / 133 
+Number of outliers in Class 2: 26 / 67 
 
 
 
@@ -1282,6 +1396,8 @@ threshold 0.01 init: random alphamin: 0.6 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 3 
 Eta values: 5.981619 9.654887 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 105 / 133 
 
 
 
@@ -1304,6 +1420,8 @@ threshold 0.01 init: random alphamin: 0.7 ccr: 0.84
 Number of misclassified labels: 32 
 Number of outliers that are misclassified: 4 
 Eta values: 7.085553 7.762559 
+Number of outliers in Class 1: 48 / 67 
+Number of outliers in Class 2: 111 / 133 
 
 
 
@@ -1326,6 +1444,8 @@ threshold 0.01 init: random alphamin: 0.8 ccr: 0.84
 Number of misclassified labels: 32 
 Number of outliers that are misclassified: 4 
 Eta values: 7.076365 7.861789 
+Number of outliers in Class 1: 48 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -1348,6 +1468,8 @@ threshold 0.01 init: random alphamin: 0.85 ccr: 0.84
 Number of misclassified labels: 32 
 Number of outliers that are misclassified: 4 
 Eta values: 7.059114 7.93761 
+Number of outliers in Class 1: 48 / 67 
+Number of outliers in Class 2: 113 / 133 
 
 
 
@@ -1370,6 +1492,8 @@ threshold 0.01 init: random alphamin: 0.9 ccr: 0.835
 Number of misclassified labels: 33 
 Number of outliers that are misclassified: 4 
 Eta values: 7.092878 8.034011 
+Number of outliers in Class 1: 48 / 67 
+Number of outliers in Class 2: 114 / 133 
 
 
 
@@ -1392,6 +1516,8 @@ threshold 0.01 init: random alphamin: 0.95 ccr: 0.795
 Number of misclassified labels: 41 
 Number of outliers that are misclassified: 4 
 Eta values: 6.553035 6.591264 
+Number of outliers in Class 1: 125 / 133 
+Number of outliers in Class 2: 58 / 67 
 
 
 
@@ -1414,6 +1540,8 @@ threshold 0.05 init: random alphamin: 0.5 ccr: 0.775
 Number of misclassified labels: 45 
 Number of outliers that are misclassified: 3 
 Eta values: 9.821098 6.041657 
+Number of outliers in Class 1: 104 / 133 
+Number of outliers in Class 2: 23 / 67 
 
 
 
@@ -1436,6 +1564,8 @@ threshold 0.05 init: random alphamin: 0.6 ccr: 0.775
 Number of misclassified labels: 45 
 Number of outliers that are misclassified: 3 
 Eta values: 9.820287 6.045162 
+Number of outliers in Class 1: 104 / 133 
+Number of outliers in Class 2: 23 / 67 
 
 
 
@@ -1458,6 +1588,8 @@ threshold 0.05 init: random alphamin: 0.7 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 9.803387 6.197766 
+Number of outliers in Class 1: 106 / 133 
+Number of outliers in Class 2: 23 / 67 
 
 
 
@@ -1480,6 +1612,8 @@ threshold 0.05 init: random alphamin: 0.8 ccr: 0.79
 Number of misclassified labels: 42 
 Number of outliers that are misclassified: 4 
 Eta values: 10.99151 4.193703 
+Number of outliers in Class 1: 103 / 133 
+Number of outliers in Class 2: 29 / 67 
 
 
 
@@ -1502,6 +1636,8 @@ threshold 0.05 init: random alphamin: 0.85 ccr: 0.79
 Number of misclassified labels: 42 
 Number of outliers that are misclassified: 4 
 Eta values: 10.94827 4.229101 
+Number of outliers in Class 1: 103 / 133 
+Number of outliers in Class 2: 30 / 67 
 
 
 
@@ -1524,6 +1660,8 @@ threshold 0.05 init: random alphamin: 0.9 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 4 
 Eta values: 72.10354 2.316662 
+Number of outliers in Class 1: 132 / 133 
+Number of outliers in Class 2: 51 / 67 
 
 
 
@@ -1546,6 +1684,8 @@ threshold 0.05 init: random alphamin: 0.95 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 4 
 Eta values: 3.489963 31.59507 
+Number of outliers in Class 1: 54 / 67 
+Number of outliers in Class 2: 131 / 133 
 
 
 
@@ -1568,6 +1708,8 @@ threshold 0.1 init: random alphamin: 0.5 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 2.941184 151.8979 
+Number of outliers in Class 1: 27 / 67 
+Number of outliers in Class 2: 115 / 133 
 
 
 
@@ -1590,6 +1732,8 @@ threshold 0.1 init: random alphamin: 0.6 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 2.755144 151.9469 
+Number of outliers in Class 1: 29 / 67 
+Number of outliers in Class 2: 118 / 133 
 
 
 
@@ -1612,6 +1756,8 @@ threshold 0.1 init: random alphamin: 0.7 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 3 
 Eta values: 2.641318 152.7392 
+Number of outliers in Class 1: 37 / 67 
+Number of outliers in Class 2: 123 / 133 
 
 
 
@@ -1634,6 +1780,8 @@ threshold 0.1 init: random alphamin: 0.8 ccr: 0.775
 Number of misclassified labels: 45 
 Number of outliers that are misclassified: 3 
 Eta values: 2.605505 154.0694 
+Number of outliers in Class 1: 43 / 67 
+Number of outliers in Class 2: 128 / 133 
 
 
 
@@ -1656,6 +1804,8 @@ threshold 0.1 init: random alphamin: 0.85 ccr: 0.775
 Number of misclassified labels: 45 
 Number of outliers that are misclassified: 3 
 Eta values: 2.569878 154.3025 
+Number of outliers in Class 1: 47 / 67 
+Number of outliers in Class 2: 129 / 133 
 
 
 
@@ -1678,6 +1828,8 @@ threshold 0.1 init: random alphamin: 0.9 ccr: 0.775
 Number of misclassified labels: 45 
 Number of outliers that are misclassified: 3 
 Eta values: 2.688531 155.0571 
+Number of outliers in Class 1: 54 / 67 
+Number of outliers in Class 2: 132 / 133 
 
 
 
@@ -1700,6 +1852,8 @@ threshold 0.1 init: random alphamin: 0.95 ccr: 0.805
 Number of misclassified labels: 39 
 Number of outliers that are misclassified: 3 
 Eta values: 10.40805 49.47463 
+Number of outliers in Class 1: 60 / 67 
+Number of outliers in Class 2: 133 / 133 
 
 
 
@@ -1722,6 +1876,8 @@ threshold 0.2 init: random alphamin: 0.5 ccr: 0.72
 Number of misclassified labels: 56 
 Number of outliers that are misclassified: 4 
 Eta values: 15.09518 6.592133 
+Number of outliers in Class 1: 96 / 133 
+Number of outliers in Class 2: 12 / 67 
 
 
 
@@ -1744,6 +1900,8 @@ threshold 0.2 init: random alphamin: 0.6 ccr: 0.72
 Number of misclassified labels: 56 
 Number of outliers that are misclassified: 4 
 Eta values: 14.96766 6.472133 
+Number of outliers in Class 1: 96 / 133 
+Number of outliers in Class 2: 12 / 67 
 
 
 
@@ -1766,6 +1924,8 @@ threshold 0.2 init: random alphamin: 0.7 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 6 
 Eta values: 3.668319 13.75549 
+Number of outliers in Class 1: 23 / 67 
+Number of outliers in Class 2: 107 / 133 
 
 
 
@@ -1788,6 +1948,8 @@ threshold 0.2 init: random alphamin: 0.8 ccr: 0.71
 Number of misclassified labels: 58 
 Number of outliers that are misclassified: 4 
 Eta values: 13.87498 3.839593 
+Number of outliers in Class 1: 106 / 133 
+Number of outliers in Class 2: 27 / 67 
 
 
 
@@ -1810,6 +1972,8 @@ threshold 0.2 init: random alphamin: 0.85 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 4 
 Eta values: 2.994477 13.73651 
+Number of outliers in Class 1: 40 / 67 
+Number of outliers in Class 2: 120 / 133 
 
 
 
@@ -1832,6 +1996,8 @@ threshold 0.2 init: random alphamin: 0.9 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 4 
 Eta values: 14.22036 3.03651 
+Number of outliers in Class 1: 122 / 133 
+Number of outliers in Class 2: 43 / 67 
 
 
 
@@ -1854,6 +2020,8 @@ threshold 0.2 init: random alphamin: 0.95 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 4 
 Eta values: 8.767399 7.056145 
+Number of outliers in Class 1: 126 / 133 
+Number of outliers in Class 2: 51 / 67 
 
 
 
@@ -1876,6 +2044,8 @@ threshold 0.3 init: random alphamin: 0.5 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 6 
 Eta values: 13.9963 3.80061 
+Number of outliers in Class 1: 105 / 133 
+Number of outliers in Class 2: 21 / 67 
 
 
 
@@ -1898,6 +2068,8 @@ threshold 0.3 init: random alphamin: 0.6 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 6 
 Eta values: 13.86783 3.733776 
+Number of outliers in Class 1: 107 / 133 
+Number of outliers in Class 2: 22 / 67 
 
 
 
@@ -1920,6 +2092,8 @@ threshold 0.3 init: random alphamin: 0.7 ccr: 0.745
 Number of misclassified labels: 51 
 Number of outliers that are misclassified: 6 
 Eta values: 13.75549 3.668306 
+Number of outliers in Class 1: 107 / 133 
+Number of outliers in Class 2: 23 / 67 
 
 
 
@@ -1942,6 +2116,8 @@ threshold 0.3 init: random alphamin: 0.8 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 4 
 Eta values: 13.00803 3.010589 
+Number of outliers in Class 1: 116 / 133 
+Number of outliers in Class 2: 35 / 67 
 
 
 
@@ -1964,6 +2140,8 @@ threshold 0.3 init: random alphamin: 0.85 ccr: 0.77
 Number of misclassified labels: 46 
 Number of outliers that are misclassified: 4 
 Eta values: 13.73653 2.994478 
+Number of outliers in Class 1: 120 / 133 
+Number of outliers in Class 2: 40 / 67 
 
 
 
@@ -1986,6 +2164,8 @@ threshold 0.3 init: random alphamin: 0.9 ccr: 0.765
 Number of misclassified labels: 47 
 Number of outliers that are misclassified: 4 
 Eta values: 14.22041 3.036501 
+Number of outliers in Class 1: 122 / 133 
+Number of outliers in Class 2: 43 / 67 
 
 
 
@@ -2008,6 +2188,8 @@ threshold 0.3 init: random alphamin: 0.95 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 4 
 Eta values: 7.056141 8.767435 
+Number of outliers in Class 1: 51 / 67 
+Number of outliers in Class 2: 126 / 133 
 
 
 
@@ -2030,6 +2212,8 @@ threshold 0.4 init: random alphamin: 0.5 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 2 
 Eta values: 7.261258 6.068487 
+Number of outliers in Class 1: 90 / 133 
+Number of outliers in Class 2: 24 / 67 
 
 
 
@@ -2052,6 +2236,8 @@ threshold 0.4 init: random alphamin: 0.6 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 2 
 Eta values: 7.275038 6.075912 
+Number of outliers in Class 1: 91 / 133 
+Number of outliers in Class 2: 24 / 67 
 
 
 
@@ -2074,6 +2260,8 @@ threshold 0.4 init: random alphamin: 0.7 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 2 
 Eta values: 7.31652 6.065175 
+Number of outliers in Class 1: 92 / 133 
+Number of outliers in Class 2: 24 / 67 
 
 
 
@@ -2096,6 +2284,8 @@ threshold 0.4 init: random alphamin: 0.8 ccr: 0.785
 Number of misclassified labels: 43 
 Number of outliers that are misclassified: 2 
 Eta values: 7.339745 5.971047 
+Number of outliers in Class 1: 98 / 133 
+Number of outliers in Class 2: 24 / 67 
 
 
 
@@ -2118,6 +2308,8 @@ threshold 0.4 init: random alphamin: 0.85 ccr: 0.825
 Number of misclassified labels: 35 
 Number of outliers that are misclassified: 4 
 Eta values: 6.244864 6.961841 
+Number of outliers in Class 1: 109 / 133 
+Number of outliers in Class 2: 54 / 67 
 
 
 
@@ -2140,6 +2332,8 @@ threshold 0.4 init: random alphamin: 0.9 ccr: 0.815
 Number of misclassified labels: 37 
 Number of outliers that are misclassified: 4 
 Eta values: 6.280434 6.949104 
+Number of outliers in Class 1: 111 / 133 
+Number of outliers in Class 2: 54 / 67 
 
 
 
@@ -2162,6 +2356,8 @@ threshold 0.4 init: random alphamin: 0.95 ccr: 0.8
 Number of misclassified labels: 40 
 Number of outliers that are misclassified: 4 
 Eta values: 6.304806 7.143745 
+Number of outliers in Class 1: 116 / 133 
+Number of outliers in Class 2: 54 / 67 
 
 
 
