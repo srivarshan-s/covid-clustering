@@ -25,5 +25,5 @@ The correct classification rate: 53.5 %
 Number of misclassified labels: 93 
 Number of outliers that are misclassified: 10 
 Eta values: 4.14012 3.737416 
-Number of outliers in Class 1: 25 / 67 
-Number of outliers in Class 2: 108 / 133 
+Number of outliers in Class 1: 42 / 67 
+Number of outliers in Class 2: 25 / 133 
