@@ -12,8 +12,8 @@ library("funHDDC")
 
 
 #################### GLOBAL VARIABLES ##########################
-NBASIS_FOURIER <- 11
-NSPLINE_BSPLINE <- 20
+NBASIS_FOURIER <- 41
+NSPLINE_BSPLINE <- 38
 
 
 
