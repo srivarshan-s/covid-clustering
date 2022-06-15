@@ -1,7 +1,7 @@
 #################### ENIRONMENT SETUP ##########################
 setwd("~/Documents/functional-data-clustering")
-source("~/Documents/functional-data-clustering/src/tfunHDDC.R")
-source("~/Documents/functional-data-clustering/src/cfunHDDC.R")
+source("./src/tfunHDDC.R")
+source("./src/cfunHDDC.R")
 
 
 
@@ -18,7 +18,7 @@ DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
 NBASIS_FOURIER <- 41
-NSPLINE_BSPLINE <- 20
+NSPLINE_BSPLINE <- 38
 ITER_MAX <- 200
 MODELS <- c("AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
             "ABkQkDk", "ABQkDk")
@@ -107,10 +107,10 @@ cfunHDDC_outliers <- function(labels, outliers) {
   class1_outliers <- 0
   class2_outliers <- 0
   for (idx in 1:length(labels)) {
-    if (labels[idx] == 1 && outliers[idx] == 1) {
+    if (labels[idx] == 1 && outliers[idx] == 0) {
       class1_outliers <- class1_outliers + 1
     }
-    if (labels[idx] == 2 && outliers[idx] == 1) {
+    if (labels[idx] == 2 && outliers[idx] == 0) {
       class2_outliers <- class2_outliers + 1
     }
   }
