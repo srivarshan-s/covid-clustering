@@ -20,7 +20,7 @@ library("funHDDC")
 
 DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
-FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
+FOURIER_BASIS <- FALSE # TRUE -> fourier FALSE -> bspline 
 NBASIS_FOURIER <- 41
 NSPLINE_BSPLINE <- 38
 ITER_MAX <- 200
