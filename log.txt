@@ -2,3 +2,28 @@
 [1] "done"
 [1] "done"
 [1] "Detecting outliers in Class 1....."
+Number of outliers in Class 1: 7 
+[1] "Detecting outliers in Class 2....."
+Number of outliers in Class 2: 21 
+[1] "Running cfunHDDC algorithm....."
+cfunHDDC: 
+      model K threshold complexity        BIC
+1 AKJBKQKDK 2       0.2        250 -11,542.86
+2   ABKQKDK 2       0.2        247 -11,665.32
+3   AKBQKDK 2       0.2        170 -13,153.24
+4    ABQKDK 2       0.2        169 -13,262.07
+5  AKBKQKDK 2       0.2        171 -13,263.52
+6  AKJBQKDK 2       0.2        170 -13,267.31
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+      
+labels  1  2
+     1 39 28
+     2 65 68
+The correct classification rate: 53.5 %
+Number of misclassified labels: 93 
+Number of outliers that are misclassified: 10 
+Eta values: 4.14012 3.737416 
+Number of outliers in Class 1: 25 / 67 
+Number of outliers in Class 2: 108 / 133 
