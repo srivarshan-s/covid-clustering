@@ -1,4 +1,5 @@
 #################### ENIRONMENT SETUP ##########################
+
 setwd("~/Documents/functional-data-clustering")
 source("./src/tfunHDDC.R")
 source("./src/cfunHDDC.R")
@@ -6,6 +7,7 @@ source("./src/cfunHDDC.R")
 
 
 #################### IMPORT PACKAGES ###########################
+
 library("tidyverse")
 library("fda")
 library("fda.usc")
@@ -14,6 +16,7 @@ library("funHDDC")
 
 
 #################### GLOBAL VARIABLES ##########################
+
 DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
