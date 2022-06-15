@@ -104,20 +104,20 @@ find_eta_values <- function(result) {
 
 cfunHDDC_outliers <- function(labels, outliers) {
     # 0 is the outlier
-  class1_outliers <- 0
-  class2_outliers <- 0
-  for (idx in 1:length(labels)) {
-    if (labels[idx] == 1 && outliers[idx] == 0) {
-      class1_outliers <- class1_outliers + 1
+    class1_outliers <- 0
+    class2_outliers <- 0
+    for (idx in 1:length(labels)) {
+        if (labels[idx] == 1 && outliers[idx] == 0) {
+            class1_outliers <- class1_outliers + 1
+        }
+        if (labels[idx] == 2 && outliers[idx] == 0) {
+            class2_outliers <- class2_outliers + 1
+        }
     }
-    if (labels[idx] == 2 && outliers[idx] == 0) {
-      class2_outliers <- class2_outliers + 1
-    }
-  }
-  cat("Number of outliers in Class 1:", class1_outliers, 
-      "/", length(labels[labels == 1]), "\n")
-  cat("Number of outliers in Class 2:", class2_outliers, "/", 
-      length(labels[labels == 2]), "\n")
+    cat("Number of outliers in Class 1:", class1_outliers, 
+        "/", length(labels[labels == 1]), "\n")
+    cat("Number of outliers in Class 2:", class2_outliers, "/", 
+        length(labels[labels == 2]), "\n")
 }
 
 
@@ -425,21 +425,21 @@ ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
 set_seed()
 result <- cfunHDDC(
-  ecg_fdata,
-  K = 2,
-  init = "kmeans", # 'random', 'kmeans'
-  threshold = 0.2,
-  model = MODELS,
-  itermax = ITER_MAX,
-  nb.rep = 1,
-  alphamin = 0.85 # Ideally between 0.8 and 0.95
+                   ecg_fdata,
+                   K = 2,
+                   init = "kmeans", # 'random', 'kmeans'
+                   threshold = 0.2,
+                   model = MODELS,
+                   itermax = ITER_MAX,
+                   nb.rep = 1,
+                   alphamin = 0.85 # Ideally between 0.8 and 0.95
 )
 cf_matrix <- table(labels, result$class)
 ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
 if (ccr < 1 - ccr) {
-  labels <- change_labels(labels)
-  cf_matrix <- table(labels, result$class)
-  ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    labels <- change_labels(labels)
+    cf_matrix <- table(labels, result$class)
+    ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
 }
 print(cf_matrix)
 cat("The correct classification rate:", ccr * 100, "%\n")
