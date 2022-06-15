@@ -17,7 +17,7 @@ library("funHDDC")
 DETECT_OUTLIERS <- TRUE
 OUTLIER_TRIM <- 0.1
 FOURIER_BASIS <- TRUE # TRUE -> fourier FALSE -> bspline 
-NBASIS_FOURIER <- 11
+NBASIS_FOURIER <- 41
 NSPLINE_BSPLINE <- 20
 ITER_MAX <- 200
 MODELS <- c("AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
@@ -103,6 +103,7 @@ find_eta_values <- function(result) {
 }
 
 cfunHDDC_outliers <- function(labels, outliers) {
+    # 0 is the outlier
   class1_outliers <- 0
   class2_outliers <- 0
   for (idx in 1:length(labels)) {
@@ -417,88 +418,88 @@ if (DETECT_OUTLIERS) {
 # cat("Best Constraint:", BEST_DCONSTR, "\n")
 # cat("Highest CCR:", BEST_CCR, "\n")
 
-# # cfunHDDC algorithm
-# print("Running cfunHDDC algorithm.....")
-# drops <- c("X1")
-# ecg_df <- df[, !(names(df) %in% drops)]
-# ecg_fdata <- functional_data(ecg_df)
-# set_seed()
-# result <- cfunHDDC(
-#   ecg_fdata,
-#   K = 2,
-#   init = "kmeans", # 'random', 'kmeans'
-#   threshold = 0.1,
-#   model = MODELS,
-#   itermax = ITER_MAX,
-#   nb.rep = 1,
-#   alphamin = 0.5 # Ideally between 0.8 and 0.95
-# )
-# cf_matrix <- table(labels, result$class)
-# ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-# if (ccr < 1 - ccr) {
-#   labels <- change_labels(labels)
-#   cf_matrix <- table(labels, result$class)
-#   ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-# }
-# print(cf_matrix)
-# cat("The correct classification rate:", ccr * 100, "%\n")
-# find_misclassified_labels(result, labels, outlier_labels)
-# find_eta_values(result)
-# class1_outliers <- 0
-# class2_outliers <- 0
-# cfunHDDC_outliers(labels, result$outlier)
-
-# cfunHDDC gridsearch
-print("Running cfunHDDC gridsearch.....")
+# cfunHDDC algorithm
+print("Running cfunHDDC algorithm.....")
 drops <- c("X1")
 ecg_df <- df[, !(names(df) %in% drops)]
 ecg_fdata <- functional_data(ecg_df)
-GRIDSEARCH_INITS <- c("kmeans", "random")
-GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
-GRIDSEARCH_ALPHAS <- c(0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95)
-BEST_CCR <- 0
-BEST_INIT <- ""
-BEST_THRESHOLD <- 0
-BEST_ALPHAMIN <- 0
-for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
-    for (alphamin in GRIDSEARCH_ALPHAS) {
-        cat("\n\n\n")
-        set_seed()
-        result <- cfunHDDC(
-                           ecg_fdata,
-                           K = 2,
-                           init = init,
-                           threshold = threshold,
-                           model = MODELS,
-                           itermax = ITER_MAX,
-                           nb.rep = 20,
-                           alphamin = alphamin
-        )
-        cf_matrix <- table(labels, result$class)
-        ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-        if (ccr < 1 - ccr) {
-            labels <- change_labels(labels)
-            cf_matrix <- table(labels, result$class)
-            ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
-        }
-        print(cf_matrix)
-        cat("threshold", threshold,
-            "init:", init,
-            "alphamin:", alphamin,
-            "ccr:", ccr, "\n")
-        find_misclassified_labels(result, labels, outlier_labels)
-        find_eta_values(result)
-        cfunHDDC_outliers(labels, result$outlier)
-        if (ccr >= BEST_CCR) {
-            BEST_CCR <- ccr
-            BEST_INIT <- init
-            BEST_THRESHOLD <- threshold
-            BEST_ALPHAMIN <- alphamin
-        }
-    }
-} }
-cat("\n\n\n")
-cat("Best Init:", BEST_INIT, "\n")
-cat("Best Threshold:", BEST_THRESHOLD, "\n")
-cat("Best Alphamin:", BEST_ALPHAMIN, "\n")
-cat("Highest CCR:", BEST_CCR, "\n")
+set_seed()
+result <- cfunHDDC(
+  ecg_fdata,
+  K = 2,
+  init = "kmeans", # 'random', 'kmeans'
+  threshold = 0.2,
+  model = MODELS,
+  itermax = ITER_MAX,
+  nb.rep = 1,
+  alphamin = 0.85 # Ideally between 0.8 and 0.95
+)
+cf_matrix <- table(labels, result$class)
+ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+if (ccr < 1 - ccr) {
+  labels <- change_labels(labels)
+  cf_matrix <- table(labels, result$class)
+  ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+}
+print(cf_matrix)
+cat("The correct classification rate:", ccr * 100, "%\n")
+find_misclassified_labels(result, labels, outlier_labels)
+find_eta_values(result)
+class1_outliers <- 0
+class2_outliers <- 0
+cfunHDDC_outliers(labels, result$outlier)
+
+# # cfunHDDC gridsearch
+# print("Running cfunHDDC gridsearch.....")
+# drops <- c("X1")
+# ecg_df <- df[, !(names(df) %in% drops)]
+# ecg_fdata <- functional_data(ecg_df)
+# GRIDSEARCH_INITS <- c("kmeans", "random")
+# GRIDSEARCH_THRESHOLDS <- c(0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4)
+# GRIDSEARCH_ALPHAS <- c(0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95)
+# BEST_CCR <- 0
+# BEST_INIT <- ""
+# BEST_THRESHOLD <- 0
+# BEST_ALPHAMIN <- 0
+# for (init in GRIDSEARCH_INITS) { for (threshold in GRIDSEARCH_THRESHOLDS) {
+#     for (alphamin in GRIDSEARCH_ALPHAS) {
+#         cat("\n\n\n")
+#         set_seed()
+#         result <- cfunHDDC(
+#                            ecg_fdata,
+#                            K = 2,
+#                            init = init,
+#                            threshold = threshold,
+#                            model = MODELS,
+#                            itermax = ITER_MAX,
+#                            nb.rep = 20,
+#                            alphamin = alphamin
+#         )
+#         cf_matrix <- table(labels, result$class)
+#         ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+#         if (ccr < 1 - ccr) {
+#             labels <- change_labels(labels)
+#             cf_matrix <- table(labels, result$class)
+#             ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+#         }
+#         print(cf_matrix)
+#         cat("threshold", threshold,
+#             "init:", init,
+#             "alphamin:", alphamin,
+#             "ccr:", ccr, "\n")
+#         find_misclassified_labels(result, labels, outlier_labels)
+#         find_eta_values(result)
+#         cfunHDDC_outliers(labels, result$outlier)
+#         if (ccr >= BEST_CCR) {
+#             BEST_CCR <- ccr
+#             BEST_INIT <- init
+#             BEST_THRESHOLD <- threshold
+#             BEST_ALPHAMIN <- alphamin
+#         }
+#     }
+# } }
+# cat("\n\n\n")
+# cat("Best Init:", BEST_INIT, "\n")
+# cat("Best Threshold:", BEST_THRESHOLD, "\n")
+# cat("Best Alphamin:", BEST_ALPHAMIN, "\n")
+# cat("Highest CCR:", BEST_CCR, "\n")
