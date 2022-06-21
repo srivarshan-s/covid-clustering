@@ -10,7 +10,7 @@
 
 4. ~~See for different splines as 38 and 41 seem too high (if possible)~~ **NOT NECESSARY**
 
-5. Keep the Bsplines at 20 splines and run cfunHDDC (huge eta; good CCR)
+5. ~~Keep the Bsplines at 20 splines and run cfunHDDC (huge eta; good CCR)~~ **DONE**
    
    1. copy the previous table and put some pictures (similar to nox data)
       
