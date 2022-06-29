@@ -2079,6 +2079,7 @@ plot_classnox<-function(data1=functional_nox_data(nox, 8), c1=ino1$plot[2,]$clas
   plot(nox2, col=CL[funco2], main="d",xlab="", ylab="")
   
 }
+set.seed(14071)
 #inc1=cluster_testdata(1, functional_nox_data(), K=2, fun_names=c("CNmixt"), nrep=50,init="kmeans", simpre="NOx", threshold=0.05,alphamin=c(0.5))#77/115 6 outliers
 #inc2=cluster_testdata(1, functional_nox_data(), K=2, fun_names=c("CNmixt"), nrep=50,init="kmeans", simpre="NOx", threshold=0.05,alphamin=c(0.75))#76/115 9 outliers
 #inc3=cluster_testdata(1, functional_nox_data(), K=2, fun_names=c("CNmixt"), nrep=50,init="kmeans", simpre="NOx", threshold=0.05,alphamin=c(0.85))#77/115 6 outliers
@@ -2087,4 +2088,3 @@ plot_classnox<-function(data1=functional_nox_data(nox, 8), c1=ino1$plot[2,]$clas
 #inc6=cluster_testdata(1, removal_nox(ino5), K=2, fun_names=c("CNmixt"), nrep=50,init="kmeans", simpre="NOx", threshold=0.05,alphamin=c(1))#86/103 0 outliers
 #in10=cluster_testdata(1, functional_nox_data(), K=2, fun_names=c("cfunHDDC","funHDDC"), nrep=1,init="kmeans", simpre="NOx", threshold=0.45,alphamin=c(0.85))#94/115 etamx=100,all outliers &74
 in11=cluster_testdata(1, functional_nox_data(), K=2, fun_names=c("cfunHDDC","funHDDC"), nrep=1,init="kmeans", simpre="NOx", threshold=0.8,alphamin=c(0.85))#94/115 etamx=100,all outliers &74
-
