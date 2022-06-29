@@ -17,13 +17,19 @@ library("funHDDC")
 #################### GLOBAL VARIABLES ##########################
 NBASIS_FOURIER <- 11
 NSPLINE_BSPLINE <- 20
-FOURIER_BASIS <- FALSE
-PLOT_ORIGINAL_DATA <- FALSE
-PLOT_TFUNHDDC_CLUSTERS <- FALSE
-PLOT_CFUNHDDC_CLUSTERS <- TRUE
+FOURIER_BASIS <- TRUE
+PLOT_ORIGINAL_DATA <- TRUE
+PLOT_TFUNHDDC_FOURIER_CLUSTERS <- FALSE
+PLOT_CFUNHDDC_FOURIER_CLUSTERS <- FALSE
+PLOT_TFUNHDDC_BSPLINE_CLUSTERS <- FALSE
+PLOT_CFUNHDDC_BSPLINE_CLUSTERS <- FALSE
+OUTLIER_TRIM <- 0.1
 ITER_MAX <- 200
-MODELS <- c("AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
-            "ABkQkDk", "ABQkDk")
+LINE_TYPE <- 1
+MODELS <- c(
+            "AkjBkQkDk", "AkjBQkDk", "AkBkQkDk", "AkBQkDk",
+            "ABkQkDk", "ABQkDk"
+)
 
 
 
@@ -57,62 +63,102 @@ df_class_2 <- filter(df, X1 == "1")
 
 if (PLOT_ORIGINAL_DATA) {
 
+    outlier_labels <- c()
+
+    # Search for outliers in class 1
+    drops <- c("X1")
+    ecg_df <- df_class_1[, !(names(df_class_1) %in% drops)]
+    ecg_fdata <- functional_data(ecg_df)
+    set_seed()
+    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim = OUTLIER_TRIM)
+    num_of_outliers <- 0
+    outlier_labels <- append(outlier_labels, ecg_outliers$outliers)
+
     # Plot class 1 of original data
     drops <- c("X1")
     plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
     pdf("original_data_class_1.pdf")
-    plot(
-         as.numeric(plot_df[1, ]),
-         type = "l",
-         col = "red",
-         main = "Class 1",
-         xlab = "Time",
-         ylab = "Value"
-    )
-    for (idx in 2:67) {
-        lines(as.numeric(plot_df[idx, ]), col = "red")
+    A <- c()
+    for (ele in ecg_fdata$fdnames$reps) {
+        flag <- TRUE
+        for (otlr in ecg_outliers$outliers) {
+            if (otlr == ele) {
+                flag <- FALSE
+                A <- append(A, 3)
+            }
+        }
+        if (flag) {
+            A <- append(A, 1)
+        }
     }
+    matplot(
+            t(as.matrix(plot_df)),
+            type = "l",
+            col = A,
+            lty = LINE_TYPE,
+            main = "Class 1",
+            xlab = "Time",
+            ylab = "Value",
+    )
+
+    # Search for outliers in class 2
+    drops <- c("X1")
+    ecg_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+    ecg_fdata <- functional_data(ecg_df)
+    set_seed()
+    ecg_outliers <- outliers.depth.trim(ecg_fdata, trim = OUTLIER_TRIM)
+    num_of_outliers <- 0
+    outlier_labels <- append(outlier_labels, ecg_outliers$outliers)
 
     # Plot class 2 of original data
     drops <- c("X1")
     plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
     pdf("original_data_class_2.pdf")
-    plot(
-         as.numeric(plot_df[1, ]),
-         type = "l",
-         col = "black",
-         main = "Class 2",
-         xlab = "Time",
-         ylab = "Value"
-    )
-    for (idx in 2:133) {
-        lines(as.numeric(plot_df[idx, ]), col = "black")
+    A <- c()
+    for (ele in ecg_fdata$fdnames$reps) {
+        flag <- TRUE
+        for (otlr in ecg_outliers$outliers) {
+            if (otlr == ele) {
+                flag <- FALSE
+                A <- append(A, 3)
+            }
+        }
+        if (flag) {
+            A <- append(A, 2)
+        }
     }
+    matplot(
+            t(as.matrix(plot_df)),
+            type = "l",
+            col = A,
+            lty = LINE_TYPE,
+            main = "Class 2",
+            xlab = "Time",
+            ylab = "Value",
+    )
 
     # Plot both classes of original data
     drops <- c("X1")
-    plot_df <- df_class_2[, !(names(df_class_2) %in% drops)]
+    plot_df <- df[, !(names(df) %in% drops)]
     pdf("original_data_all_classes.pdf")
-    plot(
-         as.numeric(plot_df[1, ]),
-         type = "l",
-         col = "red",
-         main = "All classes",
-         xlab = "Time",
-         ylab = "Value"
+    new_labels <- change_labels(labels)
+    for (otlr in outlier_labels) {
+        idx <- strtoi(strsplit(otlr, "rep")[[1]][2])
+        new_labels[idx] <- 3
+    }
+    matplot(
+            t(as.matrix(plot_df)),
+            type = "l",
+            lty = LINE_TYPE,
+            col = new_labels,
+            main = "All Classes",
+            xlab = "Time",
+            ylab = "Value",
     )
-    for (idx in 2:67) {
-        lines(as.numeric(plot_df[idx, ]), col = "red")
-    }
-    drops <- c("X1")
-    plot_df <- df_class_1[, !(names(df_class_1) %in% drops)]
-    for (idx in 1:133) {
-        lines(as.numeric(plot_df[idx, ]), col = "black")
-    }
 }
 
-if (PLOT_TFUNHDDC_CLUSTERS) {
-
+if (PLOT_TFUNHDDC_FOURIER_CLUSTERS) {
+    FOURIER_BASIS <- TRUE
     drops <- c("X1")
     ecg_df <- df[, !(names(df) %in% drops)]
     ecg_fdata <- functional_data(ecg_df)
@@ -121,11 +167,11 @@ if (PLOT_TFUNHDDC_CLUSTERS) {
                        ecg_fdata,
                        K = 2,
                        init = "random", # 'random', 'kmeans'
-                       threshold = 0.001,
+                       threshold = 0.01,
                        model = MODELS,
                        itermax = ITER_MAX,
                        nb.rep = 20,
-                       dfstart=50, # Don't go more than 100; similar to funHDDC; keep it at 50
+                       dfstart = 50,
                        dfupdate = "numeric", # "approx", "numeric"
                        dconstr = "yes" # "yes", "no"
     )
@@ -139,16 +185,112 @@ if (PLOT_TFUNHDDC_CLUSTERS) {
         ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
     }
     print(ccr)
-    pdf("tfunHDDC_all_clusters.pdf")
-    plot.fd(ecg_fdata, col = result$class)
-    pdf("tfunHDDC_cluster_1.pdf")
-    plot.fd(ecg_fdata[result$class == 1], col = 1)
-    pdf("tfunHDDC_cluster_2.pdf")
-    plot.fd(ecg_fdata[result$class == 2], col = 2)
+    pdf("tfunHDDC_fourier_all_clusters.pdf")
+    plot.fd(ecg_fdata, col = result$class,
+            main = "All Classes",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("tfunHDDC_fourier_cluster_1.pdf")
+    plot.fd(ecg_fdata[result$class == 1], col = 1,
+            main = "Class 1",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("tfunHDDC_fourier_cluster_2.pdf")
+    plot.fd(ecg_fdata[result$class == 2], col = 2,
+            main = "Class 2",
+            xlab = "Time",
+            ylab = "Value",)
 }
 
-if (PLOT_CFUNHDDC_CLUSTERS) {
+if (PLOT_CFUNHDDC_FOURIER_CLUSTERS) {
+    FOURIER_BASIS <- TRUE
+    drops <- c("X1")
+    ecg_df <- df[, !(names(df) %in% drops)]
+    ecg_fdata <- functional_data(ecg_df)
+    set_seed()
+    result <- cfunHDDC(
+                       ecg_fdata,
+                       K = 2,
+                       init = "random", # 'random', 'kmeans'
+                       threshold = 0.01,
+                       model = MODELS,
+                       itermax = ITER_MAX,
+                       nb.rep = 20,
+                       alphamin = 0.8 # Ideally between 0.8 and 0.95
+    )
+    labels <- extract_labels(df)
+    cf_matrix <- table(labels, result$class)
+    ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    if (ccr < 1 - ccr) {
+        labels <- change_labels(labels)
+        cf_matrix <- table(labels, result$class)
+        ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    }
+    print(ccr)
+    pdf("cfunHDDC_fourier_all_clusters.pdf")
+    plot.fd(ecg_fdata, col = result$class,
+            main = "All Classes",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("cfunHDDC_fourier_cluster_1.pdf")
+    plot.fd(ecg_fdata[result$class == 1], col = 1,
+            main = "Class 1",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("cfunHDDC_fourier_cluster_2.pdf")
+    plot.fd(ecg_fdata[result$class == 2], col = 2,
+            main = "Class 2",
+            xlab = "Time",
+            ylab = "Value",)
+}
 
+if (PLOT_TFUNHDDC_BSPLINE_CLUSTERS) {
+    FOURIER_BASIS <- FALSE
+    drops <- c("X1")
+    ecg_df <- df[, !(names(df) %in% drops)]
+    ecg_fdata <- functional_data(ecg_df)
+    set_seed()
+    result <- tfunHDDC(
+                       ecg_fdata,
+                       K = 2,
+                       init = "random", # 'random', 'kmeans'
+                       threshold = 0.001,
+                       model = MODELS,
+                       itermax = ITER_MAX,
+                       nb.rep = 20,
+                       dfstart = 50,
+                       dfupdate = "numeric", # "approx", "numeric"
+                       dconstr = "yes" # "yes", "no"
+    )
+
+    labels <- extract_labels(df)
+    cf_matrix <- table(labels, result$class)
+    ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    if (ccr < 1 - ccr) {
+        labels <- change_labels(labels)
+        cf_matrix <- table(labels, result$class)
+        ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
+    }
+    print(ccr)
+    pdf("tfunHDDC_bspline_all_clusters.pdf")
+    plot.fd(ecg_fdata, col = result$class,
+            main = "All Classes",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("tfunHDDC_bspline_cluster_1.pdf")
+    plot.fd(ecg_fdata[result$class == 1], col = 1,
+            main = "Class 1",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("tfunHDDC_bspline_cluster_2.pdf")
+    plot.fd(ecg_fdata[result$class == 2], col = 2,
+            main = "Class 2",
+            xlab = "Time",
+            ylab = "Value",)
+}
+
+if (PLOT_CFUNHDDC_BSPLINE_CLUSTERS) {
+    FOURIER_BASIS <- FALSE
     drops <- c("X1")
     ecg_df <- df[, !(names(df) %in% drops)]
     ecg_fdata <- functional_data(ecg_df)
@@ -172,10 +314,19 @@ if (PLOT_CFUNHDDC_CLUSTERS) {
         ccr <- (cf_matrix[1, 1] + cf_matrix[2, 2]) / sum(cf_matrix)
     }
     print(ccr)
-    pdf("cfunHDDC_all_clusters.pdf")
-    plot.fd(ecg_fdata, col = result$class)
-    pdf("cfunHDDC_cluster_1.pdf")
-    plot.fd(ecg_fdata[result$class == 1], col = 1)
-    pdf("cfunHDDC_cluster_2.pdf")
-    plot.fd(ecg_fdata[result$class == 2], col = 2)
+    pdf("cfunHDDC_bspline_all_clusters.pdf")
+    plot.fd(ecg_fdata, col = result$class,
+            main = "All Classes",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("cfunHDDC_bspline_cluster_1.pdf")
+    plot.fd(ecg_fdata[result$class == 1], col = 1,
+            main = "Class 1",
+            xlab = "Time",
+            ylab = "Value",)
+    pdf("cfunHDDC_bspline_cluster_2.pdf")
+    plot.fd(ecg_fdata[result$class == 2], col = 2,
+            main = "Class 2",
+            xlab = "Time",
+            ylab = "Value",)
 }
