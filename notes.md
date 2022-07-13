@@ -27,3 +27,9 @@
 8. Try python code about forests in (Outlier detection in multivariate functional data through a contaminated mixture model)
 
 9. Send plotting code to Cristina
+
+10. Take a look at the Kneading data
+    
+    1. first 50 are one class
+    
+    2. the next 50 are another class
