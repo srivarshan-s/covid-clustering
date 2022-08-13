@@ -1,0 +1,861 @@
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        310 -10,053.00  2  2
+2  AKBKQKDK 2      0.01        296 -10,581.02  2  2
+3   ABKQKDK 2      0.01        295 -10,959.84  2  2
+4    ABQKDK 2      0.01        321 -11,350.95  2  2
+5   AKBQKDK 2      0.01        322 -11,586.87  2  2
+6  AKJBQKDK 2      0.01        347 -13,891.79  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 66 67
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.5 ccr: 0.665 
+Number of misclassified labels: 67 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 133 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        296 -10,418.09  2  2
+2  AKBKQKDK 2      0.01        296 -10,670.31  2  2
+3   ABKQKDK 2      0.01        282 -11,220.36  2  2
+4    ABQKDK 2      0.01        321 -11,439.43  2  2
+5   AKBQKDK 2      0.01        322 -11,675.35  2  2
+6  AKJBQKDK 2      0.01        347 -13,980.27  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 65 68
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.6 ccr: 0.66 
+Number of misclassified labels: 68 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 132 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        310 -10,257.35  2  2
+2  AKBKQKDK 2      0.01        296 -10,785.37  2  2
+3   ABKQKDK 2      0.01        295 -11,164.20  2  2
+4   AKBQKDK 2      0.01        322 -11,789.53  2  2
+5    ABQKDK 2      0.01        321 -11,829.31  2  2
+6  AKJBQKDK 2      0.01        347 -14,094.44  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 66 67
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.7 ccr: 0.665 
+Number of misclassified labels: 67 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 133 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        310 -10,419.58  2  2
+2  AKBKQKDK 2      0.01        296 -10,947.60  2  2
+3   ABKQKDK 2      0.01        282 -11,495.68  2  2
+4    ABQKDK 2      0.01        321 -11,714.75  2  2
+5   AKBQKDK 2      0.01        322 -11,950.68  2  2
+6  AKJBQKDK 2      0.01        347 -14,255.59  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 66 67
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.8 ccr: 0.665 
+Number of misclassified labels: 67 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 133 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        310 -10,534.74  2  2
+2  AKBKQKDK 2      0.01        296 -11,062.75  2  2
+3   ABKQKDK 2      0.01        282 -11,610.14  2  2
+4    ABQKDK 2      0.01        321 -11,829.21  2  2
+5   AKBQKDK 2      0.01        322 -12,065.13  2  2
+6  AKJBQKDK 2      0.01        347 -14,370.05  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 66 67
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.85 ccr: 0.665 
+Number of misclassified labels: 67 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 133 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01        310 -10,697.03  2  2
+2  AKBKQKDK 2      0.01        296 -11,225.05  2  2
+3   ABKQKDK 2      0.01        282 -11,771.51  2  2
+4    ABQKDK 2      0.01        321 -11,990.58  2  2
+5   AKBQKDK 2      0.01        322 -12,226.51  2  2
+6  AKJBQKDK 2      0.01        347 -14,531.42  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 66 67
+  2  0 67
+threshold 0.01 init: kmeans alphamin: 0.9 ccr: 0.665 
+Number of misclassified labels: 67 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 999.9999 999.9999 
+Number of outliers in Class 1 : 133 / 133 
+Number of outliers in Class 2 : 67 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1   ABKQKDK 2      0.05        155 -8,190.41  2  2
+2 AKJBKQKDK 2      0.05        178 -8,470.60  2  2
+3  AKBKQKDK 2      0.05        173 -8,620.07  2  2
+4  AKJBQKDK 2      0.05        194 -9,080.25  2  2
+5    ABQKDK 2      0.05        187 -9,235.52  2  2
+6   AKBQKDK 2      0.05        188 -9,235.77  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.5 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.789852 4.057231 
+Number of outliers in Class 1 : 51 / 133 
+Number of outliers in Class 2 : 43 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1   ABKQKDK 2      0.05        155 -8,189.55  2  2
+2 AKJBKQKDK 2      0.05        178 -8,485.09  2  2
+3  AKBKQKDK 2      0.05        173 -8,636.52  2  2
+4  AKJBQKDK 2      0.05        194 -9,168.72  2  2
+5    ABQKDK 2      0.05        187 -9,324.00  2  2
+6   AKBQKDK 2      0.05        188 -9,324.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.6 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.679791 3.979814 
+Number of outliers in Class 1 : 48 / 133 
+Number of outliers in Class 2 : 43 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1   ABKQKDK 2      0.05        155 -8,198.49  2  2
+2 AKJBKQKDK 2      0.05        178 -8,521.95  2  2
+3  AKBKQKDK 2      0.05        173 -8,669.59  2  2
+4  AKJBQKDK 2      0.05        194 -9,282.90  2  2
+5    ABQKDK 2      0.05        187 -9,438.18  2  2
+6   AKBQKDK 2      0.05        188 -9,438.43  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.7 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.648362 3.835336 
+Number of outliers in Class 1 : 45 / 133 
+Number of outliers in Class 2 : 42 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1   ABKQKDK 2      0.05        155 -8,222.35  2  2
+2 AKJBKQKDK 2      0.05        178 -8,589.23  2  2
+3  AKBKQKDK 2      0.05        173 -8,731.27  2  2
+4  AKJBQKDK 2      0.05        194 -9,444.05  2  2
+5    ABQKDK 2      0.05        187 -9,599.33  2  2
+6   AKBQKDK 2      0.05        188 -9,599.58  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.8 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.605539 3.734691 
+Number of outliers in Class 1 : 43 / 133 
+Number of outliers in Class 2 : 40 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2      0.05        156 -8,175.56  2  2
+2   ABKQKDK 2      0.05        155 -8,242.07  2  2
+3 AKJBKQKDK 2      0.05        178 -8,642.70  2  2
+4  AKJBQKDK 2      0.05        194 -9,558.51  2  2
+5    ABQKDK 2      0.05        187 -9,713.79  2  2
+6   AKBQKDK 2      0.05        188 -9,714.03  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.85 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.723841 3.596913 
+Number of outliers in Class 1 : 42 / 133 
+Number of outliers in Class 2 : 38 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2      0.05        156 -8,245.05  2  2
+2   ABKQKDK 2      0.05        155 -8,280.47  2  2
+3 AKJBKQKDK 2      0.05        178 -8,725.56  2  2
+4  AKJBQKDK 2      0.05        159 -8,887.06  2  2
+5    ABQKDK 2      0.05        187 -9,875.16  2  2
+6   AKBQKDK 2      0.05        188 -9,875.41  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 70 63
+  2  0 67
+threshold 0.05 init: kmeans alphamin: 0.9 ccr: 0.685 
+Number of misclassified labels: 63 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.701315 3.483112 
+Number of outliers in Class 1 : 41 / 133 
+Number of outliers in Class 2 : 35 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -7,917.62  2  2              
+2  AKBKQKDK 2       0.1        140 -7,980.83  2  2              
+3  AKJBQKDK 2       0.1        142 -8,226.03  2  2              
+4    ABQKDK 2       0.1        154 -8,625.04  2  2              
+5   AKBQKDK 2       0.1        155 -8,626.03  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 72 61
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.5 ccr: 0.695 
+Number of misclassified labels: 61 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.975145 3.022839 
+Number of outliers in Class 1 : 47 / 133 
+Number of outliers in Class 2 : 36 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -7,919.68  2  2              
+2  AKBKQKDK 2       0.1        140 -7,981.82  2  2              
+3  AKJBQKDK 2       0.1        160 -8,484.16  2  2              
+4   AKBQKDK 2       0.1        155 -8,657.09  2  2              
+5    ABQKDK 2       0.1        154 -8,659.69  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 72 61
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.6 ccr: 0.695 
+Number of misclassified labels: 61 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.979356 3.016288 
+Number of outliers in Class 1 : 47 / 133 
+Number of outliers in Class 2 : 36 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -7,942.11  2  2              
+2  AKBKQKDK 2       0.1        140 -8,004.22  2  2              
+3    ABQKDK 2       0.1        154 -8,726.35  2  2              
+4  AKJBQKDK 2       0.1        177 -8,796.54  2  2              
+5   AKBQKDK 2       0.1        172 -8,804.95  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 72 61
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.7 ccr: 0.695 
+Number of misclassified labels: 61 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.989164 2.925001 
+Number of outliers in Class 1 : 43 / 133 
+Number of outliers in Class 2 : 34 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -7,976.37  2  2              
+2  AKBKQKDK 2       0.1        140 -8,038.14  2  2              
+3   AKBQKDK 2       0.1        201 -8,814.30  2  2              
+4    ABQKDK 2       0.1        171 -8,864.47  2  2              
+5  AKJBQKDK 2       0.1        177 -8,867.60  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 72 61
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.8 ccr: 0.695 
+Number of misclassified labels: 61 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.988136 2.872902 
+Number of outliers in Class 1 : 37 / 133 
+Number of outliers in Class 2 : 25 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -7,996.91  2  2              
+2  AKBKQKDK 2       0.1        140 -8,059.81  2  2              
+3   AKBQKDK 2       0.1        201 -8,842.19  2  2              
+4    ABQKDK 2       0.1        171 -8,870.13  2  2              
+5  AKJBQKDK 2       0.1        177 -8,912.55  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 72 61
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.85 ccr: 0.695 
+Number of misclassified labels: 61 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.974213 2.921461 
+Number of outliers in Class 1 : 36 / 133 
+Number of outliers in Class 2 : 21 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2       comment
+1 AKJBKQKDK 2       0.1        143 -8,025.28  2  2              
+2  AKBKQKDK 2       0.1        140 -8,089.29  2  2              
+3   AKBQKDK 2       0.1        201 -8,909.66  2  2              
+4  AKJBQKDK 2       0.1        177 -8,973.17  2  2              
+5    ABQKDK 2       0.1        200 -9,001.42  2  2              
+6   ABKQKDK 2       0.1       <NA>      -Inf  2  2 unknown error
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 71 62
+  2  0 67
+threshold 0.1 init: kmeans alphamin: 0.9 ccr: 0.69 
+Number of misclassified labels: 62 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.938541 3.001965 
+Number of outliers in Class 1 : 33 / 133 
+Number of outliers in Class 2 : 20 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,130.17  2  2
+2  AKBKQKDK 2       0.2        123 -8,167.89  2  2
+3   ABKQKDK 2       0.2        122 -8,348.48  2  2
+4  AKJBQKDK 2       0.2        140 -9,233.86  2  2
+5   AKBQKDK 2       0.2        137 -9,273.61  2  2
+6    ABQKDK 2       0.2        136 -9,357.91  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 74 59
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.5 ccr: 0.705 
+Number of misclassified labels: 59 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.234089 1.01 
+Number of outliers in Class 1 : 31 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,132.28  2  2
+2  AKBKQKDK 2       0.2        123 -8,168.68  2  2
+3   ABKQKDK 2       0.2        122 -8,348.48  2  2
+4  AKJBQKDK 2       0.2        140 -9,250.31  2  2
+5   AKBQKDK 2       0.2        137 -9,290.97  2  2
+6    ABQKDK 2       0.2        136 -9,381.31  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 74 59
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.6 ccr: 0.705 
+Number of misclassified labels: 59 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.242052 1.01 
+Number of outliers in Class 1 : 31 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,140.93  2  2
+2  AKBKQKDK 2       0.2        123 -8,174.67  2  2
+3   ABKQKDK 2       0.2        122 -8,350.47  2  2
+4  AKJBQKDK 2       0.2        140 -9,277.05  2  2
+5   AKBQKDK 2       0.2        137 -9,318.82  2  2
+6    ABQKDK 2       0.2        136 -9,428.47  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 74 59
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.7 ccr: 0.705 
+Number of misclassified labels: 59 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.255775 1.01 
+Number of outliers in Class 1 : 30 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,152.95  2  2
+2  AKBKQKDK 2       0.2        123 -8,185.32  2  2
+3   ABKQKDK 2       0.2        122 -8,357.79  2  2
+4  AKJBQKDK 2       0.2        140 -9,312.33  2  2
+5   AKBQKDK 2       0.2        137 -9,354.39  2  2
+6    ABQKDK 2       0.2        136 -9,489.42  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 74 59
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.8 ccr: 0.705 
+Number of misclassified labels: 59 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.232004 1.01 
+Number of outliers in Class 1 : 29 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,162.79  2  2
+2  AKBKQKDK 2       0.2        123 -8,194.67  2  2
+3   ABKQKDK 2       0.2        122 -8,364.82  2  2
+4  AKJBQKDK 2       0.2        140 -9,323.96  2  2
+5   AKBQKDK 2       0.2        137 -9,366.78  2  2
+6    ABQKDK 2       0.2        136 -9,542.52  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 74 59
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.85 ccr: 0.705 
+Number of misclassified labels: 59 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.203024 1.01 
+Number of outliers in Class 1 : 28 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.2        125 -8,177.79  2  2
+2  AKBKQKDK 2       0.2        123 -8,208.77  2  2
+3   ABKQKDK 2       0.2        122 -8,375.83  2  2
+4  AKJBQKDK 2       0.2        140 -9,337.34  2  2
+5   AKBQKDK 2       0.2        137 -9,378.81  2  2
+6    ABQKDK 2       0.2        136 -9,610.70  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 73 60
+  2  0 67
+threshold 0.2 init: kmeans alphamin: 0.9 ccr: 0.7 
+Number of misclassified labels: 60 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 4.157142 1.01 
+Number of outliers in Class 1 : 26 / 133 
+Number of outliers in Class 2 : 0 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,443.78  2  2
+2 AKJBKQKDK 2       0.3         87 -8,443.78  2  2
+3   ABKQKDK 2       0.3         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.3        140 -9,233.86  2  2
+5   AKBQKDK 2       0.3        137 -9,242.92  2  2
+6    ABQKDK 2       0.3        136 -9,357.91  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.5 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,443.78  2  2
+2 AKJBKQKDK 2       0.3         87 -8,443.78  2  2
+3   ABKQKDK 2       0.3         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.3        140 -9,250.31  2  2
+5   AKBQKDK 2       0.3        137 -9,260.24  2  2
+6    ABQKDK 2       0.3        136 -9,381.31  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.6 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,443.78  2  2
+2 AKJBKQKDK 2       0.3         87 -8,443.78  2  2
+3   ABKQKDK 2       0.3         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.3        140 -9,277.05  2  2
+5   AKBQKDK 2       0.3        137 -9,318.82  2  2
+6    ABQKDK 2       0.3        136 -9,428.47  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.7 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,455.56  2  2
+2 AKJBKQKDK 2       0.3         87 -8,455.56  2  2
+3   ABKQKDK 2       0.3         86 -8,541.33  2  2
+4  AKJBQKDK 2       0.3        140 -9,312.33  2  2
+5   AKBQKDK 2       0.3        137 -9,354.39  2  2
+6    ABQKDK 2       0.3        136 -9,489.42  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.8 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.525664 1.01 
+Number of outliers in Class 1 : 20 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,467.66  2  2
+2 AKJBKQKDK 2       0.3         87 -8,467.66  2  2
+3   ABKQKDK 2       0.3         86 -8,552.29  2  2
+4  AKJBQKDK 2       0.3        140 -9,323.96  2  2
+5   AKBQKDK 2       0.3        137 -9,366.78  2  2
+6    ABQKDK 2       0.3        136 -9,542.51  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.85 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.494942 1.01 
+Number of outliers in Class 1 : 18 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.3         87 -8,483.65  2  2
+2 AKJBKQKDK 2       0.3         87 -8,483.65  2  2
+3   ABKQKDK 2       0.3         86 -8,567.55  2  2
+4  AKJBQKDK 2       0.3        140 -9,337.34  2  2
+5   AKBQKDK 2       0.3        137 -9,378.81  2  2
+6    ABQKDK 2       0.3        136 -9,610.70  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.3 init: kmeans alphamin: 0.9 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.447805 1.01 
+Number of outliers in Class 1 : 17 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.4         87 -8,443.78  2  2
+2  AKBKQKDK 2       0.4         87 -8,443.78  2  2
+3   ABKQKDK 2       0.4         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.5 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.4         87 -8,443.78  2  2
+2  AKBKQKDK 2       0.4         87 -8,443.78  2  2
+3   ABKQKDK 2       0.4         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.6 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1 AKJBKQKDK 2       0.4         87 -8,443.78  2  2
+2  AKBKQKDK 2       0.4         87 -8,443.78  2  2
+3   ABKQKDK 2       0.4         86 -8,531.66  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.7 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.554272 1.01 
+Number of outliers in Class 1 : 21 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.4         87 -8,455.56  2  2
+2 AKJBKQKDK 2       0.4         87 -8,455.56  2  2
+3   ABKQKDK 2       0.4         86 -8,541.33  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.8 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.525664 1.01 
+Number of outliers in Class 1 : 20 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.4         87 -8,467.66  2  2
+2 AKJBKQKDK 2       0.4         87 -8,467.66  2  2
+3   ABKQKDK 2       0.4         86 -8,552.29  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.85 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.494942 1.01 
+Number of outliers in Class 1 : 18 / 133 
+Number of outliers in Class 2 : 2 / 67 
+
+
+
+cfunHDDC: 
+      model K threshold complexity       BIC d1 d2
+1  AKBKQKDK 2       0.4         87 -8,483.65  2  2
+2 AKJBKQKDK 2       0.4         87 -8,483.65  2  2
+3   ABKQKDK 2       0.4         86 -8,567.55  2  2
+4  AKJBQKDK 2       0.4        105 -9,456.98  2  2
+5   AKBQKDK 2       0.4        104 -9,457.15  2  2
+6    ABQKDK 2       0.4         85 -9,572.74  2  2
+
+SELECTED: model  AKBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+   
+     1  2
+  1 84 49
+  2  2 65
+threshold 0.4 init: kmeans alphamin: 0.9 ccr: 0.745 
+Number of misclassified labels: 51 / 200 
+Number of misclassified outliers: 4 / 5 
+Eta values: 3.447805 1.01 
+Number of outliers in Class 1 : 17 / 133 
+Number of outliers in Class 2 : 2 / 67 

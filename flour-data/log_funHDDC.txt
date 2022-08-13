@@ -1,0 +1,134 @@
+[1] "Running funHDDC"
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC             comment
+1  AKJBQKDK 3      0.01        346 -839,446.36                    
+2   AKBQKDK 3      0.01        333 -839,962.30                    
+3    ABQKDK 3      0.01        331 -840,001.74                    
+4 AKJBKQKDK 3      0.01       <NA>        -Inf pop<min.individuals
+5  AKBKQKDK 3      0.01       <NA>        -Inf pop<min.individuals
+6   ABKQKDK 3      0.01       <NA>        -Inf pop<min.individuals
+
+SELECTED: model  AKJBQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 22 26  2
+  2  0 16  9
+  3  1  5 34
+threshold 0.01 init: kmeans ccr: 0.626087 
+Number of misclassified labels: 43 / 115 
+Number of misclassified outliers: 5 / 7 
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC
+1  AKJBQKDK 3      0.05        196 -326,386.91
+2   AKBQKDK 3      0.05        192 -326,479.82
+3    ABQKDK 3      0.05        190 -326,514.48
+4 AKJBKQKDK 3      0.05        235 -475,284.09
+5  AKBKQKDK 3      0.05        229 -475,390.54
+6   ABKQKDK 3      0.05        227 -475,454.13
+
+SELECTED: model  AKJBQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 22 26  2
+  2  0 16  9
+  3  1  5 34
+threshold 0.05 init: kmeans ccr: 0.626087 
+Number of misclassified labels: 43 / 115 
+Number of misclassified outliers: 5 / 7 
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC             comment
+1  AKJBQKDK 3       0.1        160 -270,499.71                    
+2   AKBQKDK 3       0.1        158 -270,505.30                    
+3    ABQKDK 3       0.1        156 -270,527.32                    
+4 AKJBKQKDK 3       0.1       <NA>        -Inf pop<min.individuals
+5  AKBKQKDK 3       0.1       <NA>        -Inf pop<min.individuals
+6   ABKQKDK 3       0.1       <NA>        -Inf pop<min.individuals
+
+SELECTED: model  AKJBQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 22 26  2
+  2  0 16  9
+  3  1  5 34
+threshold 0.1 init: kmeans ccr: 0.626087 
+Number of misclassified labels: 43 / 115 
+Number of misclassified outliers: 5 / 7 
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC             comment
+1  AKJBQKDK 3       0.2        160 -270,499.71                    
+2   AKBQKDK 3       0.2        158 -270,505.30                    
+3    ABQKDK 3       0.2        156 -270,527.32                    
+4 AKJBKQKDK 3       0.2       <NA>        -Inf pop<min.individuals
+5  AKBKQKDK 3       0.2       <NA>        -Inf pop<min.individuals
+6   ABKQKDK 3       0.2       <NA>        -Inf pop<min.individuals
+
+SELECTED: model  AKJBQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 22 26  2
+  2  0 16  9
+  3  1  5 34
+threshold 0.2 init: kmeans ccr: 0.626087 
+Number of misclassified labels: 43 / 115 
+Number of misclassified outliers: 5 / 7 
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC             comment
+1  AKJBQKDK 3       0.3        160 -270,499.71                    
+2   AKBQKDK 3       0.3        158 -270,505.30                    
+3    ABQKDK 3       0.3        156 -270,527.32                    
+4 AKJBKQKDK 3       0.3       <NA>        -Inf pop<min.individuals
+5  AKBKQKDK 3       0.3       <NA>        -Inf pop<min.individuals
+6   ABKQKDK 3       0.3       <NA>        -Inf pop<min.individuals
+
+SELECTED: model  AKJBQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 22 26  2
+  2  0 16  9
+  3  1  5 34
+threshold 0.3 init: kmeans ccr: 0.626087 
+Number of misclassified labels: 43 / 115 
+Number of misclassified outliers: 5 / 7 
+
+
+
+funHDDC: 
+      model K threshold complexity         BIC
+1   ABKQKDK 3       0.4        123 -190,156.13
+2 AKJBKQKDK 3       0.4        125 -190,158.42
+3  AKBKQKDK 3       0.4        125 -190,158.42
+4  AKJBQKDK 3       0.4        160 -270,499.71
+5   AKBQKDK 3       0.4        158 -270,505.30
+6    ABQKDK 3       0.4        156 -270,527.32
+
+SELECTED: model  ABKQKDK  with  3  clusters.
+Selection Criterion: BIC.
+   
+     1  2  3
+  1 24 25  1
+  2  1 19  5
+  3  1  9 30
+threshold 0.4 init: kmeans ccr: 0.6347826 
+Number of misclassified labels: 42 / 115 
+Number of misclassified outliers: 6 / 7 
+

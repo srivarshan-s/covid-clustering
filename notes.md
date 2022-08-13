@@ -1,35 +1,29 @@
 # **NOTES**
 
-1. ~~Run all the algorithms for the new number of splines~~ **NOT NECESSARY**
+1. ~~clean up code~~
 
-2. ~~Play with the threshold number to see the best values (lower seems to be better)~~ **NOT NECESSARY**
+2. ~~kmeans~~
 
-3. See the paper with the python code sent by Cristina
+3. ~~10 nb.rep (start with 1, if max is obtained try surrounding with 10)~~
+
+4. ~~threshold 0.01 0.05 0.1 0.2 0.3 0.4~~
+
+5. ~~[0, 1] -> time interval~~
+
+6. Plot the data
    
-   1. Try to implement it on the ECG data
-
-4. ~~See for different splines as 38 and 41 seem too high (if possible)~~ **NOT NECESSARY**
-
-5. ~~Keep the Bsplines at 20 splines and run cfunHDDC (huge eta; good CCR)~~ **DONE**
+   1. Pic with data and classes
    
-   1. ~~copy the previous table and put some pictures (similar to nox data)~~ 
-      
-      1. ~~original data - two classes together~~
-      
-      2. ~~original data first and second (seperate)~~
-      
-      3. ~~best with tfun and cfun~~
+   2. Another with outliers
+   
+   3. Final pic seperate into 3
 
-6. Plot them along with the original data
+7. Change the random seed (increase by 1 for every iteration)
 
-7. Plot outliers with green
+8. Run the model longer for the best CCR (nb.rep = 50)
 
-8. Try python code about forests in (Outlier detection in multivariate functional data through a contaminated mixture model)
+9. Concentration 9, 10 or 11 - Visualization with detourr
 
-9. Send plotting code to Cristina
+10. Work on functional isolation forest for flour data
 
-10. Take a look at the Kneading data
-    
-    1. first 50 are one class
-    
-    2. the next 50 are another class
+11. Clean up ECG code

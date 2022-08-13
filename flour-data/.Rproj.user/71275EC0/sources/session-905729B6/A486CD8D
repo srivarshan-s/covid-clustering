@@ -1,0 +1,26 @@
+{
+    "id": "A486CD8D",
+    "path": "~/Documents/flour-data/main.R",
+    "project_path": "main.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1660323184584.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "479,1",
+        "scrollLine": "455"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1660244382,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1660323409521,
+    "read_only": false,
+    "read_only_alternatives": []
+}
