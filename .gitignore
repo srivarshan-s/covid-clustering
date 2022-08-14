@@ -3,3 +3,4 @@
 .Rhistory
 *.zip
 venv/
+functional-isolation-forest/.ipynb_checkpoints/
