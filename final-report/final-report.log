@@ -1,0 +1,231 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022 - Flatpak) (preloaded format=pdflatex 2022.4.26)  14 AUG 2022 22:15
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**final-report.tex
+(./final-report.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/app/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/app/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/app/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/app/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/app/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/app/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/app/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/app/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(/app/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/app/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/app/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+)
+(/app/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box50
+)
+(./final-report.aux)
+\openout1 = `final-report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+(/app/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen149
+\scratchbox=\box51
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen150
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks19
+) (/app/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/app/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(90.3375pt, 614.295pt, 90.3375pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=614.295pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=-18.9325pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 17.
+[1
+
+{/app/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+<ecg_data.png, id=13, 1505.625pt x 564.60938pt>
+File: ecg_data.png Graphic file (type png)
+<use ecg_data.png>
+Package pdftex.def Info: ecg_data.png  used on input line 43.
+(pdftex.def)             Requested size: 433.62001pt x 162.60393pt.
+<kneading_data.png, id=14, 1317.42188pt x 1129.21875pt>
+File: kneading_data.png Graphic file (type png)
+<use kneading_data.png>
+Package pdftex.def Info: kneading_data.png  used on input line 52.
+(pdftex.def)             Requested size: 329.35466pt x 282.304pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 65.
+<ecg_cluster.png, id=15, 1505.625pt x 564.60938pt>
+File: ecg_cluster.png Graphic file (type png)
+<use ecg_cluster.png>
+Package pdftex.def Info: ecg_cluster.png  used on input line 83.
+(pdftex.def)             Requested size: 433.62001pt x 162.60393pt.
+ [2 <./ecg_data.png (PNG copy)>] [3 <./kneading_data.png (PNG copy)> <./ecg_clu
+ster.png (PNG copy)>]
+<kneading_cluster.png, id=22, 1317.42188pt x 1129.21875pt>
+File: kneading_cluster.png Graphic file (type png)
+<use kneading_cluster.png>
+Package pdftex.def Info: kneading_cluster.png  used on input line 115.
+(pdftex.def)             Requested size: 329.35466pt x 282.304pt.
+ [4 <./kneading_cluster.png (PNG copy)>]
+<pca_10.png, id=27, 728.7225pt x 417.05812pt>
+File: pca_10.png Graphic file (type png)
+<use pca_10.png>
+Package pdftex.def Info: pca_10.png  used on input line 128.
+(pdftex.def)             Requested size: 255.05669pt x 145.97252pt.
+<spline_10.png, id=29, 737.00343pt x 577.40718pt>
+File: spline_10.png Graphic file (type png)
+<use spline_10.png>
+Package pdftex.def Info: spline_10.png  used on input line 135.
+(pdftex.def)             Requested size: 257.95506pt x 202.09554pt.
+<kneading_outliers.png, id=30, 952.55875pt x 586.19pt>
+File: kneading_outliers.png Graphic file (type png)
+<use kneading_outliers.png>
+Package pdftex.def Info: kneading_outliers.png  used on input line 147.
+(pdftex.def)             Requested size: 333.40056pt x 205.16957pt.
+ [5 <./pca_10.png> <./spline_10.png>]
+<fif_cluster.png, id=36, 943.525pt x 573.14125pt>
+File: fif_cluster.png Graphic file (type png)
+<use fif_cluster.png>
+Package pdftex.def Info: fif_cluster.png  used on input line 156.
+(pdftex.def)             Requested size: 330.2387pt x 200.60243pt.
+ [6 <./kneading_outliers.png>] [7 <./fif_cluster.png>] (./final-report.aux) ) 
+Here is how much of TeX's memory you used:
+ 1915 strings out of 478268
+ 30726 string characters out of 5847840
+ 333876 words of memory out of 5000000
+ 20136 multiletter control sequences out of 15000+600000
+ 474197 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,8n,62p,965b,227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</
+app/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></app/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></app/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></app/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></app/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></app/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/app/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></app/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on final-report.pdf (7 pages, 4624049 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+
