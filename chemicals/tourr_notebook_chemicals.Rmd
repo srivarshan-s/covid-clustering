@@ -1,0 +1,64 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+setwd("~/Documents/chemicals/")
+source("open_chemicals.R")
+library(tourr)
+```
+
+```{r}
+# display just the second spline coefficient
+chem <- merge_chemical_csv(allowed_classes = 1:10, nbasis = 4)
+chem_df <- data.frame(matrix(nrow = 63, ncol = 12))
+chem_names <- c()
+tour_dependence <- c()
+for(i in 0:10) {
+  for(j in 2:2) {
+    chem_df[,i*1+(j-1)] <- as.numeric(chem$fd[[i+1]]$coefs[j,])
+    chem_names <- append(chem_names, paste0("C", i+1,".", j))
+    tour_dependence <- append(tour_dependence, c(i+1))
+  }
+}
+names(chem_df) <- append(chem_names, "category")
+chem_df$category <- ifelse(chem$groupd==1 | chem$groupd==10, 
+                        as.character(chem$groupd), "other")
+animate_xy(chem_df[,1:11], col=chem_df$category)
+```
+
+```{r}
+# do 2 and 3 but add them as separate columns
+chem_df <- data.frame(matrix(nrow = 63, ncol = 23))
+chem_names <- c()
+tour_dependence <- c()
+for(i in 0:10) {
+  for(j in 2:3) {
+    chem_df[,i*2+(j-1)] <- as.numeric(chem$fd[[i+1]]$coefs[j,])
+    chem_names <- append(chem_names, paste0("C", i+1,".", j))
+    tour_dependence <- append(tour_dependence, c(i+1))
+  }
+}
+names(chem_df) <- append(chem_names, "category")
+chem_df$category <- ifelse(chem$groupd==1 | chem$groupd==10, 
+                        as.character(chem$groupd), "other")
+animate_xy(chem_df[,1:22], col=chem_tib$category, tour_path=dependence_tour(tour_dependence))
+```
+
+```{r}
+# do all of them but as unique rows with the same tag
+chem_df <- data.frame(matrix(nrow = 63*4, ncol = 12))
+chem_names <- c()
+tour_dependence <- c()
+for(i in 1:11) {
+  for(j in 1:4) {
+    chem_df[(1+63*(j-1)):(63*(j)),i] <- as.numeric(chem$fd[[i]]$coefs[j,])
+  }
+  chem_names <- append(chem_names, paste0("C", i))
+}
+names(chem_df) <- append(chem_names, "category")
+chem_df$category <- ifelse(chem$groupd==1 | chem$groupd==10, 
+                        as.character(chem$groupd), "other")
+animate_xy(chem_df[,1:11], col=rep(chem_df$category, 4), tour_path = guided_tour(holes()))
+```

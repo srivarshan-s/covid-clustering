@@ -1,0 +1,1101 @@
+[1] "kmeans Starting Point"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.01 alphamin = 0.5"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01      3,910 -12,191.75  2  2
+2  AKBKQKDK 2      0.01      3,896 -12,369.81  2  2
+3   ABKQKDK 2      0.01      3,895 -12,396.44  2  2
+4  AKJBQKDK 2      0.01      4,334 -20,783.42  2  2
+5    ABQKDK 2      0.01      4,317 -21,049.23  2  2
+6   AKBQKDK 2      0.01      4,318 -21,049.67  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      0  1
+  1   9 11
+  10  4  9
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 9 7
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1         2
+   0.6870334 0.5294122
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+          1        2
+   3.091052 8.551176
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.01 alphamin = 0.6"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01      3,910 -12,192.09  2  2
+2  AKBKQKDK 2      0.01      3,896 -12,370.16  2  2
+3   ABKQKDK 2      0.01      3,895 -12,396.78  2  2
+4  AKJBQKDK 2      0.01      4,334 -20,783.42  2  2
+5    ABQKDK 2      0.01      4,317 -21,049.23  2  2
+6   AKBQKDK 2      0.01      4,318 -21,049.67  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      0  1
+  1   9 11
+  10  4  9
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 7 9
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1         2
+   0.6000784 0.6870334
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+          1        2
+   8.551176 3.091052
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.01 alphamin = 0.7"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01      3,910 -12,193.92  2  2
+2  AKBKQKDK 2      0.01      3,896 -12,371.98  2  2
+3   ABKQKDK 2      0.01      3,895 -12,398.57  2  2
+4  AKJBQKDK 2      0.01      4,334 -20,783.42  2  2
+5    ABQKDK 2      0.01      4,317 -21,049.23  2  2
+6   AKBQKDK 2      0.01      4,318 -21,049.67  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      0  1
+  1   9 11
+  10  4  9
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 7 9
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1         2
+   0.7000433 0.7000714
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+          1        2
+   8.551176 3.091304
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.01 alphamin = 0.8"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01      3,910 -12,199.05  2  2
+2  AKBKQKDK 2      0.01      3,896 -12,377.09  2  2
+3   ABKQKDK 2      0.01      3,895 -12,403.60  2  2
+4  AKJBQKDK 2      0.01      4,334 -20,783.42  2  2
+5    ABQKDK 2      0.01      4,317 -21,049.23  2  2
+6   AKBQKDK 2      0.01      4,318 -21,049.67  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      0  1
+  1   9 11
+  10  4  9
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 7 9
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1         2
+   0.8000499 0.8000499
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+          1      2
+   8.551176 3.0927
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.01 alphamin = 0.9"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.01      3,910 -12,212.33  2  2
+2  AKBKQKDK 2      0.01      3,896 -12,390.35  2  2
+3   ABKQKDK 2      0.01      3,895 -12,416.85  2  2
+4  AKJBQKDK 2      0.01      4,334 -20,783.42  2  2
+5    ABQKDK 2      0.01      4,317 -21,049.23  2  2
+6   AKBQKDK 2      0.01      4,318 -21,049.67  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      0  1
+  1   9 11
+  10  4  9
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 7 9
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1         2
+   0.9000733 0.9000733
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+          1        2
+   8.551176 3.093572
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.05 alphamin = 0.5"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.05      2,195 -12,557.33  2  2
+2   ABKQKDK 2      0.05      2,188 -12,592.25  2  2
+3  AKBKQKDK 2      0.05      2,189 -12,594.51  2  2
+4  AKJBQKDK 2      0.05      2,194 -24,420.93  2  2
+5    ABQKDK 2      0.05      2,187 -24,455.83  2  2
+6   AKBQKDK 2      0.05      2,188 -24,458.11  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 4 4
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999998
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.05 alphamin = 0.6"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.05      2,195 -12,557.33  2  2
+2   ABKQKDK 2      0.05      2,188 -12,592.25  2  2
+3  AKBKQKDK 2      0.05      2,189 -12,594.51  2  2
+4  AKJBQKDK 2      0.05      2,194 -24,420.93  2  2
+5    ABQKDK 2      0.05      2,187 -24,455.83  2  2
+6   AKBQKDK 2      0.05      2,188 -24,458.11  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 4 4
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999998 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.05 alphamin = 0.7"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.05      2,195 -12,557.33  2  2
+2   ABKQKDK 2      0.05      2,188 -12,592.25  2  2
+3  AKBKQKDK 2      0.05      2,189 -12,594.51  2  2
+4  AKJBQKDK 2      0.05      2,194 -24,420.93  2  2
+5    ABQKDK 2      0.05      2,187 -24,455.83  2  2
+6   AKBQKDK 2      0.05      2,188 -24,458.11  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 4 4
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999998
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.05 alphamin = 0.8"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.05      2,195 -12,557.33  2  2
+2   ABKQKDK 2      0.05      2,188 -12,592.25  2  2
+3  AKBKQKDK 2      0.05      2,189 -12,594.51  2  2
+4  AKJBQKDK 2      0.05      2,194 -24,420.93  2  2
+5    ABQKDK 2      0.05      2,187 -24,455.83  2  2
+6   AKBQKDK 2      0.05      2,188 -24,458.11  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 4 4
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999998 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.05 alphamin = 0.9"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2      0.05      2,195 -12,557.33  2  2
+2   ABKQKDK 2      0.05      2,188 -12,592.25  2  2
+3  AKBKQKDK 2      0.05      2,189 -12,594.51  2  2
+4  AKJBQKDK 2      0.05      2,194 -24,420.93  2  2
+5    ABQKDK 2      0.05      2,187 -24,455.83  2  2
+6   AKBQKDK 2      0.05      2,188 -24,458.11  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 4 4
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999998 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.1 alphamin = 0.5"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2       0.1      1,761 -13,448.75  2  2
+2   ABKQKDK 2       0.1      1,756 -13,458.57  2  2
+3  AKBKQKDK 2       0.1      1,757 -13,461.17  2  2
+4  AKJBQKDK 2       0.1      1,760 -25,558.93  2  2
+5    ABQKDK 2       0.1      1,755 -25,568.69  2  2
+6   AKBQKDK 2       0.1      1,756 -25,571.34  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 3 3
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999999 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.1 alphamin = 0.6"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2       0.1      1,761 -13,448.75  2  2
+2   ABKQKDK 2       0.1      1,756 -13,458.57  2  2
+3  AKBKQKDK 2       0.1      1,757 -13,461.17  2  2
+4  AKJBQKDK 2       0.1      1,760 -25,558.93  2  2
+5    ABQKDK 2       0.1      1,755 -25,568.69  2  2
+6   AKBQKDK 2       0.1      1,756 -25,571.34  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 3 3
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.1 alphamin = 0.7"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2       0.1      1,761 -13,448.75  2  2
+2   ABKQKDK 2       0.1      1,756 -13,458.57  2  2
+3  AKBKQKDK 2       0.1      1,757 -13,461.17  2  2
+4  AKJBQKDK 2       0.1      1,760 -25,558.93  2  2
+5    ABQKDK 2       0.1      1,755 -25,568.69  2  2
+6   AKBQKDK 2       0.1      1,756 -25,571.34  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 3 3
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999999 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.1 alphamin = 0.8"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2       0.1      1,761 -13,448.75  2  2
+2   ABKQKDK 2       0.1      1,756 -13,458.57  2  2
+3  AKBKQKDK 2       0.1      1,757 -13,461.17  2  2
+4  AKJBQKDK 2       0.1      1,760 -25,558.93  2  2
+5    ABQKDK 2       0.1      1,755 -25,568.69  2  2
+6   AKBQKDK 2       0.1      1,756 -25,571.34  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 3 3
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999999 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.1 alphamin = 0.9"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1 AKJBKQKDK 2       0.1      1,761 -13,448.75  2  2
+2   ABKQKDK 2       0.1      1,756 -13,458.57  2  2
+3  AKBKQKDK 2       0.1      1,757 -13,461.17  2  2
+4  AKJBQKDK 2       0.1      1,760 -25,558.93  2  2
+5    ABQKDK 2       0.1      1,755 -25,568.69  2  2
+6   AKBQKDK 2       0.1      1,756 -25,571.34  2  2
+
+SELECTED: model  AKJBKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 3 3
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.2 alphamin = 0.5"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1   ABKQKDK 2       0.2      1,322 -14,754.94  2  2
+2  AKBKQKDK 2       0.2      1,323 -14,757.94  2  2
+3 AKJBKQKDK 2       0.2      1,325 -14,763.33  2  2
+4    ABQKDK 2       0.2      1,321 -27,035.60  2  2
+5   AKBQKDK 2       0.2      1,322 -27,038.99  2  2
+6  AKJBQKDK 2       0.2      1,324 -27,044.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 2 2
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.2 alphamin = 0.6"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1   ABKQKDK 2       0.2      1,322 -14,754.94  2  2
+2  AKBKQKDK 2       0.2      1,323 -14,757.94  2  2
+3 AKJBKQKDK 2       0.2      1,325 -14,763.33  2  2
+4    ABQKDK 2       0.2      1,321 -27,035.60  2  2
+5   AKBQKDK 2       0.2      1,322 -27,038.99  2  2
+6  AKJBQKDK 2       0.2      1,324 -27,044.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 2 2
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.2 alphamin = 0.7"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1   ABKQKDK 2       0.2      1,322 -14,754.94  2  2
+2  AKBKQKDK 2       0.2      1,323 -14,757.94  2  2
+3 AKJBKQKDK 2       0.2      1,325 -14,763.33  2  2
+4    ABQKDK 2       0.2      1,321 -27,035.60  2  2
+5   AKBQKDK 2       0.2      1,322 -27,038.99  2  2
+6  AKJBQKDK 2       0.2      1,324 -27,044.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 2 2
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.2 alphamin = 0.8"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1   ABKQKDK 2       0.2      1,322 -14,754.94  2  2
+2  AKBKQKDK 2       0.2      1,323 -14,757.94  2  2
+3 AKJBKQKDK 2       0.2      1,325 -14,763.33  2  2
+4    ABQKDK 2       0.2      1,321 -27,035.60  2  2
+5   AKBQKDK 2       0.2      1,322 -27,038.99  2  2
+6  AKJBQKDK 2       0.2      1,324 -27,044.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1  15  5
+  10  1 12
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 2 2
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+   1         2
+   1 0.9999999
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 1"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 2"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 1"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 2"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
+[1] "----------------------------------------------"
+[1] "Threshold = 0.2 alphamin = 0.9"
+cfunHDDC: 
+      model K threshold complexity        BIC d1 d2
+1   ABKQKDK 2       0.2      1,322 -14,754.94  2  2
+2  AKBKQKDK 2       0.2      1,323 -14,757.94  2  2
+3 AKJBKQKDK 2       0.2      1,325 -14,763.33  2  2
+4    ABQKDK 2       0.2      1,321 -27,035.60  2  2
+5   AKBQKDK 2       0.2      1,322 -27,038.99  2  2
+6  AKJBQKDK 2       0.2      1,324 -27,044.25  2  2
+
+SELECTED: model  ABKQKDK  with  2  clusters.
+Selection Criterion: BIC.
+    
+      1  2
+  1   5 15
+  10 12  1
+    
+      1
+  1  20
+  10 13
+      Intrinsic dimensions of the classes:
+       1 2
+  dim: 2 2
+attr(,"class")
+[1] "hd"
+  Probabilities of outliers of groups
+           1 2
+   0.9999999 1
+attr(,"class")
+[1] "hd"
+  Inflation coefficient of groups
+      1    2
+   1.01 1.01
+attr(,"class")
+[1] "hd"
+[1] "Correct Class = 1 and Chosen Class = 2"
+ [1] "Mitoxantronedihydrochloride"    "MitomycinC"                    
+ [3] "Topotecanhydrochloride"         "gemcitabine HCl"               
+ [5] "cisplatin"                      "merbarone"                     
+ [7] "irinotecan(CPT-11)"             "cytosine b-D-arabinofuranoside"
+ [9] "SN38"                           "5-FU"                          
+[11] "Etoposide"                      "actinomycinD"                  
+[13] "Clofarabine"                    "Hydroxyurea"                   
+[15] "Doxorubicin"                   
+[1] "Correct Class = 1 and Chosen Class = 1"
+[1] "NU7026"      "CRT0044876"  "ABT-888"     "Cordycepin"  "OchratoxinA"
+[1] "Correct Class = 10 and Chosen Class = 2"
+[1] "FAKInhibitor14"
+[1] "Correct Class = 10 and Chosen Class = 1"
+ [1] "monastrol"            "stritytl-cysteine"    "dimethylenenastrone" 
+ [4] "Y-27632"              "Ro32-3555"            "Batimastat"          
+ [7] "MLCKInhibPep18"       "PF573228"             "Blebbistatin"        
+[10] "ML7 hydrochloride"    "HA1100 hydrochloride" "PF431396"            
+[1] "----------------------------------------------"
